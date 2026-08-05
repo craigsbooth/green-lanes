@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Push to GitHub on task complete",
+  "description": "After the agent finishes a task, commit any changes and push to GitHub so Netlify auto-deploys the latest version.",
+  "version": "1",
+  "when": {
+    "type": "agentStop"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "If there are any uncommitted changes in the workspace, stage them, commit with a short descriptive message, and push to origin. Run: git add -A, then git commit, then git push. If there are no changes, do nothing."
+  }
+}
