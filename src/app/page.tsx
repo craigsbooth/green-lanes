@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { FilterPanel } from "@/components/FilterPanel";
 import { RouteDetailPanel } from "@/components/RouteDetailPanel";
@@ -32,6 +32,27 @@ export default function Home() {
   const [selectedFeature, setSelectedFeature] = useState<OsmRoute | null>(null);
   const [showFilters, setShowFilters] = useState(false);
   const [mobilePanel, setMobilePanel] = useState<"none" | "filters" | "detail">("none");
+
+  // URL sharing: load route from hash on mount
+  useEffect(() => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash) {
+      const feature = greenLanes.features.find((f) => f.properties.id === hash) || null;
+      if (feature) {
+        setSelectedFeature(feature);
+        setMobilePanel("detail");
+      }
+    }
+  }, []);
+
+  // Update URL hash when route is selected
+  useEffect(() => {
+    if (selectedFeature) {
+      window.history.replaceState(null, "", `#${selectedFeature.properties.id}`);
+    } else {
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  }, [selectedFeature]);
 
   const filteredRoutes = useMemo(() => {
     return greenLanes.features.filter((feature) => {
@@ -76,7 +97,6 @@ export default function Home() {
 
   return (
     <main className="h-screen flex flex-col md:flex-row relative">
-      {/* Desktop filter panel */}
       {showFilters && (
         <aside className="hidden md:block w-80 bg-white shadow-lg z-10 overflow-y-auto filter-panel border-r border-gray-200">
           <FilterPanel
@@ -89,7 +109,6 @@ export default function Home() {
         </aside>
       )}
 
-      {/* Mobile filter panel (overlay) */}
       {mobilePanel === "filters" && (
         <aside className="md:hidden fixed inset-0 z-30 bg-white overflow-y-auto">
           <div className="flex items-center justify-between p-4 border-b">
@@ -112,9 +131,7 @@ export default function Home() {
         </aside>
       )}
 
-      {/* Map */}
       <div className="flex-1 relative">
-        {/* Top controls */}
         <div className="absolute top-4 left-4 z-20 flex gap-2">
           <button
             onClick={toggleFilters}
@@ -135,7 +152,6 @@ export default function Home() {
         />
       </div>
 
-      {/* Desktop detail panel */}
       {selectedFeature && (
         <aside className="hidden md:block w-96 bg-white shadow-lg z-10 overflow-y-auto route-panel border-l border-gray-200">
           <RouteDetailPanel
@@ -145,7 +161,6 @@ export default function Home() {
         </aside>
       )}
 
-      {/* Mobile detail panel (overlay from bottom) */}
       {mobilePanel === "detail" && selectedFeature && (
         <aside className="md:hidden fixed inset-x-0 bottom-0 z-30 bg-white rounded-t-xl shadow-2xl max-h-[80vh] overflow-y-auto">
           <div className="sticky top-0 bg-white p-2 flex justify-center border-b">

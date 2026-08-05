@@ -2,6 +2,7 @@
 import { OsmRoute } from "@/data/routes";
 import { getDifficulty } from "@/data/difficulty";
 import { RouteImages } from "./RouteImages";
+import { calculateRouteLength, generateGPX, downloadFile } from "@/lib/geo";
 
 interface Props {
   feature: OsmRoute;
@@ -12,6 +13,7 @@ export function RouteDetailPanel({ feature, onClose }: Props) {
   const route = feature.properties;
   const coords = feature.geometry.coordinates;
   const difficulty = getDifficulty(route);
+  const length = calculateRouteLength(coords);
 
   const midIdx = Math.floor(coords.length / 2);
   const midCoord = coords[midIdx];
@@ -31,6 +33,13 @@ export function RouteDetailPanel({ feature, onClose }: Props) {
     extreme: "bg-red-100 text-red-800",
   };
 
+  const handleDownloadGPX = () => {
+    const desc = `${route.type} - ${route.legalBasis}. Surface: ${route.surface}. Difficulty: ${difficulty}.`;
+    const gpx = generateGPX(route.name, desc, coords);
+    const filename = route.name.replace(/[^a-zA-Z0-9]/g, "-").toLowerCase() + ".gpx";
+    downloadFile(gpx, filename, "application/gpx+xml");
+  };
+
   return (
     <div className="p-4">
       <div className="flex items-start justify-between mb-3">
@@ -43,6 +52,27 @@ export function RouteDetailPanel({ feature, onClose }: Props) {
         <span className={`text-xs px-2 py-0.5 rounded-full ${diffColors[difficulty]}`}>{difficulty}</span>
         {route.legalStatus === "tro_restricted" && <span className="text-xs bg-red-100 text-red-800 px-2 py-0.5 rounded-full">TRO Restricted</span>}
         {route.legalStatus === "open" && <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">Open</span>}
+        <span className="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">{length} km</span>
+      </div>
+
+      {/* GPX Download + Share */}
+      <div className="flex gap-2 mb-4">
+        <button
+          onClick={handleDownloadGPX}
+          className="flex-1 py-2 px-3 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md transition-colors flex items-center justify-center gap-2"
+        >
+          <span>📥</span> Download GPX
+        </button>
+        <button
+          onClick={() => {
+            const url = window.location.origin + "/#" + route.id;
+            navigator.clipboard.writeText(url);
+          }}
+          className="py-2 px-3 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium rounded-md transition-colors flex items-center gap-2"
+          title="Copy shareable link"
+        >
+          <span>🔗</span> Share
+        </button>
       </div>
 
       <div className="mb-4 p-3 bg-green-50 border border-green-200 rounded-md">
@@ -50,10 +80,10 @@ export function RouteDetailPanel({ feature, onClose }: Props) {
       </div>
 
       <div className="grid grid-cols-2 gap-2 mb-4">
-        <Stat label="Highway" value={route.highway || "\u2014"} />
+        <Stat label="Length" value={`${length} km`} />
         <Stat label="Surface" value={route.surface || "unknown"} />
+        <Stat label="Highway" value={route.highway || "\u2014"} />
         <Stat label="Tracktype" value={route.tracktype || "\u2014"} />
-        <Stat label="Access" value={route.access || "\u2014"} />
         <Stat label="Motor vehicles" value={route.motor_vehicle || "\u2014"} />
         <Stat label="Ref" value={route.ref || "\u2014"} />
       </div>
@@ -76,10 +106,8 @@ export function RouteDetailPanel({ feature, onClose }: Props) {
         </div>
       )}
 
-      {/* Images from Wikimedia Commons - searches along the actual track */}
       <RouteImages coordinates={coords} routeName={route.name} />
 
-      {/* External links */}
       <div className="mb-4">
         <h3 className="text-sm font-medium text-gray-700 mb-2">Links &amp; Media</h3>
         <div className="space-y-2">
