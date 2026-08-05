@@ -113,6 +113,19 @@ export function FilterPanel({ filters, onChange, totalRoutes, visibleRoutes, sur
         Reset Filters
       </button>
 
+      {/* Data info */}
+      <div className="mt-4 p-3 bg-gray-50 rounded-md">
+        <p className="text-xs text-gray-500">
+          <strong>Data source:</strong> OpenStreetMap (legal designations only)
+        </p>
+        <p className="text-xs text-gray-400 mt-1">
+          Routes last refreshed: 4 Aug 2026
+        </p>
+        <p className="text-xs text-gray-400">
+          Coverage: County Durham &amp; Yorkshire
+        </p>
+      </div>
+
       {/* Legend */}
       <div className="mt-6 pt-4 border-t border-gray-200">
         <h3 className="text-sm font-medium text-gray-700 mb-2">Difficulty Legend</h3>

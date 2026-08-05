@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 interface ImageResult {
   title: string;
@@ -10,35 +10,47 @@ interface ImageResult {
 }
 
 interface Props {
-  coordinates: [number, number][]; // full route line [lng, lat][]
+  coordinates: [number, number][];
   routeName: string;
 }
 
-/**
- * Searches for images along the actual route line, not just a single point.
- * Samples multiple points along the route and uses a tight 100m radius
- * so we only get images that are genuinely ON the track.
- */
 export function RouteImages({ coordinates, routeName }: Props) {
   const [images, setImages] = useState<ImageResult[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const abortRef = useRef<AbortController | null>(null);
+
+  // Stabilise reference: only refetch when first coordinate changes (i.e. different route)
+  const routeKey = coordinates.length > 0
+    ? `${coordinates[0][0].toFixed(5)},${coordinates[0][1].toFixed(5)}`
+    : "";
 
   useEffect(() => {
+    // Abort previous fetch if user clicked a new route
+    if (abortRef.current) abortRef.current.abort();
+    const controller = new AbortController();
+    abortRef.current = controller;
+
     setLoading(true);
     setError(null);
     setImages([]);
 
-    fetchImagesAlongRoute(coordinates)
+    fetchImagesAlongRoute(coordinates, controller.signal)
       .then((results) => {
-        setImages(results);
-        setLoading(false);
+        if (!controller.signal.aborted) {
+          setImages(results);
+          setLoading(false);
+        }
       })
       .catch((err) => {
-        setError(err.message);
-        setLoading(false);
+        if (!controller.signal.aborted) {
+          setError(err.message);
+          setLoading(false);
+        }
       });
-  }, [coordinates]);
+
+    return () => controller.abort();
+  }, [routeKey]);
 
   if (loading) {
     return (
@@ -86,7 +98,7 @@ export function RouteImages({ coordinates, routeName }: Props) {
       <div className="grid grid-cols-2 gap-2">
         {images.map((img, idx) => (
           <a
-            key={idx}
+            key={img.pageUrl}
             href={img.pageUrl}
             target="_blank"
             rel="noopener noreferrer"
@@ -109,12 +121,10 @@ export function RouteImages({ coordinates, routeName }: Props) {
   );
 }
 
-/**
- * Sample points along the route and search for images at each.
- * Uses tight 100m radius to ensure images are actually on/beside the track.
- */
-async function fetchImagesAlongRoute(coords: [number, number][]): Promise<ImageResult[]> {
-  // Sample up to 5 points evenly spaced along the route
+async function fetchImagesAlongRoute(
+  coords: [number, number][],
+  signal: AbortSignal
+): Promise<ImageResult[]> {
   const sampleCount = Math.min(5, coords.length);
   const step = Math.max(1, Math.floor(coords.length / sampleCount));
   const samplePoints: [number, number][] = [];
@@ -126,10 +136,10 @@ async function fetchImagesAlongRoute(coords: [number, number][]): Promise<ImageR
   const seen = new Set<string>();
   const allResults: ImageResult[] = [];
 
-  // Query each sample point (sequentially to avoid hammering the API)
   for (const [lng, lat] of samplePoints) {
+    if (signal.aborted) break;
     try {
-      const results = await fetchWikimediaAtPoint(lat, lng);
+      const results = await fetchWikimediaAtPoint(lat, lng, signal);
       for (const r of results) {
         if (!seen.has(r.pageUrl)) {
           seen.add(r.pageUrl);
@@ -137,21 +147,24 @@ async function fetchImagesAlongRoute(coords: [number, number][]): Promise<ImageR
         }
       }
     } catch {
-      // Skip failed points, continue with others
+      // Skip failed points
     }
-    // Small delay between requests
-    await new Promise((r) => setTimeout(r, 200));
+    if (!signal.aborted) {
+      await new Promise((r) => setTimeout(r, 200));
+    }
   }
 
-  // Sort by distance (closest to track first), limit to 8
   return allResults.sort((a, b) => a.dist - b.dist).slice(0, 8);
 }
 
-async function fetchWikimediaAtPoint(lat: number, lng: number): Promise<ImageResult[]> {
-  // 100m radius - very tight, only gets images basically on the track
+async function fetchWikimediaAtPoint(
+  lat: number,
+  lng: number,
+  signal: AbortSignal
+): Promise<ImageResult[]> {
   const geoUrl = `https://commons.wikimedia.org/w/api.php?action=query&list=geosearch&gscoord=${lat}|${lng}&gsradius=100&gsnamespace=6&gslimit=5&format=json&origin=*`;
 
-  const geoRes = await fetch(geoUrl);
+  const geoRes = await fetch(geoUrl, { signal });
   if (!geoRes.ok) return [];
 
   const geoData = await geoRes.json();
@@ -161,7 +174,7 @@ async function fetchWikimediaAtPoint(lat: number, lng: number): Promise<ImageRes
   const pageIds = pages.map((p: any) => p.pageid).join("|");
   const infoUrl = `https://commons.wikimedia.org/w/api.php?action=query&pageids=${pageIds}&prop=imageinfo&iiprop=url&iiurlwidth=400&format=json&origin=*`;
 
-  const infoRes = await fetch(infoUrl);
+  const infoRes = await fetch(infoUrl, { signal });
   if (!infoRes.ok) return [];
 
   const infoData = await infoRes.json();
@@ -173,14 +186,13 @@ async function fetchWikimediaAtPoint(lat: number, lng: number): Promise<ImageRes
     if (!page) continue;
     const info = page.imageinfo?.[0];
     if (!info) continue;
-    // Skip non-photo files
     if (info.url?.endsWith(".svg") || info.url?.endsWith(".pdf") || info.url?.endsWith(".ogv")) continue;
 
     results.push({
       title: page.title?.replace("File:", "") || "Image",
       thumbUrl: info.thumburl || info.url,
       pageUrl: `https://commons.wikimedia.org/wiki/${encodeURIComponent(page.title)}`,
-      dist: geoPage.dist, // distance in metres from the sample point
+      dist: geoPage.dist,
     });
   }
 

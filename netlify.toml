@@ -9,6 +9,7 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "strict-origin-when-cross-origin"
     Permissions-Policy = "camera=(), microphone=(), geolocation=(self)"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval'; style-src 'self' 'unsafe-inline' https://unpkg.com; img-src 'self' https://*.tile.openstreetmap.org https://upload.wikimedia.org https://maps.googleapis.com data:; connect-src 'self' https://commons.wikimedia.org https://*.tile.openstreetmap.org; font-src 'self'; frame-ancestors 'none'"
 
 [[headers]]
   for = "/_next/static/*"
