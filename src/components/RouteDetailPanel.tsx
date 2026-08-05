@@ -1,4 +1,5 @@
 ﻿"use client";
+import { useState } from "react";
 import { OsmRoute } from "@/data/routes";
 import { getDifficulty } from "@/data/difficulty";
 import { RouteImages } from "./RouteImages";
@@ -10,6 +11,7 @@ interface Props {
 }
 
 export function RouteDetailPanel({ feature, onClose }: Props) {
+  const [copied, setCopied] = useState(false);
   const route = feature.properties;
   const coords = feature.geometry.coordinates;
   const difficulty = getDifficulty(route);
@@ -28,7 +30,7 @@ export function RouteDetailPanel({ feature, onClose }: Props) {
   const diffColors: Record<string, string> = {
     unknown: "bg-gray-100 text-gray-700",
     easy: "bg-green-100 text-green-800",
-    moderate: "bg-yellow-100 text-yellow-800",
+    moderate: "bg-amber-100 text-amber-900",
     challenging: "bg-orange-100 text-orange-800",
     extreme: "bg-red-100 text-red-800",
   };
@@ -66,12 +68,15 @@ export function RouteDetailPanel({ feature, onClose }: Props) {
         <button
           onClick={() => {
             const url = window.location.origin + "/#" + route.id;
-            navigator.clipboard.writeText(url);
+            navigator.clipboard.writeText(url).then(() => {
+              setCopied(true);
+              setTimeout(() => setCopied(false), 2000);
+            });
           }}
           className="py-2 px-3 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium rounded-md transition-colors flex items-center gap-2"
           title="Copy shareable link"
         >
-          <span>🔗</span> Share
+          <span>{copied ? "✓" : "🔗"}</span> {copied ? "Copied!" : "Share"}
         </button>
       </div>
 

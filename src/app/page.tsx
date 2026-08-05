@@ -30,10 +30,9 @@ export default function Home() {
   });
 
   const [selectedFeature, setSelectedFeature] = useState<OsmRoute | null>(null);
-  const [showFilters, setShowFilters] = useState(false);
+  const [showFilters, setShowFilters] = useState(true);
   const [mobilePanel, setMobilePanel] = useState<"none" | "filters" | "detail">("none");
 
-  // URL sharing: load route from hash on mount
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
     if (hash) {
@@ -45,7 +44,6 @@ export default function Home() {
     }
   }, []);
 
-  // Update URL hash when route is selected
   useEffect(() => {
     if (selectedFeature) {
       window.history.replaceState(null, "", `#${selectedFeature.properties.id}`);
@@ -97,6 +95,7 @@ export default function Home() {
 
   return (
     <main className="h-screen flex flex-col md:flex-row relative">
+      {/* Desktop filter panel - defaults open */}
       {showFilters && (
         <aside className="hidden md:block w-80 bg-white shadow-lg z-10 overflow-y-auto filter-panel border-r border-gray-200">
           <FilterPanel
@@ -109,6 +108,7 @@ export default function Home() {
         </aside>
       )}
 
+      {/* Mobile filter panel (full overlay) */}
       {mobilePanel === "filters" && (
         <aside className="md:hidden fixed inset-0 z-30 bg-white overflow-y-auto">
           <div className="flex items-center justify-between p-4 border-b">
@@ -131,19 +131,37 @@ export default function Home() {
         </aside>
       )}
 
+      {/* Map area */}
       <div className="flex-1 relative">
-        <div className="absolute top-4 left-4 z-20 flex gap-2">
+        {/* Top-right controls (away from Leaflet zoom which is top-left) */}
+        <div className="absolute top-4 right-4 z-20 flex gap-2">
+          <div className="bg-white px-3 py-2 rounded-lg shadow-md text-xs text-gray-600 flex items-center">
+            {filteredRoutes.length} routes
+          </div>
           <button
             onClick={toggleFilters}
             className="bg-white px-3 py-2 rounded-lg shadow-md hover:bg-gray-50 text-sm font-medium"
             aria-label="Toggle filters"
           >
-            {showFilters || mobilePanel === "filters" ? "Hide Filters" : "Filters"}
+            {showFilters || mobilePanel === "filters" ? "✕ Filters" : "☰ Filters"}
           </button>
-          <div className="bg-white px-3 py-2 rounded-lg shadow-md text-xs text-gray-600 flex items-center">
-            {filteredRoutes.length} routes
-          </div>
         </div>
+
+        {/* Empty state overlay */}
+        {filteredRoutes.length === 0 && (
+          <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
+            <div className="bg-white/90 backdrop-blur-sm px-6 py-4 rounded-xl shadow-lg text-center pointer-events-auto">
+              <p className="text-gray-700 font-medium mb-1">No routes match your filters</p>
+              <p className="text-sm text-gray-500 mb-3">Try broadening your search or resetting filters.</p>
+              <button
+                onClick={() => setFilters({ type: "all", surface: "all", difficulty: "all", searchText: "", hideRestricted: false })}
+                className="px-4 py-2 bg-green-600 text-white text-sm rounded-md hover:bg-green-700"
+              >
+                Reset Filters
+              </button>
+            </div>
+          </div>
+        )}
 
         <MapView
           routes={filteredCollection}
@@ -152,6 +170,7 @@ export default function Home() {
         />
       </div>
 
+      {/* Desktop detail panel */}
       {selectedFeature && (
         <aside className="hidden md:block w-96 bg-white shadow-lg z-10 overflow-y-auto route-panel border-l border-gray-200">
           <RouteDetailPanel
@@ -161,9 +180,10 @@ export default function Home() {
         </aside>
       )}
 
+      {/* Mobile detail panel (bottom sheet) */}
       {mobilePanel === "detail" && selectedFeature && (
         <aside className="md:hidden fixed inset-x-0 bottom-0 z-30 bg-white rounded-t-xl shadow-2xl max-h-[80vh] overflow-y-auto">
-          <div className="sticky top-0 bg-white p-2 flex justify-center border-b">
+          <div className="sticky top-0 bg-white pt-2 pb-1 flex justify-center border-b shadow-sm z-10">
             <div className="w-10 h-1 bg-gray-300 rounded-full"></div>
           </div>
           <RouteDetailPanel
