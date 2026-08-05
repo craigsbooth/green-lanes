@@ -1,14 +1,24 @@
 ﻿"use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { FilterPanel } from "@/components/FilterPanel";
 import { RouteDetailPanel } from "@/components/RouteDetailPanel";
 import { FilterState } from "@/types/route";
-import { greenLanes, OsmRouteProperties, OsmRoute } from "@/data/routes";
+import { greenLanes, OsmRoute } from "@/data/routes";
 import { getDifficulty } from "@/data/difficulty";
 
-const MapView = dynamic(() => import("@/components/MapView"), { ssr: false });
+const MapView = dynamic(() => import("@/components/MapView"), {
+  ssr: false,
+  loading: () => (
+    <div className="h-full w-full flex items-center justify-center bg-gray-100">
+      <div className="text-center">
+        <div className="animate-spin h-8 w-8 border-4 border-green-200 border-t-green-600 rounded-full mx-auto mb-3"></div>
+        <p className="text-sm text-gray-600">Loading map...</p>
+      </div>
+    </div>
+  ),
+});
 
 export default function Home() {
   const [filters, setFilters] = useState<FilterState>({
@@ -20,7 +30,8 @@ export default function Home() {
   });
 
   const [selectedFeature, setSelectedFeature] = useState<OsmRoute | null>(null);
-  const [showFilters, setShowFilters] = useState(true);
+  const [showFilters, setShowFilters] = useState(false);
+  const [mobilePanel, setMobilePanel] = useState<"none" | "filters" | "detail">("none");
 
   const filteredRoutes = useMemo(() => {
     return greenLanes.features.filter((feature) => {
@@ -47,15 +58,27 @@ export default function Home() {
     return Array.from(set).sort();
   }, []);
 
-  const handleSelectRoute = (routeId: string) => {
+  const handleSelectRoute = useCallback((routeId: string) => {
     const feature = greenLanes.features.find((f) => f.properties.id === routeId) || null;
     setSelectedFeature(feature);
-  };
+    setMobilePanel("detail");
+  }, []);
+
+  const handleCloseDetail = useCallback(() => {
+    setSelectedFeature(null);
+    setMobilePanel("none");
+  }, []);
+
+  const toggleFilters = useCallback(() => {
+    setShowFilters((prev) => !prev);
+    setMobilePanel((prev) => (prev === "filters" ? "none" : "filters"));
+  }, []);
 
   return (
-    <main className="h-screen flex relative">
+    <main className="h-screen flex flex-col md:flex-row relative">
+      {/* Desktop filter panel */}
       {showFilters && (
-        <aside className="w-80 bg-white shadow-lg z-10 overflow-y-auto filter-panel border-r border-gray-200">
+        <aside className="hidden md:block w-80 bg-white shadow-lg z-10 overflow-y-auto filter-panel border-r border-gray-200">
           <FilterPanel
             filters={filters}
             onChange={setFilters}
@@ -66,14 +89,45 @@ export default function Home() {
         </aside>
       )}
 
+      {/* Mobile filter panel (overlay) */}
+      {mobilePanel === "filters" && (
+        <aside className="md:hidden fixed inset-0 z-30 bg-white overflow-y-auto">
+          <div className="flex items-center justify-between p-4 border-b">
+            <h2 className="font-bold text-gray-800">Filters</h2>
+            <button
+              onClick={() => setMobilePanel("none")}
+              className="text-gray-500 hover:text-gray-700 text-xl"
+              aria-label="Close filters"
+            >
+              &times;
+            </button>
+          </div>
+          <FilterPanel
+            filters={filters}
+            onChange={setFilters}
+            totalRoutes={greenLanes.features.length}
+            visibleRoutes={filteredRoutes.length}
+            surfaces={surfaces}
+          />
+        </aside>
+      )}
+
+      {/* Map */}
       <div className="flex-1 relative">
-        <button
-          onClick={() => setShowFilters(!showFilters)}
-          className="absolute top-4 left-4 z-20 bg-white px-3 py-2 rounded-lg shadow-md hover:bg-gray-50 text-sm font-medium"
-          aria-label={showFilters ? "Hide filters" : "Show filters"}
-        >
-          {showFilters ? "Hide Filters" : "Show Filters"}
-        </button>
+        {/* Top controls */}
+        <div className="absolute top-4 left-4 z-20 flex gap-2">
+          <button
+            onClick={toggleFilters}
+            className="bg-white px-3 py-2 rounded-lg shadow-md hover:bg-gray-50 text-sm font-medium"
+            aria-label="Toggle filters"
+          >
+            {showFilters || mobilePanel === "filters" ? "Hide Filters" : "Filters"}
+          </button>
+          <div className="bg-white px-3 py-2 rounded-lg shadow-md text-xs text-gray-600 flex items-center">
+            {filteredRoutes.length} routes
+          </div>
+        </div>
+
         <MapView
           routes={filteredCollection}
           onSelectRoute={handleSelectRoute}
@@ -81,11 +135,25 @@ export default function Home() {
         />
       </div>
 
+      {/* Desktop detail panel */}
       {selectedFeature && (
-        <aside className="w-96 bg-white shadow-lg z-10 overflow-y-auto route-panel border-l border-gray-200">
+        <aside className="hidden md:block w-96 bg-white shadow-lg z-10 overflow-y-auto route-panel border-l border-gray-200">
           <RouteDetailPanel
             feature={selectedFeature}
-            onClose={() => setSelectedFeature(null)}
+            onClose={handleCloseDetail}
+          />
+        </aside>
+      )}
+
+      {/* Mobile detail panel (overlay from bottom) */}
+      {mobilePanel === "detail" && selectedFeature && (
+        <aside className="md:hidden fixed inset-x-0 bottom-0 z-30 bg-white rounded-t-xl shadow-2xl max-h-[80vh] overflow-y-auto">
+          <div className="sticky top-0 bg-white p-2 flex justify-center border-b">
+            <div className="w-10 h-1 bg-gray-300 rounded-full"></div>
+          </div>
+          <RouteDetailPanel
+            feature={selectedFeature}
+            onClose={handleCloseDetail}
           />
         </aside>
       )}

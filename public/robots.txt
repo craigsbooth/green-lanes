@@ -1,0 +1,3 @@
+﻿User-agent: *
+Allow: /
+Sitemap: https://fancy-treacle-886ab8.netlify.app/sitemap.xml
