@@ -1,16 +1,17 @@
 ﻿/**
  * Geographic utility functions for route calculations and exports.
+ * All distances in MILES (UK).
  */
 
 /**
  * Calculate the distance between two points using the Haversine formula.
- * Returns distance in kilometres.
+ * Returns distance in miles.
  */
 export function haversineDistance(
   lat1: number, lon1: number,
   lat2: number, lon2: number
 ): number {
-  const R = 6371;
+  const R = 3959; // Earth radius in miles
   const dLat = toRad(lat2 - lat1);
   const dLon = toRad(lon2 - lon1);
   const a =
@@ -28,7 +29,7 @@ function toRad(deg: number): number {
 /**
  * Calculate total length of a route from its coordinate array.
  * Coordinates are [lng, lat] pairs (GeoJSON format).
- * Returns length in kilometres, rounded to 1 decimal place.
+ * Returns length in miles, rounded to 1 decimal place.
  */
 export function calculateRouteLength(coordinates: [number, number][]): number {
   let total = 0;

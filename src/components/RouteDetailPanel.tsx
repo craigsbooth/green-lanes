@@ -56,7 +56,7 @@ export function RouteDetailPanel({ feature, onClose, onAddToTrip, isInTrip }: Pr
         <span className={`text-xs px-2 py-0.5 rounded-full ${diffColors[difficulty]}`}>{difficulty}</span>
         {route.legalStatus === "tro_restricted" && <span className="text-xs bg-red-100 text-red-800 px-2 py-0.5 rounded-full">TRO Restricted</span>}
         {route.legalStatus === "open" && <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">Open</span>}
-        <span className="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">{length} km</span>
+        <span className="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">{length} miles</span>
       </div>
 
       {/* GPX Download + Share + Add to Trip */}
@@ -100,7 +100,7 @@ export function RouteDetailPanel({ feature, onClose, onAddToTrip, isInTrip }: Pr
       </div>
 
       <div className="grid grid-cols-2 gap-2 mb-4">
-        <Stat label="Length" value={`${length} km`} />
+        <Stat label="Length" value={`${length} miles`} />
         <Stat label="Surface" value={route.surface || "unknown"} />
         <Stat label="Highway" value={route.highway || "\u2014"} />
         <Stat label="Tracktype" value={route.tracktype || "\u2014"} />

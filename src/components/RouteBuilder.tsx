@@ -27,7 +27,7 @@ export function RouteBuilder({ routes, onRemove, onClear }: Props) {
     });
 
     const routeNames = routes.map((r) => r.properties.name).join(" → ");
-    const desc = `Green lane route: ${routeNames}. Total: ${Math.round(totalLength * 10) / 10} km. Export for use with OsmAnd, Locus Map, or Sygic on Android Auto.`;
+    const desc = `Green lane route: ${routeNames}. Total: ${Math.round(totalLength * 10) / 10} miles. Export for use with OsmAnd, Locus Map, or Sygic on Android Auto.`;
     const gpx = generateGPX(tripName, desc, allCoords);
     const filename = tripName.replace(/[^a-zA-Z0-9]/g, "-").toLowerCase() + ".gpx";
     downloadFile(gpx, filename, "application/gpx+xml");
@@ -62,7 +62,7 @@ export function RouteBuilder({ routes, onRemove, onClear }: Props) {
             <div className="flex-1 min-w-0">
               <p className="text-sm font-medium text-gray-800 truncate">{route.properties.name}</p>
               <p className="text-xs text-gray-500">
-                {calculateRouteLength(route.geometry.coordinates)} km · {route.properties.surface}
+                {calculateRouteLength(route.geometry.coordinates)} miles · {route.properties.surface}
               </p>
             </div>
             <button
@@ -80,7 +80,7 @@ export function RouteBuilder({ routes, onRemove, onClear }: Props) {
       <div className="flex justify-between items-center p-3 bg-green-50 rounded-md mb-4">
         <div>
           <p className="text-xs text-green-600">Total distance</p>
-          <p className="text-sm font-bold text-green-800">{Math.round(totalLength * 10) / 10} km</p>
+          <p className="text-sm font-bold text-green-800">{Math.round(totalLength * 10) / 10} miles</p>
         </div>
         <div>
           <p className="text-xs text-green-600">Segments</p>

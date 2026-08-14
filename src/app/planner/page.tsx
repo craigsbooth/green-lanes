@@ -128,7 +128,7 @@ export default function PlannerPage() {
   const handleExport = useCallback(() => {
     if (!fullRouteCoords) return;
     const laneNames = greenLaneSegments.map((s) => s.lane.properties.name).join(", ");
-    const desc = `Planned route${laneNames ? " via " + laneNames : ""}. Total: ${routeResult?.distance || 0} km.`;
+    const desc = `Planned route${laneNames ? " via " + laneNames : ""}. Total: ${routeResult?.distance || 0} miles.`;
     const gpx = generateGPX("Green Lane Route", desc, fullRouteCoords);
     downloadFile(gpx, "green-lane-route.gpx", "application/gpx+xml");
   }, [fullRouteCoords, greenLaneSegments, routeResult]);

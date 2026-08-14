@@ -40,7 +40,7 @@ export async function getRoute(waypoints: { lat: number; lng: number }[]): Promi
   const route = data.routes[0];
   return {
     coordinates: route.geometry.coordinates as [number, number][],
-    distance: Math.round((route.distance / 1000) * 10) / 10,
+    distance: Math.round((route.distance / 1609.34) * 10) / 10, // metres to miles
     duration: Math.round(route.duration),
   };
 }

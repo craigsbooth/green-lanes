@@ -108,7 +108,7 @@ export function RoutePlanner({
           <div className="flex justify-between">
             <div>
               <p className="text-xs text-green-600">Total distance</p>
-              <p className="text-lg font-bold text-green-800">{totalDistance} km</p>
+              <p className="text-lg font-bold text-green-800">{totalDistance} miles</p>
             </div>
             <div>
               <p className="text-xs text-green-600">Est. time</p>
