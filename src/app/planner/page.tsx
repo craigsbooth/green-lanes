@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useState, useMemo, useCallback } from "react";
+import { useState, useMemo, useCallback, useRef } from "react";
 import dynamic from "next/dynamic";
 import { RoutePlanner, Waypoint, RouteWarning } from "@/components/RoutePlanner";
 import { greenLanes, OsmRoute } from "@/data/routes";
@@ -24,6 +24,12 @@ export default function PlannerPage() {
   const [greenLaneSegments, setGreenLaneSegments] = useState<{ lane: OsmRoute; startIdx: number; endIdx: number }[]>([]);
   const [warnings, setWarnings] = useState<RouteWarning[]>([]);
   const [isRouting, setIsRouting] = useState(false);
+
+  // Refs to avoid stale closures in map callbacks
+  const waypointsRef = useRef(waypoints);
+  waypointsRef.current = waypoints;
+  const clickModeRef = useRef(clickMode);
+  clickModeRef.current = clickMode;
 
   const filteredRoutes = useMemo(() => greenLanes, []);
 
@@ -108,51 +114,54 @@ export default function PlannerPage() {
 
   const handleGreenLaneClick = useCallback((routeId: string, lat: number, lng: number) => {
     // Don't add green lanes when we're in start/end click mode
-    if (clickMode !== "none") return;
+    if (clickModeRef.current !== "none") return;
 
     // Need both start and end before adding via-points
-    const hasStart = waypoints.some((w) => w.id === "start");
-    const hasEnd = waypoints.some((w) => w.id === "end");
+    const wps = waypointsRef.current;
+    const hasStart = wps.some((w) => w.id === "start");
+    const hasEnd = wps.some((w) => w.id === "end");
     if (!hasStart || !hasEnd) return;
 
     const lane = greenLanes.features.find((f) => f.properties.id === routeId);
     if (!lane) return;
 
-    const wpId = `via-${Date.now()}`;
-    if (waypoints.find((w) => w.greenLane?.properties.id === routeId)) return;
+    // Don't add duplicate
+    if (wps.find((w) => w.greenLane?.properties.id === routeId)) return;
 
+    const wpId = `via-${Date.now()}`;
     const newWp: Waypoint = { id: wpId, lat, lng, label: lane.properties.name, greenLane: lane };
 
-    const endIdx = waypoints.findIndex((w) => w.id === "end");
+    const endIdx = wps.findIndex((w) => w.id === "end");
     let updated: Waypoint[];
     if (endIdx >= 0) {
-      updated = [...waypoints.slice(0, endIdx), newWp, ...waypoints.slice(endIdx)];
+      updated = [...wps.slice(0, endIdx), newWp, ...wps.slice(endIdx)];
     } else {
-      updated = [...waypoints, newWp];
+      updated = [...wps, newWp];
     }
 
     setWaypoints(updated);
     setGreenLaneSegments((prev) => [...prev, { lane, startIdx: 0, endIdx: 0 }]);
     calculateRoute(updated);
-  }, [waypoints, clickMode, calculateRoute]);
+  }, [calculateRoute]);
 
   // DRAG: existing waypoint dragged to new position
   const handleWaypointDrag = useCallback((id: string, lat: number, lng: number) => {
+    const wps = waypointsRef.current;
     const lane = detectGreenLane(lat, lng);
-    const updated = waypoints.map((wp) =>
+    const updated = wps.map((wp) =>
       wp.id === id ? { ...wp, lat, lng, greenLane: lane, label: lane ? lane.properties.name : wp.label } : wp
     );
     setWaypoints(updated);
 
-    // Update green lane segments
     const lanes = updated.filter((w) => w.greenLane).map((w) => ({ lane: w.greenLane!, startIdx: 0, endIdx: 0 }));
     setGreenLaneSegments(lanes);
 
     calculateRoute(updated);
-  }, [waypoints, calculateRoute]);
+  }, [calculateRoute]);
 
   // DRAG: midpoint between waypoints dragged to create new via-point
   const handleRouteLineDrag = useCallback((lat: number, lng: number, segmentIndex: number) => {
+    const wps = waypointsRef.current;
     const lane = detectGreenLane(lat, lng);
     const newWp: Waypoint = {
       id: `via-${Date.now()}`,
@@ -162,11 +171,10 @@ export default function PlannerPage() {
       greenLane: lane,
     };
 
-    // Insert after segmentIndex (between waypoints[segmentIndex] and waypoints[segmentIndex+1])
     const updated = [
-      ...waypoints.slice(0, segmentIndex + 1),
+      ...wps.slice(0, segmentIndex + 1),
       newWp,
-      ...waypoints.slice(segmentIndex + 1),
+      ...wps.slice(segmentIndex + 1),
     ];
 
     setWaypoints(updated);
@@ -175,7 +183,7 @@ export default function PlannerPage() {
     setGreenLaneSegments(lanes);
 
     calculateRoute(updated);
-  }, [waypoints, calculateRoute]);
+  }, [calculateRoute]);
 
   const handleOverrideWarning = useCallback((waypointId: string) => {
     setWarnings((prev) => prev.map((w) => w.waypointId === waypointId ? { ...w, overridden: true } : w));
