@@ -4,8 +4,8 @@ import { useState, useMemo, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { RoutePlanner, Waypoint, RouteWarning } from "@/components/RoutePlanner";
 import { greenLanes, OsmRoute } from "@/data/routes";
-import { getRoute, RoutingResult } from "@/lib/routing";
-import { generateGPX, downloadFile, calculateRouteLength } from "@/lib/geo";
+import { getRoute, RoutingResult, findNearestGreenLane } from "@/lib/routing";
+import { generateGPX, downloadFile } from "@/lib/geo";
 
 const PlannerMap = dynamic(() => import("@/components/PlannerMap"), {
   ssr: false,
@@ -27,7 +27,6 @@ export default function PlannerPage() {
 
   const filteredRoutes = useMemo(() => greenLanes, []);
 
-  // Calculate route whenever waypoints change
   const calculateRoute = useCallback(async (wps: Waypoint[]) => {
     if (wps.length < 2) {
       setRouteResult(null);
@@ -40,33 +39,7 @@ export default function PlannerPage() {
       const result = await getRoute(wps.map((w) => ({ lat: w.lat, lng: w.lng })));
       setRouteResult(result);
       setFullRouteCoords(result.coordinates);
-
-      // Check for warnings on green lane waypoints
-      const newWarnings: RouteWarning[] = [];
-      for (const wp of wps) {
-        if (wp.greenLane) {
-          const props = wp.greenLane.properties;
-          if (props.legalStatus === "tro_restricted" || props.motor_vehicle === "no") {
-            newWarnings.push({
-              waypointId: wp.id,
-              type: "tro",
-              message: `This route has a Traffic Regulation Order restricting motor vehicles. Check with the council for current status.`,
-              laneName: props.name,
-              overridden: false,
-            });
-          }
-          if (props.surface === "unknown") {
-            newWarnings.push({
-              waypointId: wp.id,
-              type: "unknown_surface",
-              message: `Surface condition unknown. The route may be impassable in wet weather.`,
-              laneName: props.name,
-              overridden: false,
-            });
-          }
-        }
-      }
-      setWarnings(newWarnings);
+      generateWarnings(wps);
     } catch (err) {
       console.error("Routing failed:", err);
       setRouteResult(null);
@@ -75,15 +48,54 @@ export default function PlannerPage() {
     setIsRouting(false);
   }, []);
 
+  const generateWarnings = (wps: Waypoint[]) => {
+    const newWarnings: RouteWarning[] = [];
+    for (const wp of wps) {
+      if (wp.greenLane) {
+        const props = wp.greenLane.properties;
+        if (props.legalStatus === "tro_restricted" || props.motor_vehicle === "no") {
+          newWarnings.push({
+            waypointId: wp.id,
+            type: "tro",
+            message: "Traffic Regulation Order restricts motor vehicles. Check current status with the council.",
+            laneName: props.name,
+            overridden: false,
+          });
+        }
+        if (props.surface === "unknown") {
+          newWarnings.push({
+            waypointId: wp.id,
+            type: "unknown_surface",
+            message: "Surface condition unknown. May be impassable in wet weather.",
+            laneName: props.name,
+            overridden: false,
+          });
+        }
+      }
+    }
+    setWarnings(newWarnings);
+  };
+
+  // Detect if a point is near a green lane
+  const detectGreenLane = (lat: number, lng: number): OsmRoute | undefined => {
+    const nearest = findNearestGreenLane(lat, lng, greenLanes.features, 0.1); // 100m
+    if (nearest) {
+      return greenLanes.features.find((f) => f.properties.id === nearest.featureId);
+    }
+    return undefined;
+  };
+
   const handleMapClick = useCallback((lat: number, lng: number) => {
     if (clickMode === "start") {
-      const newWp: Waypoint = { id: "start", lat, lng, label: "Start" };
+      const lane = detectGreenLane(lat, lng);
+      const newWp: Waypoint = { id: "start", lat, lng, label: "Start", greenLane: lane };
       const updated = [newWp, ...waypoints.filter((w) => w.id !== "start")];
       setWaypoints(updated);
       setClickMode("none");
       calculateRoute(updated);
     } else if (clickMode === "end") {
-      const newWp: Waypoint = { id: "end", lat, lng, label: "End" };
+      const lane = detectGreenLane(lat, lng);
+      const newWp: Waypoint = { id: "end", lat, lng, label: "End", greenLane: lane };
       const updated = [...waypoints.filter((w) => w.id !== "end"), newWp];
       setWaypoints(updated);
       setClickMode("none");
@@ -95,19 +107,11 @@ export default function PlannerPage() {
     const lane = greenLanes.features.find((f) => f.properties.id === routeId);
     if (!lane) return;
 
-    const wpId = `via-${routeId}`;
-    // Don't add duplicate
-    if (waypoints.find((w) => w.id === wpId)) return;
+    const wpId = `via-${Date.now()}`;
+    if (waypoints.find((w) => w.greenLane?.properties.id === routeId)) return;
 
-    const newWp: Waypoint = {
-      id: wpId,
-      lat,
-      lng,
-      label: lane.properties.name,
-      greenLane: lane,
-    };
+    const newWp: Waypoint = { id: wpId, lat, lng, label: lane.properties.name, greenLane: lane };
 
-    // Insert before the end waypoint
     const endIdx = waypoints.findIndex((w) => w.id === "end");
     let updated: Waypoint[];
     if (endIdx >= 0) {
@@ -118,6 +122,47 @@ export default function PlannerPage() {
 
     setWaypoints(updated);
     setGreenLaneSegments((prev) => [...prev, { lane, startIdx: 0, endIdx: 0 }]);
+    calculateRoute(updated);
+  }, [waypoints, calculateRoute]);
+
+  // DRAG: existing waypoint dragged to new position
+  const handleWaypointDrag = useCallback((id: string, lat: number, lng: number) => {
+    const lane = detectGreenLane(lat, lng);
+    const updated = waypoints.map((wp) =>
+      wp.id === id ? { ...wp, lat, lng, greenLane: lane, label: lane ? lane.properties.name : wp.label } : wp
+    );
+    setWaypoints(updated);
+
+    // Update green lane segments
+    const lanes = updated.filter((w) => w.greenLane).map((w) => ({ lane: w.greenLane!, startIdx: 0, endIdx: 0 }));
+    setGreenLaneSegments(lanes);
+
+    calculateRoute(updated);
+  }, [waypoints, calculateRoute]);
+
+  // DRAG: midpoint between waypoints dragged to create new via-point
+  const handleRouteLineDrag = useCallback((lat: number, lng: number, segmentIndex: number) => {
+    const lane = detectGreenLane(lat, lng);
+    const newWp: Waypoint = {
+      id: `via-${Date.now()}`,
+      lat,
+      lng,
+      label: lane ? lane.properties.name : "Via point",
+      greenLane: lane,
+    };
+
+    // Insert after segmentIndex (between waypoints[segmentIndex] and waypoints[segmentIndex+1])
+    const updated = [
+      ...waypoints.slice(0, segmentIndex + 1),
+      newWp,
+      ...waypoints.slice(segmentIndex + 1),
+    ];
+
+    setWaypoints(updated);
+
+    const lanes = updated.filter((w) => w.greenLane).map((w) => ({ lane: w.greenLane!, startIdx: 0, endIdx: 0 }));
+    setGreenLaneSegments(lanes);
+
     calculateRoute(updated);
   }, [waypoints, calculateRoute]);
 
@@ -145,12 +190,11 @@ export default function PlannerPage() {
 
   return (
     <main className="h-screen flex flex-col md:flex-row">
-      {/* Sidebar */}
       <aside className="w-full md:w-96 bg-white shadow-lg z-10 overflow-y-auto border-r border-gray-200 md:max-h-screen max-h-[40vh]">
         <div className="p-4 border-b flex items-center justify-between">
           <div>
             <h1 className="font-bold text-gray-800">Route Planner</h1>
-            <p className="text-xs text-gray-400">Plan roads + green lanes together</p>
+            <p className="text-xs text-gray-400">Drag the route to reshape it</p>
           </div>
           <a href="/" className="text-xs text-blue-500 hover:underline">← Back to map</a>
         </div>
@@ -169,13 +213,19 @@ export default function PlannerPage() {
         />
       </aside>
 
-      {/* Map */}
       <div className="flex-1 relative">
         {clickMode !== "none" && (
           <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg text-sm font-medium">
             Click the map to set {clickMode === "start" ? "start point" : "end point"}
           </div>
         )}
+
+        {waypoints.length >= 2 && !isRouting && clickMode === "none" && (
+          <div className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-lg shadow text-xs text-gray-600">
+            Drag the white circles on the route to reshape it · Click green lanes to route through them
+          </div>
+        )}
+
         <PlannerMap
           routes={filteredRoutes}
           plannedRoute={fullRouteCoords}
@@ -183,6 +233,8 @@ export default function PlannerPage() {
           clickMode={clickMode}
           onMapClick={handleMapClick}
           onGreenLaneClick={handleGreenLaneClick}
+          onWaypointDrag={handleWaypointDrag}
+          onRouteLineDrag={handleRouteLineDrag}
           selectedRouteId={null}
         />
       </div>

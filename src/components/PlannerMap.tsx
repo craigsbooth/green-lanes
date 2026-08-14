@@ -1,6 +1,6 @@
 ﻿"use client";
 
-import { useEffect, useRef, useCallback } from "react";
+import { useEffect, useRef, useCallback, useState } from "react";
 import { MapContainer, TileLayer, GeoJSON, useMap, useMapEvents, Marker, Polyline, Popup } from "react-leaflet";
 import L from "leaflet";
 import { OsmRouteCollection, OsmRouteProperties } from "@/data/routes";
@@ -15,6 +15,8 @@ interface Props {
   clickMode: "none" | "start" | "end" | "via";
   onMapClick: (lat: number, lng: number) => void;
   onGreenLaneClick: (routeId: string, lat: number, lng: number) => void;
+  onWaypointDrag: (id: string, lat: number, lng: number) => void;
+  onRouteLineDrag: (lat: number, lng: number, segmentIndex: number) => void;
   selectedRouteId: string | null;
 }
 
@@ -26,9 +28,10 @@ const difficultyColors: Record<Difficulty, string> = {
   extreme: "#e63946",
 };
 
-const startIcon = L.divIcon({ className: "", html: '<div style="background:#16a34a;width:14px;height:14px;border-radius:50%;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,0.3)"></div>', iconSize: [14, 14], iconAnchor: [7, 7] });
-const endIcon = L.divIcon({ className: "", html: '<div style="background:#dc2626;width:14px;height:14px;border-radius:50%;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,0.3)"></div>', iconSize: [14, 14], iconAnchor: [7, 7] });
-const viaIcon = L.divIcon({ className: "", html: '<div style="background:#2563eb;width:10px;height:10px;border-radius:50%;border:2px solid white;box-shadow:0 1px 3px rgba(0,0,0,0.3)"></div>', iconSize: [10, 10], iconAnchor: [5, 5] });
+const startIcon = L.divIcon({ className: "", html: '<div style="background:#16a34a;width:16px;height:16px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);cursor:grab"></div>', iconSize: [16, 16], iconAnchor: [8, 8] });
+const endIcon = L.divIcon({ className: "", html: '<div style="background:#dc2626;width:16px;height:16px;border-radius:50%;border:3px solid white;box-shadow:0 2px 6px rgba(0,0,0,0.3);cursor:grab"></div>', iconSize: [16, 16], iconAnchor: [8, 8] });
+const viaIcon = L.divIcon({ className: "", html: '<div style="background:#2563eb;width:12px;height:12px;border-radius:50%;border:2px solid white;box-shadow:0 2px 4px rgba(0,0,0,0.3);cursor:grab"></div>', iconSize: [12, 12], iconAnchor: [6, 6] });
+const dragHintIcon = L.divIcon({ className: "", html: '<div style="background:white;width:10px;height:10px;border-radius:50%;border:2px solid #3b82f6;opacity:0.7;cursor:grab"></div>', iconSize: [10, 10], iconAnchor: [5, 5] });
 
 function ClickHandler({ mode, onMapClick }: { mode: string; onMapClick: (lat: number, lng: number) => void }) {
   useMapEvents({
@@ -59,7 +62,106 @@ function FitBounds({ routes }: { routes: OsmRouteCollection }) {
   return null;
 }
 
-export default function PlannerMap({ routes, plannedRoute, waypoints, clickMode, onMapClick, onGreenLaneClick, selectedRouteId }: Props) {
+/**
+ * Draggable marker component that reports its new position on drag end.
+ */
+function DraggableWaypoint({ wp, idx, total, onDragEnd }: {
+  wp: Waypoint;
+  idx: number;
+  total: number;
+  onDragEnd: (id: string, lat: number, lng: number) => void;
+}) {
+  const icon = idx === 0 ? startIcon : idx === total - 1 ? endIcon : viaIcon;
+  const markerRef = useRef<L.Marker | null>(null);
+
+  const eventHandlers = {
+    dragend() {
+      const marker = markerRef.current;
+      if (marker) {
+        const pos = marker.getLatLng();
+        onDragEnd(wp.id, pos.lat, pos.lng);
+      }
+    },
+  };
+
+  return (
+    <Marker
+      position={[wp.lat, wp.lng]}
+      icon={icon}
+      draggable={true}
+      eventHandlers={eventHandlers}
+      ref={markerRef}
+    >
+      <Popup>
+        <span className="text-xs">
+          {idx === 0 ? "Start (drag to move)" : idx === total - 1 ? "End (drag to move)" : `Via point ${idx} (drag to move)`}
+          {wp.greenLane && <><br/><strong>{wp.greenLane.properties.name}</strong></>}
+        </span>
+      </Popup>
+    </Marker>
+  );
+}
+
+/**
+ * Mid-point markers between waypoints that appear on the route line.
+ * Dragging these inserts a new via-point.
+ */
+function MidpointMarkers({ waypoints, routeCoords, onDrag }: {
+  waypoints: Waypoint[];
+  routeCoords: [number, number][] | null;
+  onDrag: (lat: number, lng: number, segmentIndex: number) => void;
+}) {
+  if (!routeCoords || waypoints.length < 2) return null;
+
+  // Place a draggable midpoint between each consecutive pair of waypoints
+  const midpoints: { lat: number; lng: number; segIdx: number }[] = [];
+  for (let i = 0; i < waypoints.length - 1; i++) {
+    const a = waypoints[i];
+    const b = waypoints[i + 1];
+    midpoints.push({
+      lat: (a.lat + b.lat) / 2,
+      lng: (a.lng + b.lng) / 2,
+      segIdx: i,
+    });
+  }
+
+  return (
+    <>
+      {midpoints.map((mp, idx) => (
+        <MidpointDragMarker key={`mid-${idx}`} lat={mp.lat} lng={mp.lng} segIdx={mp.segIdx} onDrag={onDrag} />
+      ))}
+    </>
+  );
+}
+
+function MidpointDragMarker({ lat, lng, segIdx, onDrag }: {
+  lat: number; lng: number; segIdx: number;
+  onDrag: (lat: number, lng: number, segmentIndex: number) => void;
+}) {
+  const markerRef = useRef<L.Marker | null>(null);
+
+  const eventHandlers = {
+    dragend() {
+      const marker = markerRef.current;
+      if (marker) {
+        const pos = marker.getLatLng();
+        onDrag(pos.lat, pos.lng, segIdx);
+      }
+    },
+  };
+
+  return (
+    <Marker
+      position={[lat, lng]}
+      icon={dragHintIcon}
+      draggable={true}
+      eventHandlers={eventHandlers}
+      ref={markerRef}
+    />
+  );
+}
+
+export default function PlannerMap({ routes, plannedRoute, waypoints, clickMode, onMapClick, onGreenLaneClick, onWaypointDrag, onRouteLineDrag, selectedRouteId }: Props) {
   const onEachFeature = useCallback((feature: any, layer: L.Layer) => {
     const props = feature.properties as OsmRouteProperties;
     const difficulty = getDifficulty(props);
@@ -70,8 +172,7 @@ export default function PlannerMap({ routes, plannedRoute, waypoints, clickMode,
     );
     layer.on("click", (e: any) => {
       L.DomEvent.stopPropagation(e);
-      const latlng = e.latlng;
-      onGreenLaneClick(props.id, latlng.lat, latlng.lng);
+      onGreenLaneClick(props.id, e.latlng.lat, e.latlng.lng);
     });
   }, [onGreenLaneClick]);
 
@@ -85,7 +186,6 @@ export default function PlannerMap({ routes, plannedRoute, waypoints, clickMode,
     };
   }, []);
 
-  // Convert planned route from [lng,lat] to [lat,lng] for Leaflet
   const routeLine = plannedRoute
     ? plannedRoute.map(([lng, lat]) => [lat, lng] as [number, number])
     : null;
@@ -109,23 +209,16 @@ export default function PlannerMap({ routes, plannedRoute, waypoints, clickMode,
 
       {/* Planned route line */}
       {routeLine && (
-        <Polyline positions={routeLine} color="#3b82f6" weight={5} opacity={0.9} />
+        <Polyline positions={routeLine} color="#3b82f6" weight={5} opacity={0.85} />
       )}
 
-      {/* Waypoint markers */}
-      {waypoints.map((wp, idx) => {
-        const icon = idx === 0 ? startIcon : idx === waypoints.length - 1 ? endIcon : viaIcon;
-        return (
-          <Marker key={wp.id} position={[wp.lat, wp.lng]} icon={icon}>
-            <Popup>
-              <span className="text-xs">
-                {idx === 0 ? "Start" : idx === waypoints.length - 1 ? "End" : `Via ${idx}`}
-                {wp.greenLane && <><br/>{wp.greenLane.properties.name}</>}
-              </span>
-            </Popup>
-          </Marker>
-        );
-      })}
+      {/* Midpoint drag handles (between waypoints) */}
+      <MidpointMarkers waypoints={waypoints} routeCoords={plannedRoute} onDrag={onRouteLineDrag} />
+
+      {/* Draggable waypoint markers */}
+      {waypoints.map((wp, idx) => (
+        <DraggableWaypoint key={wp.id} wp={wp} idx={idx} total={waypoints.length} onDragEnd={onWaypointDrag} />
+      ))}
     </MapContainer>
   );
 }
