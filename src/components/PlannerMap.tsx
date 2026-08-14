@@ -162,6 +162,10 @@ function MidpointDragMarker({ lat, lng, segIdx, onDrag }: {
 }
 
 export default function PlannerMap({ routes, plannedRoute, waypoints, clickMode, onMapClick, onGreenLaneClick, onWaypointDrag, onRouteLineDrag, selectedRouteId }: Props) {
+  // Use ref so the GeoJSON layer click always calls the latest callback
+  const greenLaneClickRef = useRef(onGreenLaneClick);
+  greenLaneClickRef.current = onGreenLaneClick;
+
   const onEachFeature = useCallback((feature: any, layer: L.Layer) => {
     const props = feature.properties as OsmRouteProperties;
     const difficulty = getDifficulty(props);
@@ -172,9 +176,9 @@ export default function PlannerMap({ routes, plannedRoute, waypoints, clickMode,
     );
     layer.on("click", (e: any) => {
       L.DomEvent.stopPropagation(e);
-      onGreenLaneClick(props.id, e.latlng.lat, e.latlng.lng);
+      greenLaneClickRef.current(props.id, e.latlng.lat, e.latlng.lng);
     });
-  }, [onGreenLaneClick]);
+  }, []);
 
   const style = useCallback((feature: any) => {
     const props = feature?.properties as OsmRouteProperties;
