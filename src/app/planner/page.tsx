@@ -107,6 +107,14 @@ export default function PlannerPage() {
   }, [clickMode, waypoints, calculateRoute]);
 
   const handleGreenLaneClick = useCallback((routeId: string, lat: number, lng: number) => {
+    // Don't add green lanes when we're in start/end click mode
+    if (clickMode !== "none") return;
+
+    // Need both start and end before adding via-points
+    const hasStart = waypoints.some((w) => w.id === "start");
+    const hasEnd = waypoints.some((w) => w.id === "end");
+    if (!hasStart || !hasEnd) return;
+
     const lane = greenLanes.features.find((f) => f.properties.id === routeId);
     if (!lane) return;
 
@@ -126,7 +134,7 @@ export default function PlannerPage() {
     setWaypoints(updated);
     setGreenLaneSegments((prev) => [...prev, { lane, startIdx: 0, endIdx: 0 }]);
     calculateRoute(updated);
-  }, [waypoints, calculateRoute]);
+  }, [waypoints, clickMode, calculateRoute]);
 
   // DRAG: existing waypoint dragged to new position
   const handleWaypointDrag = useCallback((id: string, lat: number, lng: number) => {
