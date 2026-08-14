@@ -34,10 +34,7 @@ export async function getRoute(waypoints: { lat: number; lng: number }[]): Promi
   };
 }
 
-/**
- * Get a road route between just two points.
- */
-export async function getSegmentRoute(
+async function getSegmentRoute(
   from: { lat: number; lng: number },
   to: { lat: number; lng: number }
 ): Promise<RoutingResult> {
@@ -76,11 +73,15 @@ function haversineQuick(lat1: number, lon1: number, lat2: number, lon2: number):
 }
 
 /**
- * Build a complete route that stitches road segments (OSRM) with green lane geometry.
+ * Build a stitched route: road → green lane → road → green lane → road...
+ *
+ * Key insight: when a waypoint has a greenLane, we treat it as a SEGMENT to traverse,
+ * not a point to pass through. The routing is:
  * 
- * For each segment between waypoints:
- *   - If the next waypoint is a green lane: route road to lane start, then use lane geometry
- *   - If it's a normal point: route road to road
+ *   previous point --[road]--> lane ENTRY --[lane geometry]--> lane EXIT --[road]--> next point
+ *
+ * We figure out which end of the lane is the "entry" (closest to previous point)
+ * and which is the "exit" (closest to next point).
  */
 export async function buildStitchedRoute(
   waypoints: { lat: number; lng: number; greenLane?: any }[]
@@ -89,68 +90,100 @@ export async function buildStitchedRoute(
   let totalDistance = 0;
   let totalDuration = 0;
 
-  for (let i = 0; i < waypoints.length - 1; i++) {
-    const from = waypoints[i];
-    const to = waypoints[i + 1];
+  // Build a list of "effective points" that the route must pass through.
+  // For green lane waypoints, we expand them into entry + exit points.
+  interface EffectiveSegment {
+    type: "road";
+    from: { lat: number; lng: number };
+    to: { lat: number; lng: number };
+  }
+  interface LaneSegment {
+    type: "lane";
+    coords: [number, number][];
+  }
 
-    if (to.greenLane) {
-      // Route from current point to the START of the green lane via road
-      const laneCoords = to.greenLane.geometry.coordinates as [number, number][];
+  const segments: (EffectiveSegment | LaneSegment)[] = [];
+
+  // Current position tracks where we are after each segment
+  let currentPos = { lat: waypoints[0].lat, lng: waypoints[0].lng };
+
+  for (let i = 1; i < waypoints.length; i++) {
+    const wp = waypoints[i];
+
+    if (wp.greenLane) {
+      const laneCoords = wp.greenLane.geometry.coordinates as [number, number][];
       const laneStart = laneCoords[0]; // [lng, lat]
-      const laneEnd = laneCoords[laneCoords.length - 1];
+      const laneEnd = laneCoords[laneCoords.length - 1]; // [lng, lat]
 
-      // Determine which end of the lane is closer to "from"
-      const distToStart = haversineQuick(from.lat, from.lng, laneStart[1], laneStart[0]);
-      const distToEnd = haversineQuick(from.lat, from.lng, laneEnd[1], laneEnd[0]);
-      const useReverse = distToEnd < distToStart;
-      const entryPoint = useReverse ? laneEnd : laneStart;
+      // Which end is closer to where we currently are? That's the entry.
+      const distToStart = haversineQuick(currentPos.lat, currentPos.lng, laneStart[1], laneStart[0]);
+      const distToEnd = haversineQuick(currentPos.lat, currentPos.lng, laneEnd[1], laneEnd[0]);
 
-      try {
-        // Road route to the lane entry
-        const roadToLane = await getSegmentRoute(
-          { lat: from.lat, lng: from.lng },
-          { lat: entryPoint[1], lng: entryPoint[0] }
-        );
-        allCoords.push(...roadToLane.coordinates);
-        totalDistance += roadToLane.distance;
-        totalDuration += roadToLane.duration;
-      } catch {
-        // If road routing fails, just connect directly
+      let entry: [number, number];
+      let exit: [number, number];
+      let orderedCoords: [number, number][];
+
+      if (distToStart <= distToEnd) {
+        entry = laneStart;
+        exit = laneEnd;
+        orderedCoords = laneCoords;
+      } else {
+        entry = laneEnd;
+        exit = laneStart;
+        orderedCoords = [...laneCoords].reverse();
       }
 
-      // Add the green lane geometry itself
-      const orderedLane = useReverse ? [...laneCoords].reverse() : laneCoords;
-      allCoords.push(...orderedLane);
+      // Road from current position to lane entry
+      segments.push({
+        type: "road",
+        from: { lat: currentPos.lat, lng: currentPos.lng },
+        to: { lat: entry[1], lng: entry[0] },
+      });
 
-      // Estimate lane distance (crude: count coord pairs)
-      const laneDistKm = laneCoords.reduce((sum, coord, idx) => {
-        if (idx === 0) return 0;
-        const prev = laneCoords[idx - 1];
-        return sum + haversineQuick(prev[1], prev[0], coord[1], coord[0]);
-      }, 0);
-      totalDistance += Math.round((laneDistKm / 1.609) * 10) / 10; // km to miles
+      // The green lane itself
+      segments.push({ type: "lane", coords: orderedCoords });
+
+      // Update current position to lane exit
+      currentPos = { lat: exit[1], lng: exit[0] };
     } else {
-      // Normal road routing
-      try {
-        const roadSeg = await getSegmentRoute(
-          { lat: from.lat, lng: from.lng },
-          { lat: to.lat, lng: to.lng }
-        );
-        allCoords.push(...roadSeg.coordinates);
-        totalDistance += roadSeg.distance;
-        totalDuration += roadSeg.duration;
-      } catch {
-        // Direct line fallback
-        allCoords.push([from.lng, from.lat], [to.lng, to.lat]);
-      }
+      // Normal road waypoint
+      segments.push({
+        type: "road",
+        from: { lat: currentPos.lat, lng: currentPos.lng },
+        to: { lat: wp.lat, lng: wp.lng },
+      });
+      currentPos = { lat: wp.lat, lng: wp.lng };
     }
   }
 
-  // If last waypoint is a green lane, route from lane exit to nothing (it's the end)
-  // Handle: route from last green lane exit back to road if there's a non-lane waypoint after
-  const lastWp = waypoints[waypoints.length - 1];
-  if (lastWp.greenLane && waypoints.length > 1) {
-    // Already handled in the loop above
+  // Now execute each segment
+  for (const seg of segments) {
+    if (seg.type === "road") {
+      // Skip zero-distance segments
+      const dist = haversineQuick(seg.from.lat, seg.from.lng, seg.to.lat, seg.to.lng);
+      if (dist < 0.01) continue; // less than 10m, skip
+
+      try {
+        const result = await getSegmentRoute(seg.from, seg.to);
+        allCoords.push(...result.coordinates);
+        totalDistance += result.distance;
+        totalDuration += result.duration;
+      } catch {
+        // Direct line fallback
+        allCoords.push([seg.from.lng, seg.from.lat], [seg.to.lng, seg.to.lat]);
+      }
+    } else {
+      // Lane geometry - add directly
+      allCoords.push(...seg.coords);
+      // Calculate lane distance
+      let laneDist = 0;
+      for (let j = 1; j < seg.coords.length; j++) {
+        laneDist += haversineQuick(seg.coords[j-1][1], seg.coords[j-1][0], seg.coords[j][1], seg.coords[j][0]);
+      }
+      totalDistance += Math.round((laneDist / 1.609) * 10) / 10; // km to miles
+      // Estimate duration at 15mph on green lane
+      totalDuration += Math.round((laneDist / 1.609) / 15 * 3600);
+    }
   }
 
   return {
