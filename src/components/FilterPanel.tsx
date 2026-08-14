@@ -126,6 +126,14 @@ export function FilterPanel({ filters, onChange, totalRoutes, visibleRoutes, sur
         </p>
       </div>
 
+      {/* Route Planner link */}
+      <a
+        href="/planner"
+        className="mt-4 block w-full py-3 px-4 bg-blue-600 hover:bg-blue-700 text-white text-sm font-medium rounded-md transition-colors text-center"
+      >
+        🗺️ Route Planner (roads + green lanes)
+      </a>
+
       {/* Legend */}
       <div className="mt-6 pt-4 border-t border-gray-200">
         <h3 className="text-sm font-medium text-gray-700 mb-2">Difficulty Legend</h3>
