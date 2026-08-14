@@ -8,9 +8,11 @@ import { calculateRouteLength, generateGPX, downloadFile } from "@/lib/geo";
 interface Props {
   feature: OsmRoute;
   onClose: () => void;
+  onAddToTrip?: (route: OsmRoute) => void;
+  isInTrip?: boolean;
 }
 
-export function RouteDetailPanel({ feature, onClose }: Props) {
+export function RouteDetailPanel({ feature, onClose, onAddToTrip, isInTrip }: Props) {
   const [copied, setCopied] = useState(false);
   const route = feature.properties;
   const coords = feature.geometry.coordinates;
@@ -57,14 +59,27 @@ export function RouteDetailPanel({ feature, onClose }: Props) {
         <span className="text-xs bg-purple-100 text-purple-800 px-2 py-0.5 rounded-full">{length} km</span>
       </div>
 
-      {/* GPX Download + Share */}
+      {/* GPX Download + Share + Add to Trip */}
       <div className="flex gap-2 mb-4">
         <button
           onClick={handleDownloadGPX}
           className="flex-1 py-2 px-3 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-md transition-colors flex items-center justify-center gap-2"
         >
-          <span>📥</span> Download GPX
+          <span>📥</span> GPX
         </button>
+        {onAddToTrip && (
+          <button
+            onClick={() => onAddToTrip(feature)}
+            disabled={isInTrip}
+            className={`flex-1 py-2 px-3 text-sm font-medium rounded-md transition-colors flex items-center justify-center gap-2 ${
+              isInTrip
+                ? "bg-gray-100 text-gray-400 cursor-not-allowed"
+                : "bg-blue-600 hover:bg-blue-700 text-white"
+            }`}
+          >
+            <span>{isInTrip ? "✓" : "➕"}</span> {isInTrip ? "In Trip" : "Add to Trip"}
+          </button>
+        )}
         <button
           onClick={() => {
             const url = window.location.origin + "/#" + route.id;
@@ -76,7 +91,7 @@ export function RouteDetailPanel({ feature, onClose }: Props) {
           className="py-2 px-3 bg-gray-100 hover:bg-gray-200 text-gray-700 text-sm font-medium rounded-md transition-colors flex items-center gap-2"
           title="Copy shareable link"
         >
-          <span>{copied ? "✓" : "🔗"}</span> {copied ? "Copied!" : "Share"}
+          <span>{copied ? "✓" : "🔗"}</span>
         </button>
       </div>
 

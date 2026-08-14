@@ -4,6 +4,7 @@ import { useState, useMemo, useCallback, useEffect } from "react";
 import dynamic from "next/dynamic";
 import { FilterPanel } from "@/components/FilterPanel";
 import { RouteDetailPanel } from "@/components/RouteDetailPanel";
+import { RouteBuilder } from "@/components/RouteBuilder";
 import { FilterState } from "@/types/route";
 import { greenLanes, OsmRoute } from "@/data/routes";
 import { getDifficulty } from "@/data/difficulty";
@@ -31,7 +32,9 @@ export default function Home() {
 
   const [selectedFeature, setSelectedFeature] = useState<OsmRoute | null>(null);
   const [showFilters, setShowFilters] = useState(true);
-  const [mobilePanel, setMobilePanel] = useState<"none" | "filters" | "detail">("none");
+  const [mobilePanel, setMobilePanel] = useState<"none" | "filters" | "detail" | "trip">("none");
+  const [tripRoutes, setTripRoutes] = useState<OsmRoute[]>([]);
+  const [showTrip, setShowTrip] = useState(false);
 
   useEffect(() => {
     const hash = window.location.hash.replace("#", "");
@@ -90,7 +93,31 @@ export default function Home() {
 
   const toggleFilters = useCallback(() => {
     setShowFilters((prev) => !prev);
+    setShowTrip(false);
     setMobilePanel((prev) => (prev === "filters" ? "none" : "filters"));
+  }, []);
+
+  const toggleTrip = useCallback(() => {
+    setShowTrip((prev) => !prev);
+    setShowFilters(false);
+    setMobilePanel((prev) => (prev === "trip" ? "none" : "trip"));
+  }, []);
+
+  const addToTrip = useCallback((route: OsmRoute) => {
+    setTripRoutes((prev) => {
+      if (prev.find((r) => r.properties.id === route.properties.id)) return prev;
+      return [...prev, route];
+    });
+    setShowTrip(true);
+    setMobilePanel("trip");
+  }, []);
+
+  const removeFromTrip = useCallback((id: string) => {
+    setTripRoutes((prev) => prev.filter((r) => r.properties.id !== id));
+  }, []);
+
+  const clearTrip = useCallback(() => {
+    setTripRoutes([]);
   }, []);
 
   return (
@@ -108,42 +135,59 @@ export default function Home() {
         </aside>
       )}
 
+      {/* Desktop trip builder panel */}
+      {showTrip && (
+        <aside className="hidden md:block w-80 bg-white shadow-lg z-10 overflow-y-auto filter-panel border-r border-gray-200">
+          <div className="p-4 border-b">
+            <h2 className="font-bold text-gray-800">Trip Builder</h2>
+            <p className="text-xs text-gray-400 mt-1">Build a route for Android Auto navigation</p>
+          </div>
+          <RouteBuilder routes={tripRoutes} onRemove={removeFromTrip} onClear={clearTrip} />
+        </aside>
+      )}
+
       {/* Mobile filter panel (full overlay) */}
       {mobilePanel === "filters" && (
         <aside className="md:hidden fixed inset-0 z-30 bg-white overflow-y-auto">
           <div className="flex items-center justify-between p-4 border-b">
             <h2 className="font-bold text-gray-800">Filters</h2>
-            <button
-              onClick={() => setMobilePanel("none")}
-              className="text-gray-500 hover:text-gray-700 text-xl"
-              aria-label="Close filters"
-            >
-              &times;
-            </button>
+            <button onClick={() => setMobilePanel("none")} className="text-gray-500 hover:text-gray-700 text-xl" aria-label="Close filters">&times;</button>
           </div>
-          <FilterPanel
-            filters={filters}
-            onChange={setFilters}
-            totalRoutes={greenLanes.features.length}
-            visibleRoutes={filteredRoutes.length}
-            surfaces={surfaces}
-          />
+          <FilterPanel filters={filters} onChange={setFilters} totalRoutes={greenLanes.features.length} visibleRoutes={filteredRoutes.length} surfaces={surfaces} />
+        </aside>
+      )}
+
+      {/* Mobile trip panel (full overlay) */}
+      {mobilePanel === "trip" && (
+        <aside className="md:hidden fixed inset-0 z-30 bg-white overflow-y-auto">
+          <div className="flex items-center justify-between p-4 border-b">
+            <h2 className="font-bold text-gray-800">Trip Builder</h2>
+            <button onClick={() => setMobilePanel("none")} className="text-gray-500 hover:text-gray-700 text-xl" aria-label="Close trip">&times;</button>
+          </div>
+          <RouteBuilder routes={tripRoutes} onRemove={removeFromTrip} onClear={clearTrip} />
         </aside>
       )}
 
       {/* Map area */}
       <div className="flex-1 relative">
-        {/* Top-right controls (away from Leaflet zoom which is top-left) */}
+        {/* Top-right controls */}
         <div className="absolute top-4 right-4 z-20 flex gap-2">
           <div className="bg-white px-3 py-2 rounded-lg shadow-md text-xs text-gray-600 flex items-center">
             {filteredRoutes.length} routes
           </div>
           <button
             onClick={toggleFilters}
-            className="bg-white px-3 py-2 rounded-lg shadow-md hover:bg-gray-50 text-sm font-medium"
+            className={`px-3 py-2 rounded-lg shadow-md text-sm font-medium ${showFilters ? "bg-green-600 text-white" : "bg-white hover:bg-gray-50"}`}
             aria-label="Toggle filters"
           >
-            {showFilters || mobilePanel === "filters" ? "✕ Filters" : "☰ Filters"}
+            ☰ Filters
+          </button>
+          <button
+            onClick={toggleTrip}
+            className={`px-3 py-2 rounded-lg shadow-md text-sm font-medium ${showTrip ? "bg-green-600 text-white" : "bg-white hover:bg-gray-50"}`}
+            aria-label="Toggle trip builder"
+          >
+            🗺️ Trip{tripRoutes.length > 0 ? ` (${tripRoutes.length})` : ""}
           </button>
         </div>
 
@@ -176,6 +220,8 @@ export default function Home() {
           <RouteDetailPanel
             feature={selectedFeature}
             onClose={handleCloseDetail}
+            onAddToTrip={addToTrip}
+            isInTrip={tripRoutes.some((r) => r.properties.id === selectedFeature.properties.id)}
           />
         </aside>
       )}
@@ -189,6 +235,8 @@ export default function Home() {
           <RouteDetailPanel
             feature={selectedFeature}
             onClose={handleCloseDetail}
+            onAddToTrip={addToTrip}
+            isInTrip={tripRoutes.some((r) => r.properties.id === selectedFeature.properties.id)}
           />
         </aside>
       )}
