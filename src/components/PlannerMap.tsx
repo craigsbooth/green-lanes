@@ -103,7 +103,7 @@ function DraggableWaypoint({ wp, idx, total, onDragEnd }: {
 }
 
 /**
- * Mid-point markers between waypoints that appear on the route line.
+ * Mid-point markers placed ON the actual route line between waypoints.
  * Dragging these inserts a new via-point.
  */
 function MidpointMarkers({ waypoints, routeCoords, onDrag }: {
@@ -111,24 +111,24 @@ function MidpointMarkers({ waypoints, routeCoords, onDrag }: {
   routeCoords: [number, number][] | null;
   onDrag: (lat: number, lng: number, segmentIndex: number) => void;
 }) {
-  if (!routeCoords || waypoints.length < 2) return null;
+  if (!routeCoords || routeCoords.length < 2 || waypoints.length < 2) return null;
 
-  // Place a draggable midpoint between each consecutive pair of waypoints
+  // For each segment between waypoints, find the midpoint on the actual route line
+  const totalPoints = routeCoords.length;
+  const segCount = waypoints.length - 1;
+  const pointsPerSeg = Math.floor(totalPoints / segCount);
+
   const midpoints: { lat: number; lng: number; segIdx: number }[] = [];
-  for (let i = 0; i < waypoints.length - 1; i++) {
-    const a = waypoints[i];
-    const b = waypoints[i + 1];
-    midpoints.push({
-      lat: (a.lat + b.lat) / 2,
-      lng: (a.lng + b.lng) / 2,
-      segIdx: i,
-    });
+  for (let i = 0; i < segCount; i++) {
+    const midIdx = Math.min(Math.floor((i + 0.5) * pointsPerSeg), totalPoints - 1);
+    const coord = routeCoords[midIdx]; // [lng, lat]
+    midpoints.push({ lat: coord[1], lng: coord[0], segIdx: i });
   }
 
   return (
     <>
       {midpoints.map((mp, idx) => (
-        <MidpointDragMarker key={`mid-${idx}`} lat={mp.lat} lng={mp.lng} segIdx={mp.segIdx} onDrag={onDrag} />
+        <MidpointDragMarker key={`mid-${idx}-${mp.lat.toFixed(4)}`} lat={mp.lat} lng={mp.lng} segIdx={mp.segIdx} onDrag={onDrag} />
       ))}
     </>
   );

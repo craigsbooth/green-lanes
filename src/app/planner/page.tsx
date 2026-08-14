@@ -4,7 +4,7 @@ import { useState, useMemo, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { RoutePlanner, Waypoint, RouteWarning } from "@/components/RoutePlanner";
 import { greenLanes, OsmRoute } from "@/data/routes";
-import { getRoute, RoutingResult, findNearestGreenLane } from "@/lib/routing";
+import { getRoute, RoutingResult, findNearestGreenLane, buildStitchedRoute } from "@/lib/routing";
 import { generateGPX, downloadFile } from "@/lib/geo";
 
 const PlannerMap = dynamic(() => import("@/components/PlannerMap"), {
@@ -36,7 +36,10 @@ export default function PlannerPage() {
 
     setIsRouting(true);
     try {
-      const result = await getRoute(wps.map((w) => ({ lat: w.lat, lng: w.lng })));
+      // Use stitched routing: road segments via OSRM, green lane segments use actual geometry
+      const result = await buildStitchedRoute(
+        wps.map((w) => ({ lat: w.lat, lng: w.lng, greenLane: w.greenLane }))
+      );
       setRouteResult(result);
       setFullRouteCoords(result.coordinates);
       generateWarnings(wps);
