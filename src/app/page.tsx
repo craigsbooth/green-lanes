@@ -119,7 +119,7 @@ export default function Home() {
           <div className="bg-white px-3 py-2 rounded-lg shadow-md text-xs text-gray-600">{filteredRoutes.length} routes</div>
           <button onClick={toggleFilters} className={`px-3 py-2 rounded-lg shadow-md text-sm font-medium ${showFilters ? "bg-green-600 text-white" : "bg-white"}`}>☰ Filters</button>
           <button onClick={toggleTrip} className={`px-3 py-2 rounded-lg shadow-md text-sm font-medium ${showTrip ? "bg-green-600 text-white" : "bg-white"}`}>🗺️ Trip{tripRoutes.length > 0 ? ` (${tripRoutes.length})` : ""}</button>
-          <a href="/planner" className="px-3 py-2 rounded-lg shadow-md text-sm font-medium bg-blue-600 text-white hover:bg-blue-700">�� Plan Route</a>
+          <a href="/planner" className="px-3 py-2 rounded-lg shadow-md text-sm font-medium bg-blue-600 text-white hover:bg-blue-700">&#x1F6E3;&#xFE0F; Plan Route</a>
         </div>
         {filteredRoutes.length === 0 && (
           <div className="absolute inset-0 z-10 flex items-center justify-center pointer-events-none">
