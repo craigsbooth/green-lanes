@@ -136,6 +136,7 @@ export function RouteDetailPanel({ feature, onClose, onAddToTrip, isInTrip }: Pr
           <ExtLink href={googleSearchUrl} label="Search for articles / reports" icon="🔍" />
           <ExtLink href={youtubeUrl} label="YouTube videos" icon="▶️" />
           <ExtLink href={`https://www.openstreetmap.org/way/${route.osmId}`} label="OpenStreetMap" icon="🗺️" />
+          <ExtLink href={`https://www.trailwise2.co.uk/#lat=${lat}&lng=${lng}&zoom=15`} label="View area on TW2 (GLASS login required)" icon="🟢" />
         </div>
       </div>
     </div>
