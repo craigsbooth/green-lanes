@@ -4,8 +4,9 @@ import { useState, useMemo, useCallback, useRef } from "react";
 import dynamic from "next/dynamic";
 import { RoutePlanner, Waypoint, RouteWarning } from "@/components/RoutePlanner";
 import { greenLanes, OsmRoute } from "@/data/routes";
-import { getRoute, RoutingResult, findNearestGreenLane, buildStitchedRoute } from "@/lib/routing";
+import { getRoute, RoutingResult, buildStitchedRoute } from "@/lib/routing";
 import { generateGPX, downloadFile } from "@/lib/geo";
+import { SpatialGrid } from "@/lib/spatial-index";
 
 const PlannerMap = dynamic(() => import("@/components/PlannerMap"), {
   ssr: false,
@@ -24,6 +25,7 @@ export default function PlannerPage() {
   const [greenLaneSegments, setGreenLaneSegments] = useState<{ lane: OsmRoute; startIdx: number; endIdx: number }[]>([]);
   const [warnings, setWarnings] = useState<RouteWarning[]>([]);
   const [isRouting, setIsRouting] = useState(false);
+  const [routeError, setRouteError] = useState<string | null>(null);
 
   // Refs to avoid stale closures in map callbacks
   const waypointsRef = useRef(waypoints);
@@ -33,6 +35,22 @@ export default function PlannerPage() {
 
   const filteredRoutes = useMemo(() => greenLanes, []);
 
+  // Build spatial index once for fast green lane lookups on drag
+  const spatialGrid = useMemo(() => {
+    const grid = new SpatialGrid(0.005); // ~550m cells
+    grid.buildIndex(greenLanes.features as any);
+    return grid;
+  }, []);
+
+  // Fast green lane detection using spatial index
+  const detectGreenLane = useCallback((lat: number, lng: number): OsmRoute | undefined => {
+    const nearest = spatialGrid.findNearest(lat, lng, 0.1); // 100m
+    if (nearest) {
+      return greenLanes.features.find((f) => f.properties.id === nearest.featureId);
+    }
+    return undefined;
+  }, [spatialGrid]);
+
   const calculateRoute = useCallback(async (wps: Waypoint[]) => {
     if (wps.length < 2) {
       setRouteResult(null);
@@ -41,16 +59,23 @@ export default function PlannerPage() {
     }
 
     setIsRouting(true);
+    setRouteError(null);
     try {
       // Use stitched routing: road segments via OSRM, green lane segments use actual geometry
       const result = await buildStitchedRoute(
         wps.map((w) => ({ lat: w.lat, lng: w.lng, greenLane: w.greenLane }))
       );
-      setRouteResult(result);
-      setFullRouteCoords(result.coordinates);
-      generateWarnings(wps);
+      if (result.coordinates.length === 0) {
+        setRouteError("Could not calculate route. The routing service may be unavailable — try again in a moment.");
+        setRouteResult(null);
+        setFullRouteCoords(null);
+      } else {
+        setRouteResult(result);
+        setFullRouteCoords(result.coordinates);
+        generateWarnings(wps);
+      }
     } catch (err) {
-      console.error("Routing failed:", err);
+      setRouteError("Routing failed. Check your internet connection or try again later.");
       setRouteResult(null);
       setFullRouteCoords(null);
     }
@@ -83,15 +108,6 @@ export default function PlannerPage() {
       }
     }
     setWarnings(newWarnings);
-  };
-
-  // Detect if a point is near a green lane
-  const detectGreenLane = (lat: number, lng: number): OsmRoute | undefined => {
-    const nearest = findNearestGreenLane(lat, lng, greenLanes.features, 0.1); // 100m
-    if (nearest) {
-      return greenLanes.features.find((f) => f.properties.id === nearest.featureId);
-    }
-    return undefined;
   };
 
   const handleMapClick = useCallback((lat: number, lng: number) => {
@@ -236,6 +252,13 @@ export default function PlannerPage() {
         {clickMode !== "none" && (
           <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20 bg-blue-600 text-white px-4 py-2 rounded-lg shadow-lg text-sm font-medium">
             Click the map to set {clickMode === "start" ? "start point" : "end point"}
+          </div>
+        )}
+
+        {routeError && (
+          <div className="absolute top-4 left-1/2 -translate-x-1/2 z-20 bg-red-600 text-white px-4 py-2 rounded-lg shadow-lg text-sm font-medium max-w-sm text-center">
+            {routeError}
+            <button onClick={() => setRouteError(null)} className="ml-2 underline text-red-100">Dismiss</button>
           </div>
         )}
 
