@@ -8,6 +8,6 @@
   },
   "then": {
     "type": "askAgent",
-    "prompt": "If there are any uncommitted changes in the workspace, stage them, commit with a short descriptive message, and push to origin. Run: git add -A, then git commit, then git push. If there are no changes, do nothing."
+    "prompt": "If there are any uncommitted changes in the workspace, stage them, commit with a short descriptive message that includes the version number from package.json (e.g. 'v1.1.0: description of changes'), and push to origin. Run: git add -A, then read the version from package.json, then git commit with the version prefix, then git push. If there are no changes, do nothing."
   }
 }

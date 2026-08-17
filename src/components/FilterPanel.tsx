@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import { FilterState, RouteType, Difficulty } from "@/types/route";
+import packageJson from "../../package.json";
 
 interface FilterPanelProps {
   filters: FilterState;
@@ -146,6 +147,9 @@ export function FilterPanel({ filters, onChange, totalRoutes, visibleRoutes, sur
           <LegendItem color="#264653" label="Selected" />
         </div>
       </div>
+
+      {/* Version */}
+      <p className="mt-4 text-xs text-gray-300 text-center">v{packageJson.version}</p>
     </div>
   );
 }
