@@ -69,7 +69,7 @@ export function RoutePlanner({
           onClick={onSetEnd}
           className="flex-1 py-2 px-3 bg-red-100 hover:bg-red-200 text-red-800 text-sm font-medium rounded-md transition-colors"
         >
-          �� Set End
+          &#x1F3C1; Set End
         </button>
       </div>
 
