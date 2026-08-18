@@ -5,28 +5,40 @@ console.log("Unique GUIDs:", guids.length);
 
 const consoleScript = `(async function() {
   const guids = ${JSON.stringify(guids)};
-  console.log("Fetching comments for " + guids.length + " routes...");
+  console.log("Fetching comments from " + guids.length + " route detail pages...");
   const allComments = {};
   let done = 0;
+  let found = 0;
   for (const guid of guids) {
     done++;
-    if (done % 20 === 0) console.log("Progress: " + done + "/" + guids.length);
+    if (done % 10 === 0) console.log("Progress: " + done + "/" + guids.length + " (" + found + " with comments)");
     try {
-      const r = await fetch("/api/talk/Comments?projectid=421f568f-c985-4e83-98c2-4dcdcd0dd7dc" + String.fromCharCode(38) + "threadid=route-" + guid + String.fromCharCode(38) + "page=1" + String.fromCharCode(38) + "pagesize=50");
+      const r = await fetch("/route/details/" + guid);
       if (!r.ok) continue;
-      const data = await r.json();
-      if (data && data.length > 0) {
-        allComments[guid] = data.map(c => ({
-          author: c.AuthorName || c.authorName || "Unknown",
-          date: c.CreatedDate || c.createdDate || "",
-          text: c.Body || c.body || c.Text || c.text || ""
-        }));
+      const html = await r.text();
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, "text/html");
+      const commentEls = doc.querySelectorAll('[itemprop="commentText"]');
+      if (commentEls.length > 0) {
+        const comments = [];
+        commentEls.forEach((el, idx) => {
+          const authorEl = doc.querySelectorAll('[itemprop="author"]')[idx];
+          const dateEl = doc.querySelectorAll('[itemprop="datePublished"]')[idx];
+          comments.push({
+            author: authorEl ? authorEl.textContent.trim() : "Unknown",
+            date: dateEl ? dateEl.getAttribute("content") || dateEl.textContent.trim() : "",
+            text: el.textContent.trim()
+          });
+        });
+        if (comments.length > 0) {
+          allComments[guid] = comments;
+          found++;
+        }
       }
-    } catch(e) {}
-    await new Promise(r => setTimeout(r, 150));
+    } catch(e) { console.log("Error on " + guid + ": " + e.message); }
+    await new Promise(r => setTimeout(r, 300));
   }
-  const count = Object.keys(allComments).length;
-  console.log("Done! Comments found for " + count + " routes.");
+  console.log("Done! Comments found for " + found + " routes.");
   const blob = new Blob([JSON.stringify(allComments, null, 2)], {type: "application/json"});
   const a = document.createElement("a");
   a.href = URL.createObjectURL(blob);
@@ -38,11 +50,12 @@ const html = `<!DOCTYPE html>
 <html><head><title>TW2 Comment Fetcher</title></head>
 <body style="font-family:system-ui;max-width:800px;margin:40px auto;padding:20px">
 <h1>Fetch TW2 Comments</h1>
+<p>This fetches comments by loading each route detail page and extracting them from the HTML.</p>
 <ol>
-<li>Go to <a href="https://www.trailwise2.co.uk/route/map" target="_blank">TW2 map</a> (logged in)</li>
+<li>Go to <a href="https://www.trailwise2.co.uk/route/map" target="_blank">TW2</a> (logged in)</li>
 <li>Open DevTools (F12) &gt; Console</li>
-<li>Click "Copy" below, paste in console, press Enter</li>
-<li>Wait ~40 seconds</li>
+<li>Click Copy, paste in console, press Enter</li>
+<li>Wait ~1 minute (${guids.length} pages at 300ms each)</li>
 <li>Move <code>tw2-comments.json</code> to the project folder</li>
 </ol>
 <textarea id="s" rows="20" style="width:100%;font-family:monospace;font-size:11px;padding:10px" readonly>${consoleScript.replace(/</g,"&lt;").replace(/>/g,"&gt;")}</textarea>
