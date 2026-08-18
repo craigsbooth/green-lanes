@@ -4,7 +4,8 @@ import { OsmRoute } from "@/data/routes";
 import { getDifficulty } from "@/data/difficulty";
 import { RouteImages } from "./RouteImages";
 import { calculateRouteLength, generateGPX, downloadFile } from "@/lib/geo";
-import tw2Mapping from "@/data/tw2-mapping.json";
+import tw2MappingData from "@/data/tw2-mapping.json";
+const tw2Mapping: Record<string, { guid: string; twuid: string; type: string; distance_m: number }> = tw2MappingData as any;
 
 interface Props {
   feature: OsmRoute;
@@ -138,14 +139,11 @@ export function RouteDetailPanel({ feature, onClose, onAddToTrip, isInTrip }: Pr
           <ExtLink href={youtubeUrl} label="YouTube videos" icon="▶️" />
           <ExtLink href={`https://www.openstreetmap.org/way/${route.osmId}`} label="OpenStreetMap" icon="🗺️" />
           {(() => {
-            const tw2 = (tw2Mapping as any)[route.id];
-            const tw2Url = tw2?.guid
-              ? `https://www.trailwise2.co.uk/route/details/${tw2.guid}`
-              : "https://www.trailwise2.co.uk/route/map";
-            const tw2Label = tw2?.twuid
-              ? `View on TW2: ${tw2.twuid}`
-              : "View on TW2 map (login required)";
-            return <ExtLink href={tw2Url} label={tw2Label} icon="🟢" />;
+            const tw2 = tw2Mapping[route.id];
+            if (tw2?.guid) {
+              return <ExtLink href={`https://www.trailwise2.co.uk/route/details/${tw2.guid}`} label={`View on TW2: ${tw2.twuid || 'Details'}`} icon="🟢" />;
+            }
+            return null;
           })()}
         </div>
       </div>
