@@ -1,6 +1,6 @@
 {
     "name":  "green-lanes",
-    "version":  "1.2.0",
+    "version":  "1.2.1",
     "private":  true,
     "description":  "Interactive map of legal green lanes (BOATs and UCRs) in County Durham and Yorkshire",
     "scripts":  {
