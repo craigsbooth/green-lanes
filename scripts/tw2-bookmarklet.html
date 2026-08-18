@@ -3,30 +3,36 @@
 <head><title>TW2 Route Extractor</title></head>
 <body style="font-family:system-ui;max-width:800px;margin:40px auto;padding:20px">
 <h1>TW2 Route Extractor</h1>
-<p>Run these on the TW2 map page while logged in.</p>
 
-<h2>Step 1: Test (drag to bookmarks bar)</h2>
+<h2>Step 1: Test what layers are available</h2>
+<p>Drag to bookmarks bar, then click on TW2 map page:</p>
 <p style="padding:20px;background:#f0f0f0;border-radius:8px">
-<a href="javascript:void(async function(){try{const r=await fetch('/api/mapserver/trailwise?VERSION=2.0.0&outputFormat=geojson&SERVICE=WFS&REQUEST=GetFeature&SRSNAME=EPSG:3857&TYPENAME=BOATLines&COUNT=5&BBOX=-250000,7100000,-50000,7400000');const t=await r.text();prompt('Response (copy this):',t.slice(0,2000))}catch(e){alert('Error:'+e.message)}})()">
-  <strong style="font-size:16px;padding:8px 16px;background:#e9c46a;color:#333;border-radius:6px;text-decoration:none">Test TW2 API</strong>
+<a href="javascript:void(async function(){try{const r=await fetch('/api/mapserver/trailwise?SERVICE=WFS&VERSION=2.0.0&REQUEST=GetCapabilities');const t=await r.text();const layers=t.match(/<Name>([^<]+)<\/Name>/g);prompt('WFS Layers found:',layers?layers.join(', '):'None - raw: '+t.slice(0,500))}catch(e){alert('Error:'+e.message)}})()">
+  <strong style="padding:8px 16px;background:#e9c46a;color:#333;border-radius:6px;text-decoration:none">1. Get WFS Layers</strong>
 </a>
 </p>
-<p>This fetches just 5 routes to test the connection. Copy what it shows you and paste it back to me.</p>
 
-<h2>Step 2: Full Extract (use after Step 1 works)</h2>
+<h2>Step 2: Test GetFeatureInfo (WMS) - this format works</h2>
 <p style="padding:20px;background:#f0f0f0;border-radius:8px">
-<a href="javascript:void(async function(){try{const areas=['-323000,7100000,-180000,7400000','-180000,7100000,-50000,7400000'];let all=[];for(const bbox of areas){for(const layer of['BOATLines','UCRLines']){const r=await fetch('/api/mapserver/trailwise?VERSION=2.0.0&outputFormat=geojson&SERVICE=WFS&REQUEST=GetFeature&SRSNAME=EPSG:3857&TYPENAME='+layer+'&BBOX='+bbox);if(!r.ok){console.log(layer+' '+bbox+': '+r.status);continue}const d=await r.json();if(d.features){all=all.concat(d.features.map(f=>({guid:f.properties.RouteGUID||f.properties.GUID||f.id||'',twuid:f.properties.TWUID||'',name:f.properties.RouteName||f.properties.Name||'',type:layer.replace('Lines',''),coords:f.geometry?f.geometry.coordinates:null})))}}}const blob=new Blob([JSON.stringify(all,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='tw2-routes.json';a.click();alert('Downloaded '+all.length+' routes!')}catch(e){alert('Error: '+e.message)}})()">
-  <strong style="font-size:16px;padding:8px 16px;background:#2d6a4f;color:white;border-radius:6px;text-decoration:none">Extract All TW2 Routes</strong>
+<a href="javascript:void(async function(){try{const bbox='-207674,7274494,-206242,7275926';const r=await fetch('/api/mapserver/trailwise?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&FORMAT=image/png&TRANSPARENT=true&QUERY_LAYERS=UCRLines,BOATLines,FavLanes&LAYERS=UCRLines,BOATLines,FavLanes&HIDE_ROUTES_OF_NO_INTEREST=0&INFO_FORMAT=text/html&I=50&J=50&CRS=EPSG:3857&STYLES=&WIDTH=101&HEIGHT=101&BBOX='+bbox);const t=await r.text();prompt('GetFeatureInfo response:',t.slice(0,2000))}catch(e){alert('Error:'+e.message)}})()">
+  <strong style="padding:8px 16px;background:#457b9d;color:white;border-radius:6px;text-decoration:none">2. Test GetFeatureInfo</strong>
+</a>
+</p>
+
+<h2>Step 3: Test WFS GetFeature with HighlightRoutes</h2>
+<p style="padding:20px;background:#f0f0f0;border-radius:8px">
+<a href="javascript:void(async function(){try{const r=await fetch('/api/mapserver/trailwise?VERSION=2.0.0&outputFormat=geojson&SERVICE=WFS&REQUEST=GetFeature&SRSNAME=EPSG:3857&TYPENAME=HighlightRoutes&Filter=%3CFilter%3E%3CBBOX%3E%3CPropertyName%3Egeometry%3C/PropertyName%3E%3CEnvelope%3E%3ClowerCorner%3E-207674%207274494%3C/lowerCorner%3E%3CupperCorner%3E-206242%207275926%3C/upperCorner%3E%3C/Envelope%3E%3C/BBOX%3E%3C/Filter%3E');const t=await r.text();prompt('WFS HighlightRoutes:',t.slice(0,2000))}catch(e){alert('Error:'+e.message)}})()">
+  <strong style="padding:8px 16px;background:#2d6a4f;color:white;border-radius:6px;text-decoration:none">3. Test WFS HighlightRoutes</strong>
 </a>
 </p>
 
 <h2>Instructions</h2>
 <ol>
 <li>Log into <a href="https://www.trailwise2.co.uk/route/map" target="_blank">TW2 map</a></li>
-<li>Drag <strong>Test TW2 API</strong> to your bookmarks bar</li>
-<li>Click it while on the TW2 map page</li>
-<li>Copy what it shows and paste it back to me so I can fix the query if needed</li>
-<li>Once working, use the green <strong>Extract All</strong> button</li>
+<li>Drag each button to bookmarks bar</li>
+<li>Click them one by one on the TW2 page</li>
+<li>Copy the results and paste them back to me</li>
 </ol>
+<p>I need to see the responses to figure out the correct query format.</p>
 </body>
 </html>
