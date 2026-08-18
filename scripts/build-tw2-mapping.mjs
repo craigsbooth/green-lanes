@@ -1,7 +1,7 @@
 ﻿/**
  * Matches TW2 routes to our OSM routes by proximity.
- * Input: src/data/tw2-routes.json (from bookmarklet)
- * Output: src/data/tw2-mapping.json (OSM ID -> TW2 GUID)
+ * TW2 data has coordinates in EPSG:3857 (cx, cy).
+ * OSM data has coordinates in WGS84 [lng, lat].
  */
 
 import { readFileSync, writeFileSync } from "fs";
@@ -14,7 +14,7 @@ function haversine(lat1, lon1, lat2, lon2) {
   return R * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-// Convert EPSG:3857 to lat/lng
+// Convert EPSG:3857 to WGS84
 function fromMercator(x, y) {
   const lng = (x / 20037508.34) * 180;
   let lat = (y / 20037508.34) * 180;
@@ -23,17 +23,19 @@ function fromMercator(x, y) {
 }
 
 const osmRoutes = JSON.parse(readFileSync("src/data/osm-routes.json", "utf-8"));
-let tw2Routes;
-try {
-  tw2Routes = JSON.parse(readFileSync("src/data/tw2-routes.json", "utf-8"));
-} catch {
-  console.error("Error: src/data/tw2-routes.json not found.");
-  console.error("Run the bookmarklet on TW2 first to generate this file.");
-  process.exit(1);
-}
+const tw2Routes = JSON.parse(readFileSync("src/data/tw2-routes.json", "utf-8"));
 
 console.log(`OSM routes: ${osmRoutes.features.length}`);
 console.log(`TW2 routes: ${tw2Routes.length}`);
+
+// Convert TW2 coords from mercator to lat/lng
+const tw2WithLatLng = tw2Routes.map(r => {
+  if (r.cx && r.cy) {
+    const { lat, lng } = fromMercator(r.cx, r.cy);
+    return { ...r, lat, lng };
+  }
+  return r;
+});
 
 const mapping = {};
 let matched = 0;
@@ -46,7 +48,7 @@ for (const osm of osmRoutes.features) {
   let bestMatch = null;
   let bestDist = Infinity;
 
-  for (const tw2 of tw2Routes) {
+  for (const tw2 of tw2WithLatLng) {
     if (!tw2.lat || !tw2.lng) continue;
     const dist = haversine(osmLat, osmLng, tw2.lat, tw2.lng);
     if (dist < bestDist) {
@@ -55,19 +57,19 @@ for (const osm of osmRoutes.features) {
     }
   }
 
-  // Match if within 200m
-  if (bestMatch && bestDist < 0.2) {
+  // Match if within 2km (grid scan has 20km cells so midpoints are approximate)
+  if (bestMatch && bestDist < 2) {
     mapping[osm.properties.id] = {
       guid: bestMatch.guid,
       twuid: bestMatch.twuid,
-      name: bestMatch.name,
-      distance: Math.round(bestDist * 1000),
+      type: bestMatch.type,
+      distance_m: Math.round(bestDist * 1000),
     };
     matched++;
   }
 }
 
 writeFileSync("src/data/tw2-mapping.json", JSON.stringify(mapping, null, 2));
-console.log(`\nMatched ${matched} routes (within 200m)`);
-console.log(`Unmatched: ${osmRoutes.features.length - matched}`);
+console.log(`\nMatched ${matched} / ${osmRoutes.features.length} routes to TW2`);
+console.log(`TW2 routes matched: ${matched} / ${tw2Routes.length}`);
 console.log("Written to src/data/tw2-mapping.json");
