@@ -5,6 +5,14 @@ import { getDifficulty } from "@/data/difficulty";
 import { RouteImages } from "./RouteImages";
 import { calculateRouteLength, generateGPX, downloadFile } from "@/lib/geo";
 
+// Try to load TW2 mapping - will be empty object if file doesn't exist yet
+let tw2Mapping: Record<string, { guid: string | null; twuid: string | null }> = {};
+try {
+  tw2Mapping = require("@/data/tw2-mapping.json");
+} catch {
+  // File doesn't exist yet - that's fine
+}
+
 interface Props {
   feature: OsmRoute;
   onClose: () => void;
@@ -136,7 +144,16 @@ export function RouteDetailPanel({ feature, onClose, onAddToTrip, isInTrip }: Pr
           <ExtLink href={googleSearchUrl} label="Search for articles / reports" icon="🔍" />
           <ExtLink href={youtubeUrl} label="YouTube videos" icon="▶️" />
           <ExtLink href={`https://www.openstreetmap.org/way/${route.osmId}`} label="OpenStreetMap" icon="🗺️" />
-          <ExtLink href={`https://www.trailwise2.co.uk/route/map#15/${lat}/${lng}`} label="View on TW2 map (login required)" icon="🟢" />
+          {(() => {
+            const tw2 = tw2Mapping[route.id];
+            const tw2Url = tw2?.guid
+              ? `https://www.trailwise2.co.uk/route/details/${tw2.guid}`
+              : "https://www.trailwise2.co.uk/route/map";
+            const tw2Label = tw2?.twuid
+              ? `View on TW2: ${tw2.twuid}`
+              : "View on TW2 map (login required)";
+            return <ExtLink href={tw2Url} label={tw2Label} icon="🟢" />;
+          })()}
         </div>
       </div>
     </div>
