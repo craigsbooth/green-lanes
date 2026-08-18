@@ -1,34 +1,32 @@
 ﻿<!DOCTYPE html>
 <html>
-<head><title>TW2 Route Extractor - Bookmarklet</title></head>
+<head><title>TW2 Route Extractor</title></head>
 <body style="font-family:system-ui;max-width:800px;margin:40px auto;padding:20px">
 <h1>TW2 Route Extractor</h1>
-<p>This bookmarklet runs on the TW2 map page to extract route GUIDs for our Green Lanes app.</p>
+<p>Run these on the TW2 map page while logged in.</p>
 
-<h2>Setup</h2>
-<ol>
-<li>Drag this link to your bookmarks bar:</li>
-</ol>
-
+<h2>Step 1: Test (drag to bookmarks bar)</h2>
 <p style="padding:20px;background:#f0f0f0;border-radius:8px">
-<a href="javascript:void(async function(){const bbox='-323000,7100000,-89000,7400000';const url='/api/mapserver/trailwise?VERSION=2.0.0&outputFormat=geojson&SERVICE=WFS&REQUEST=GetFeature&SRSNAME=EPSG:3857&TYPENAME=UCRLines,BOATLines&BBOX='+bbox;try{const r=await fetch(url);const d=await r.json();const routes=d.features.map(f=>({guid:f.properties.RouteGUID||f.properties.GUID||f.id,twuid:f.properties.TWUID||f.properties.Name,name:f.properties.RouteName||f.properties.Name||'',type:f.properties.RouteType||''}));const blob=new Blob([JSON.stringify(routes,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='tw2-routes.json';a.click();alert('Downloaded '+routes.length+' routes!')}catch(e){alert('Error: '+e.message+'. Make sure you are on trailwise2.co.uk and logged in.')}})()">
-  <strong style="font-size:18px;padding:10px 20px;background:#2d6a4f;color:white;border-radius:6px;text-decoration:none">📥 Extract TW2 Routes</strong>
+<a href="javascript:void(async function(){try{const r=await fetch('/api/mapserver/trailwise?VERSION=2.0.0&outputFormat=geojson&SERVICE=WFS&REQUEST=GetFeature&SRSNAME=EPSG:3857&TYPENAME=BOATLines&COUNT=5&BBOX=-250000,7100000,-50000,7400000');const t=await r.text();prompt('Response (copy this):',t.slice(0,2000))}catch(e){alert('Error:'+e.message)}})()">
+  <strong style="font-size:16px;padding:8px 16px;background:#e9c46a;color:#333;border-radius:6px;text-decoration:none">Test TW2 API</strong>
+</a>
+</p>
+<p>This fetches just 5 routes to test the connection. Copy what it shows you and paste it back to me.</p>
+
+<h2>Step 2: Full Extract (use after Step 1 works)</h2>
+<p style="padding:20px;background:#f0f0f0;border-radius:8px">
+<a href="javascript:void(async function(){try{const areas=['-323000,7100000,-180000,7400000','-180000,7100000,-50000,7400000'];let all=[];for(const bbox of areas){for(const layer of['BOATLines','UCRLines']){const r=await fetch('/api/mapserver/trailwise?VERSION=2.0.0&outputFormat=geojson&SERVICE=WFS&REQUEST=GetFeature&SRSNAME=EPSG:3857&TYPENAME='+layer+'&BBOX='+bbox);if(!r.ok){console.log(layer+' '+bbox+': '+r.status);continue}const d=await r.json();if(d.features){all=all.concat(d.features.map(f=>({guid:f.properties.RouteGUID||f.properties.GUID||f.id||'',twuid:f.properties.TWUID||'',name:f.properties.RouteName||f.properties.Name||'',type:layer.replace('Lines',''),coords:f.geometry?f.geometry.coordinates:null})))}}}const blob=new Blob([JSON.stringify(all,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='tw2-routes.json';a.click();alert('Downloaded '+all.length+' routes!')}catch(e){alert('Error: '+e.message)}})()">
+  <strong style="font-size:16px;padding:8px 16px;background:#2d6a4f;color:white;border-radius:6px;text-decoration:none">Extract All TW2 Routes</strong>
 </a>
 </p>
 
-<h2>Usage</h2>
+<h2>Instructions</h2>
 <ol>
-<li>Log into <a href="https://www.trailwise2.co.uk/route/map" target="_blank">TW2</a></li>
-<li>Once on the map page, click the bookmarklet in your bookmarks bar</li>
-<li>It will download a <code>tw2-routes.json</code> file</li>
-<li>Place that file in the project at <code>src/data/tw2-routes.json</code></li>
-<li>Run: <code>node scripts/build-tw2-mapping.mjs</code> to generate the mapping</li>
+<li>Log into <a href="https://www.trailwise2.co.uk/route/map" target="_blank">TW2 map</a></li>
+<li>Drag <strong>Test TW2 API</strong> to your bookmarks bar</li>
+<li>Click it while on the TW2 map page</li>
+<li>Copy what it shows and paste it back to me so I can fix the query if needed</li>
+<li>Once working, use the green <strong>Extract All</strong> button</li>
 </ol>
-
-<h2>What it does</h2>
-<p>The bookmarklet queries TW2's WFS API (from their own domain, using your logged-in session) to fetch all BOAT and UCR routes in the Durham/Yorkshire area. It downloads a JSON file with route GUIDs that we can match to our OSM data.</p>
-
-<h2>Privacy</h2>
-<p>The data stays on your machine. Nothing is sent to any third party. The bookmarklet only talks to trailwise2.co.uk.</p>
 </body>
 </html>
