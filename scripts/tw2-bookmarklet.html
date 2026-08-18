@@ -1,24 +1,68 @@
 ﻿<!DOCTYPE html>
 <html>
-<head><title>TW2 Route Extractor - Fine Grid</title></head>
+<head><title>TW2 Route Extractor</title></head>
 <body style="font-family:system-ui;max-width:800px;margin:40px auto;padding:20px">
 <h1>TW2 Route Extractor (Fine Grid)</h1>
-<p>Scans with a 5km grid to find more routes. Takes 3-5 minutes.</p>
+<p>Copy this script, paste into the TW2 console. Scans 5km grid, finds all routes.</p>
 
-<h2>Extract Routes (drag to bookmarks bar)</h2>
-<p style="padding:15px;background:#f0f0f0;border-radius:8px">
-<a href="javascript:void(async function(){try{const s=document.createElement('div');s.style='position:fixed;top:10px;left:50%;transform:translateX(-50%);background:%232d6a4f;color:white;padding:12px 24px;border-radius:8px;z-index:99999;font-size:14px;font-family:system-ui';document.body.appendChild(s);const all=new Map();const xMin=-320000,xMax=-60000,yMin=7080000,yMax=7440000;const step=5000;const width=101,height=101;let queries=0;const totalX=Math.ceil((xMax-xMin)/step);const totalY=Math.ceil((yMax-yMin)/step);const totalSteps=totalX*totalY;let done=0;for(let x=xMin;x<xMax;x+=step){for(let y=yMin;y<yMax;y+=step){done++;if(done%50===0)s.textContent='Scanning '+done+'/'+totalSteps+' ('+all.size+' routes found)';try{const bbox=x+','+(y)+','+(x+step)+','+(y+step);const url='/api/mapserver/trailwise?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&FORMAT=image/png&TRANSPARENT=true&QUERY_LAYERS=UCRLines,BOATLines&LAYERS=UCRLines,BOATLines&HIDE_ROUTES_OF_NO_INTEREST=0&INFO_FORMAT=text/html&I=50&J=50&CRS=EPSG:3857&STYLES=&WIDTH='+width+'&HEIGHT='+height+'&BBOX='+bbox;const r=await fetch(url);if(!r.ok)continue;const t=await r.text();const guids=t.match(/[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}/g);const twuids=t.match(/[A-Z][A-Z][0-9][0-9][0-9][0-9]-[0-9][0-9]/g);if(guids){for(let i=0;i<guids.length;i++){const guid=guids[i].toUpperCase();if(!all.has(guid)){const twuid=twuids&&twuids[i]?twuids[i]:'';const isUCR=t.indexOf('Unclassified')>-1;all.set(guid,{guid,twuid,type:isUCR?'UCR':'BOAT',cx:x+step/2,cy:y+step/2})}}}}catch(e){}queries++;if(queries%10===0)await new Promise(r=>setTimeout(r,50))}}s.textContent='Downloading '+all.size+' routes...';const arr=Array.from(all.values());const blob=new Blob([JSON.stringify(arr,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='tw2-routes.json';a.click();s.textContent='Done! '+all.size+' routes extracted.';setTimeout(()=>s.remove(),10000)}catch(e){alert('Error: '+e.message)}})()">
-  <strong style="font-size:18px;padding:12px 24px;background:#2d6a4f;color:white;border-radius:6px;text-decoration:none;display:inline-block">Extract All TW2 Routes (Fine Grid)</strong>
-</a>
-</p>
-
-<h2>Instructions</h2>
 <ol>
 <li>Go to <a href="https://www.trailwise2.co.uk/route/map" target="_blank">TW2 map</a> (logged in)</li>
-<li>Drag the green button to bookmarks bar, click it</li>
-<li>Wait 3-5 minutes (scans ~3700 grid cells at 5km spacing)</li>
-<li>When done, replace <code>src/data/tw2-routes.json</code> with the downloaded file</li>
-<li>Tell me and I will rebuild the mapping</li>
+<li>Open DevTools (F12) &gt; Console</li>
+<li>Click "Copy" below, paste in console, press Enter</li>
+<li>Wait 3-5 minutes</li>
+<li>Replace <code>src/data/tw2-routes.json</code> with the downloaded file</li>
 </ol>
+
+<textarea id="s" rows="25" style="width:100%;font-family:monospace;font-size:11px;padding:10px" readonly>
+(async function() {
+  const s = document.createElement("div");
+  s.style = "position:fixed;top:10px;left:50%;transform:translateX(-50%);background:#2d6a4f;color:white;padding:12px 24px;border-radius:8px;z-index:99999;font-size:14px;font-family:system-ui";
+  document.body.appendChild(s);
+  const all = new Map();
+  const xMin = -320000, xMax = -60000, yMin = 7080000, yMax = 7440000;
+  const step = 5000;
+  const totalX = Math.ceil((xMax - xMin) / step);
+  const totalY = Math.ceil((yMax - yMin) / step);
+  const totalSteps = totalX * totalY;
+  let done = 0;
+  for (let x = xMin; x < xMax; x += step) {
+    for (let y = yMin; y < yMax; y += step) {
+      done++;
+      if (done % 50 === 0) s.textContent = "Scanning " + done + "/" + totalSteps + " (" + all.size + " routes found)";
+      try {
+        const bbox = x + "," + y + "," + (x + step) + "," + (y + step);
+        const url = "/api/mapserver/trailwise?SERVICE=WMS&VERSION=1.3.0&REQUEST=GetFeatureInfo&FORMAT=image/png&TRANSPARENT=true&QUERY_LAYERS=UCRLines,BOATLines&LAYERS=UCRLines,BOATLines&HIDE_ROUTES_OF_NO_INTEREST=0&INFO_FORMAT=text/html&I=50&J=50&CRS=EPSG:3857&STYLES=&WIDTH=101&HEIGHT=101&BBOX=" + bbox;
+        const r = await fetch(url);
+        if (!r.ok) continue;
+        const t = await r.text();
+        const guids = t.match(/[0-9A-Fa-f]{8}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{4}-[0-9A-Fa-f]{12}/g);
+        const twuids = t.match(/[A-Z][A-Z][0-9][0-9][0-9][0-9]-[0-9][0-9]/g);
+        if (guids) {
+          for (let i = 0; i < guids.length; i++) {
+            const guid = guids[i].toUpperCase();
+            if (!all.has(guid)) {
+              const twuid = twuids && twuids[i] ? twuids[i] : "";
+              const isUCR = t.indexOf("Unclassified") > -1;
+              all.set(guid, { guid, twuid, type: isUCR ? "UCR" : "BOAT", cx: x + step/2, cy: y + step/2 });
+            }
+          }
+        }
+      } catch(e) {}
+      if (done % 10 === 0) await new Promise(r => setTimeout(r, 50));
+    }
+  }
+  s.textContent = "Downloading " + all.size + " routes...";
+  const arr = Array.from(all.values());
+  const blob = new Blob([JSON.stringify(arr, null, 2)], {type: "application/json"});
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "tw2-routes.json";
+  a.click();
+  s.textContent = "Done! " + all.size + " routes extracted.";
+  setTimeout(() => s.remove(), 10000);
+})();
+</textarea>
+<br>
+<button onclick="navigator.clipboard.writeText(document.getElementById('s').value.trim());this.textContent='Copied!'" style="margin-top:10px;padding:8px 16px;background:#2d6a4f;color:white;border:none;border-radius:6px;cursor:pointer;font-size:14px">Copy to Clipboard</button>
 </body>
 </html>
