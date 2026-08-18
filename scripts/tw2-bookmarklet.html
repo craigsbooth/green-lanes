@@ -3,27 +3,23 @@
 <head><title>TW2 Route Extractor</title></head>
 <body style="font-family:system-ui;max-width:800px;margin:40px auto;padding:20px">
 <h1>TW2 Route Extractor</h1>
-<p>Extracts all TW2 route GUIDs for Durham and Yorkshire. Run on TW2 map page while logged in.</p>
 
 <h2>Extract All Routes (drag to bookmarks bar)</h2>
 <p style="padding:20px;background:#f0f0f0;border-radius:8px">
-<a href="javascript:void(async function(){try{const status=document.createElement('div');status.style='position:fixed;top:10px;left:50%;transform:translateX(-50%);background:#2d6a4f;color:white;padding:12px 24px;border-radius:8px;z-index:99999;font-family:system-ui';status.textContent='Extracting routes...';document.body.appendChild(status);const all=[];const layers=['ms:UCRMidPoints','ms:BOATMidPoints'];for(const layer of layers){status.textContent='Fetching '+layer+'...';const r=await fetch('/api/mapserver/trailwise?VERSION=2.0.0&outputFormat=geojson&SERVICE=WFS&REQUEST=GetFeature&SRSNAME=EPSG:4326&TYPENAME='+layer);if(!r.ok){status.textContent=layer+' failed: '+r.status;await new Promise(r=>setTimeout(r,2000));continue}const d=await r.json();if(d.features){for(const f of d.features){all.push({guid:f.properties.RouteGUID||'',twuid:f.properties.TWUID||f.properties.Name||'',name:f.properties.RouteName||f.properties.Name||'',type:layer.includes('UCR')?'UCR':'BOAT',lat:f.geometry?f.geometry.coordinates[1]:null,lng:f.geometry?f.geometry.coordinates[0]:null})}status.textContent=layer+': '+d.features.length+' routes';}await new Promise(r=>setTimeout(r,1000))}status.textContent='Downloading '+all.length+' routes...';const blob=new Blob([JSON.stringify(all,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='tw2-routes.json';a.click();status.textContent='Done! '+all.length+' routes downloaded.';setTimeout(()=>status.remove(),5000)}catch(e){alert('Error: '+e.message)}})()">
+<a href="javascript:void(async function(){try{const status=document.createElement('div');status.style='position:fixed;top:10px;left:50%;transform:translateX(-50%);background:%232d6a4f;color:white;padding:12px 24px;border-radius:8px;z-index:99999;font-family:system-ui;font-size:14px';document.body.appendChild(status);const all=[];const layers=['UCRMidPoints','BOATMidPoints'];const bboxes=['-325000,7050000,-180000,7250000','-325000,7250000,-180000,7450000','-180000,7050000,-50000,7250000','-180000,7250000,-50000,7450000'];let total=0;for(const layer of layers){for(const bbox of bboxes){status.textContent=layer+' chunk '+(total+1)+'... ('+all.length+' found so far)';try{const r=await fetch('/api/mapserver/trailwise?VERSION=2.0.0&outputFormat=geojson&SERVICE=WFS&REQUEST=GetFeature&SRSNAME=EPSG:3857&TYPENAME='+layer+'&BBOX='+bbox);if(!r.ok){console.log(layer+' bbox '+bbox+': HTTP '+r.status);total++;continue}const t=await r.text();if(!t.startsWith('{')){console.log(layer+': not JSON');total++;continue}const d=JSON.parse(t);if(d.features){for(const f of d.features){const guid=f.properties.RouteGUID||f.properties.GUID||'';if(guid&&!all.find(x=>x.guid===guid)){all.push({guid:guid,twuid:f.properties.TWUID||f.properties.Name||'',name:f.properties.RouteName||f.properties.Name||'',type:layer.includes('UCR')?'UCR':'BOAT',lat:f.geometry&&f.geometry.coordinates?f.geometry.coordinates[1]:null,lng:f.geometry&&f.geometry.coordinates?f.geometry.coordinates[0]:null})}}}}catch(e){console.log(layer+' error:',e.message)}total++;await new Promise(r=>setTimeout(r,500))}}status.textContent='Downloading '+all.length+' routes...';const blob=new Blob([JSON.stringify(all,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='tw2-routes.json';a.click();status.textContent='Done! '+all.length+' routes extracted.';setTimeout(()=>status.remove(),10000)}catch(e){alert('Error: '+e.message)}})()">
   <strong style="font-size:18px;padding:12px 24px;background:#2d6a4f;color:white;border-radius:6px;text-decoration:none;display:inline-block">Extract All TW2 Routes</strong>
 </a>
 </p>
 
 <h2>Instructions</h2>
 <ol>
-<li>Drag the green button above to your bookmarks bar</li>
+<li>Drag the green button to your bookmarks bar</li>
 <li>Go to <a href="https://www.trailwise2.co.uk/route/map" target="_blank">TW2 map</a> (logged in)</li>
-<li>Click the bookmarklet</li>
-<li>Wait for it to finish (shows progress)</li>
-<li>It downloads <code>tw2-routes.json</code></li>
-<li>Move that file to <code>src/data/tw2-routes.json</code> in this project</li>
-<li>Run: <code>node scripts/build-tw2-mapping.mjs</code></li>
-<li>Rebuild the app: <code>npm run build</code></li>
+<li>Click the bookmarklet - a green bar shows progress</li>
+<li>Wait ~30 seconds - it queries 8 chunks (4 areas x 2 layer types)</li>
+<li>A <code>tw2-routes.json</code> file downloads automatically</li>
+<li>Move it to <code>src/data/tw2-routes.json</code></li>
+<li>Tell me and I will run the mapping script</li>
 </ol>
-
-<p>After that, every matched route in our app will have a direct "View on TW2" link opening the exact route detail page with comments.</p>
 </body>
 </html>
