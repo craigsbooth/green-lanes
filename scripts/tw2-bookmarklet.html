@@ -4,22 +4,27 @@
 <body style="font-family:system-ui;max-width:800px;margin:40px auto;padding:20px">
 <h1>TW2 Route Extractor</h1>
 
-<h2>Extract All Routes (drag to bookmarks bar)</h2>
-<p style="padding:20px;background:#f0f0f0;border-radius:8px">
-<a href="javascript:void(async function(){try{const status=document.createElement('div');status.style='position:fixed;top:10px;left:50%;transform:translateX(-50%);background:%232d6a4f;color:white;padding:12px 24px;border-radius:8px;z-index:99999;font-family:system-ui;font-size:14px';document.body.appendChild(status);const all=[];const layers=['UCRMidPoints','BOATMidPoints'];const bboxes=['-325000,7050000,-180000,7250000','-325000,7250000,-180000,7450000','-180000,7050000,-50000,7250000','-180000,7250000,-50000,7450000'];let total=0;for(const layer of layers){for(const bbox of bboxes){status.textContent=layer+' chunk '+(total+1)+'... ('+all.length+' found so far)';try{const r=await fetch('/api/mapserver/trailwise?VERSION=2.0.0&outputFormat=geojson&SERVICE=WFS&REQUEST=GetFeature&SRSNAME=EPSG:3857&TYPENAME='+layer+'&BBOX='+bbox);if(!r.ok){console.log(layer+' bbox '+bbox+': HTTP '+r.status);total++;continue}const t=await r.text();if(!t.startsWith('{')){console.log(layer+': not JSON');total++;continue}const d=JSON.parse(t);if(d.features){for(const f of d.features){const guid=f.properties.RouteGUID||f.properties.GUID||'';if(guid&&!all.find(x=>x.guid===guid)){all.push({guid:guid,twuid:f.properties.TWUID||f.properties.Name||'',name:f.properties.RouteName||f.properties.Name||'',type:layer.includes('UCR')?'UCR':'BOAT',lat:f.geometry&&f.geometry.coordinates?f.geometry.coordinates[1]:null,lng:f.geometry&&f.geometry.coordinates?f.geometry.coordinates[0]:null})}}}}catch(e){console.log(layer+' error:',e.message)}total++;await new Promise(r=>setTimeout(r,500))}}status.textContent='Downloading '+all.length+' routes...';const blob=new Blob([JSON.stringify(all,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='tw2-routes.json';a.click();status.textContent='Done! '+all.length+' routes extracted.';setTimeout(()=>status.remove(),10000)}catch(e){alert('Error: '+e.message)}})()">
+<h2>Step 1: Quick test (try this first)</h2>
+<p style="padding:15px;background:#f0f0f0;border-radius:8px">
+<a href="javascript:void(async function(){const status=document.createElement('div');status.style='position:fixed;top:10px;left:50%;transform:translateX(-50%);background:%23333;color:white;padding:12px 24px;border-radius:8px;z-index:99999;font-size:13px;font-family:system-ui;max-width:90vw;overflow:hidden';document.body.appendChild(status);const layers=['UCRLines','BOATLines','UCRMidPoints','BOATMidPoints'];const bbox='-210000,7274000,-206000,7278000';for(const layer of layers){status.textContent='Testing '+layer+'...';try{const r=await fetch('/api/mapserver/trailwise?VERSION=2.0.0&outputFormat=geojson&SERVICE=WFS&REQUEST=GetFeature&SRSNAME=EPSG:3857&TYPENAME='+layer+'&BBOX='+bbox);const t=await r.text();status.textContent=layer+': '+r.status+' - '+t.slice(0,200);await new Promise(r=>setTimeout(r,3000))}catch(e){status.textContent=layer+': ERROR '+e.message;await new Promise(r=>setTimeout(r,3000))}}status.textContent='Tests complete. Check console for details.';setTimeout(()=>status.remove(),5000)})()">
+  <strong style="padding:8px 16px;background:#e9c46a;color:#333;border-radius:6px;text-decoration:none">Quick Test (shows responses)</strong>
+</a>
+</p>
+
+<h2>Step 2: Full extract (after test works)</h2>
+<p style="padding:15px;background:#f0f0f0;border-radius:8px">
+<a href="javascript:void(async function(){try{const status=document.createElement('div');status.style='position:fixed;top:10px;left:50%;transform:translateX(-50%);background:%232d6a4f;color:white;padding:12px 24px;border-radius:8px;z-index:99999;font-size:14px;font-family:system-ui';document.body.appendChild(status);const all=[];const bboxes=['-325000,7050000,-250000,7200000','-250000,7050000,-175000,7200000','-175000,7050000,-50000,7200000','-325000,7200000,-250000,7350000','-250000,7200000,-175000,7350000','-175000,7200000,-50000,7350000','-325000,7350000,-250000,7500000','-250000,7350000,-175000,7500000','-175000,7350000,-50000,7500000'];let chunk=0;for(const bbox of bboxes){for(const layer of['UCRLines','BOATLines']){chunk++;status.textContent='Chunk '+chunk+'/18: '+layer+' ('+all.length+' routes found)';try{const r=await fetch('/api/mapserver/trailwise?VERSION=2.0.0&outputFormat=geojson&SERVICE=WFS&REQUEST=GetFeature&SRSNAME=EPSG:3857&TYPENAME='+layer+'&BBOX='+bbox);if(!r.ok)continue;const d=await r.json();if(d.features){for(const f of d.features){const guid=f.properties.RouteGUID||f.properties.GUID||f.properties.route_guid||'';const twuid=f.properties.TWUID||f.properties.twuid||f.properties.Name||'';if(guid&&!all.find(x=>x.guid===guid)){const coords=f.geometry.coordinates;const mid=Array.isArray(coords[0])?coords[Math.floor(coords.length/2)]:coords;all.push({guid,twuid,type:layer.includes('UCR')?'UCR':'BOAT',lat:mid[1],lng:mid[0]})}}}}catch(e){console.log(layer+' error:',e)}await new Promise(r=>setTimeout(r,300))}}status.textContent='Downloading '+all.length+' routes...';const blob=new Blob([JSON.stringify(all,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='tw2-routes.json';a.click();status.textContent='Done! '+all.length+' routes.';setTimeout(()=>status.remove(),10000)}catch(e){alert('Error: '+e.message)}})()">
   <strong style="font-size:18px;padding:12px 24px;background:#2d6a4f;color:white;border-radius:6px;text-decoration:none;display:inline-block">Extract All TW2 Routes</strong>
 </a>
 </p>
 
 <h2>Instructions</h2>
 <ol>
-<li>Drag the green button to your bookmarks bar</li>
 <li>Go to <a href="https://www.trailwise2.co.uk/route/map" target="_blank">TW2 map</a> (logged in)</li>
-<li>Click the bookmarklet - a green bar shows progress</li>
-<li>Wait ~30 seconds - it queries 8 chunks (4 areas x 2 layer types)</li>
-<li>A <code>tw2-routes.json</code> file downloads automatically</li>
-<li>Move it to <code>src/data/tw2-routes.json</code></li>
-<li>Tell me and I will run the mapping script</li>
+<li>First try the yellow <strong>Quick Test</strong> - it tests 4 layers on a small area and shows what comes back</li>
+<li>Watch the status bar - it cycles through each layer showing the response</li>
+<li>Once you see which layers return data, use the green <strong>Extract All</strong> button</li>
+<li>Report what the yellow test shows for each layer</li>
 </ol>
 </body>
 </html>
