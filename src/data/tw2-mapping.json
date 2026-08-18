@@ -1,1490 +1,5468 @@
 {
+  "osm-4453088": {
+    "guid": "3C0785B0-5D18-400B-9081-9EE57DA08629",
+    "twuid": "SD9480-01",
+    "type": "BOAT",
+    "distance_m": 1014
+  },
+  "osm-4488282": {
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 548
+  },
+  "osm-4488302": {
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 534
+  },
+  "osm-4488303": {
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 546
+  },
   "osm-4488305": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
-    "type": "UCR",
-    "distance_m": 1997
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 466
+  },
+  "osm-4488328": {
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 1246
+  },
+  "osm-4488411": {
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 1488
   },
   "osm-4488536": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 497
+  },
+  "osm-4488809": {
+    "guid": "EDBD4497-3C24-4CF8-97BE-F14A54DF0940",
+    "twuid": "SE1850-01",
     "type": "UCR",
-    "distance_m": 1839
+    "distance_m": 1881
   },
   "osm-4488862": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 1102
+  },
+  "osm-4488977": {
+    "guid": "2D2FD2CC-9AA0-4010-8484-2B0573D050D5",
+    "twuid": "SE1450-02",
     "type": "UCR",
-    "distance_m": 1303
+    "distance_m": 856
+  },
+  "osm-4572237": {
+    "guid": "6214F386-B4CD-4771-9EC9-D89187E262F8",
+    "twuid": "NY4605-02",
+    "type": "BOAT",
+    "distance_m": 666
+  },
+  "osm-4588145": {
+    "guid": "94B1FF35-C1D7-4A47-A2CA-A382016EBFB6",
+    "twuid": "SE0125-02",
+    "type": "UCR",
+    "distance_m": 1896
+  },
+  "osm-4628339": {
+    "guid": "94B1FF35-C1D7-4A47-A2CA-A382016EBFB6",
+    "twuid": "SE0125-02",
+    "type": "UCR",
+    "distance_m": 1979
   },
   "osm-4638698": {
-    "guid": "48A091DB-6072-4126-81AE-854292212639",
-    "twuid": "SD4780-01",
+    "guid": "C51199B0-44D8-46FA-879F-E4E80E034E97",
+    "twuid": "SD5077-01",
     "type": "UCR",
-    "distance_m": 1485
+    "distance_m": 1966
+  },
+  "osm-4748078": {
+    "guid": "A5C06249-B6E1-4D91-BFF3-19377E277049",
+    "twuid": "NZ4730-03",
+    "type": "BOAT",
+    "distance_m": 1638
   },
   "osm-4773704": {
     "guid": "04A309A3-CDD6-4146-97F7-4A460CB3D8E5",
     "twuid": "NY7349-04",
     "type": "UCR",
-    "distance_m": 1876
+    "distance_m": 447
+  },
+  "osm-4798138": {
+    "guid": "F3588D09-7F78-4CA0-9712-AA904C96D0D9",
+    "twuid": "NY4805-01",
+    "type": "UCR",
+    "distance_m": 727
+  },
+  "osm-4938290": {
+    "guid": "94B1FF35-C1D7-4A47-A2CA-A382016EBFB6",
+    "twuid": "SE0125-02",
+    "type": "UCR",
+    "distance_m": 1377
+  },
+  "osm-5045834": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 1690
+  },
+  "osm-5045841": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 1386
+  },
+  "osm-8092691": {
+    "guid": "96B8E361-22CE-4230-9E91-FD0F123D8D86",
+    "twuid": "SE2442-02",
+    "type": "UCR",
+    "distance_m": 737
+  },
+  "osm-10634309": {
+    "guid": "D33B1F98-A0D3-4745-91DA-777B7F9BCB09",
+    "twuid": "SD8265-04",
+    "type": "BOAT",
+    "distance_m": 1887
+  },
+  "osm-23386728": {
+    "guid": "0E68C442-7E22-4F78-98E1-5C23DAD5331B",
+    "twuid": "NY7442-02",
+    "type": "UCR",
+    "distance_m": 766
   },
   "osm-24289379": {
-    "guid": "FBB762A7-D7F8-4284-9331-E91DB4CA88B9",
-    "twuid": "SE1847-03",
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
     "type": "UCR",
-    "distance_m": 1955
+    "distance_m": 1420
+  },
+  "osm-24291871": {
+    "guid": "31928F44-2170-4CF5-BABD-49561951380A",
+    "twuid": "NY6607-02",
+    "type": "BOAT",
+    "distance_m": 614
+  },
+  "osm-24291874": {
+    "guid": "31928F44-2170-4CF5-BABD-49561951380A",
+    "twuid": "NY6607-02",
+    "type": "BOAT",
+    "distance_m": 504
+  },
+  "osm-24611985": {
+    "guid": "6214F386-B4CD-4771-9EC9-D89187E262F8",
+    "twuid": "NY4605-02",
+    "type": "BOAT",
+    "distance_m": 1252
+  },
+  "osm-24642532": {
+    "guid": "C5177048-D8B3-4B38-AB23-E048C0B6880F",
+    "twuid": "NZ2135-05",
+    "type": "BOAT",
+    "distance_m": 1943
   },
   "osm-24654286": {
     "guid": "48A091DB-6072-4126-81AE-854292212639",
     "twuid": "SD4780-01",
     "type": "UCR",
-    "distance_m": 1905
+    "distance_m": 1926
+  },
+  "osm-24872370": {
+    "guid": "FB35B2AD-D1B3-4584-AC3F-57D90EB35971",
+    "twuid": "SD4898-03",
+    "type": "UCR",
+    "distance_m": 1690
   },
   "osm-25016037": {
-    "guid": "5A3A05A1-229E-4F30-B7AE-8D727BEF81DA",
-    "twuid": "SD9592-02",
+    "guid": "27A5726F-713F-4363-A211-C96439D51DC2",
+    "twuid": "SD9392-01",
     "type": "UCR",
-    "distance_m": 1850
+    "distance_m": 667
   },
   "osm-25016094": {
-    "guid": "5A3A05A1-229E-4F30-B7AE-8D727BEF81DA",
-    "twuid": "SD9592-02",
+    "guid": "27A5726F-713F-4363-A211-C96439D51DC2",
+    "twuid": "SD9392-01",
     "type": "UCR",
-    "distance_m": 1385
+    "distance_m": 769
+  },
+  "osm-26352618": {
+    "guid": "FAEA4740-06B6-411C-BD09-9A17E91BAD6B",
+    "twuid": "NZ2836-09",
+    "type": "BOAT",
+    "distance_m": 981
+  },
+  "osm-26352620": {
+    "guid": "FAEA4740-06B6-411C-BD09-9A17E91BAD6B",
+    "twuid": "NZ2836-09",
+    "type": "BOAT",
+    "distance_m": 1064
+  },
+  "osm-26352629": {
+    "guid": "FAEA4740-06B6-411C-BD09-9A17E91BAD6B",
+    "twuid": "NZ2836-09",
+    "type": "BOAT",
+    "distance_m": 1095
+  },
+  "osm-26352769": {
+    "guid": "FAEA4740-06B6-411C-BD09-9A17E91BAD6B",
+    "twuid": "NZ2836-09",
+    "type": "BOAT",
+    "distance_m": 1068
+  },
+  "osm-26352775": {
+    "guid": "FAEA4740-06B6-411C-BD09-9A17E91BAD6B",
+    "twuid": "NZ2836-09",
+    "type": "BOAT",
+    "distance_m": 1090
+  },
+  "osm-26353090": {
+    "guid": "FAEA4740-06B6-411C-BD09-9A17E91BAD6B",
+    "twuid": "NZ2836-09",
+    "type": "BOAT",
+    "distance_m": 1176
+  },
+  "osm-26353108": {
+    "guid": "FAEA4740-06B6-411C-BD09-9A17E91BAD6B",
+    "twuid": "NZ2836-09",
+    "type": "BOAT",
+    "distance_m": 1055
+  },
+  "osm-26353290": {
+    "guid": "FAEA4740-06B6-411C-BD09-9A17E91BAD6B",
+    "twuid": "NZ2836-09",
+    "type": "BOAT",
+    "distance_m": 1065
+  },
+  "osm-27251015": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1313
+  },
+  "osm-27673413": {
+    "guid": "4557ECAF-2D82-4535-B744-A30E624ACE24",
+    "twuid": "NZ2050-01",
+    "type": "BOAT",
+    "distance_m": 175
+  },
+  "osm-28173699": {
+    "guid": "1FD518F0-684A-47EC-9377-2A3AD74A6B61",
+    "twuid": "SD7198-02",
+    "type": "UCR",
+    "distance_m": 1016
+  },
+  "osm-28174261": {
+    "guid": "97E59373-2F6D-42B1-9A50-9D03CBE4B162",
+    "twuid": "SD6791-02",
+    "type": "UCR",
+    "distance_m": 645
+  },
+  "osm-28416411": {
+    "guid": "67A089DE-3536-4AF3-B78D-0A9BA98D0ECD",
+    "twuid": "SD8269-02",
+    "type": "BOAT",
+    "distance_m": 1052
+  },
+  "osm-28449843": {
+    "guid": "7DFFBDE0-CE8F-4BBB-A0B0-2CDB155E2BDD",
+    "twuid": "NZ1935-02",
+    "type": "BOAT",
+    "distance_m": 1367
+  },
+  "osm-28508458": {
+    "guid": "878384DB-B36D-42D5-9F03-4BDE63C104F0",
+    "twuid": "SD7663-03",
+    "type": "UCR",
+    "distance_m": 230
+  },
+  "osm-28508465": {
+    "guid": "878384DB-B36D-42D5-9F03-4BDE63C104F0",
+    "twuid": "SD7663-03",
+    "type": "UCR",
+    "distance_m": 792
+  },
+  "osm-28569308": {
+    "guid": "8CB0D29E-797B-44A0-A5A2-BAB294B450C9",
+    "twuid": "NY9550-03",
+    "type": "UCR",
+    "distance_m": 1495
+  },
+  "osm-28569309": {
+    "guid": "8CB0D29E-797B-44A0-A5A2-BAB294B450C9",
+    "twuid": "NY9550-03",
+    "type": "UCR",
+    "distance_m": 1096
   },
   "osm-28569311": {
     "guid": "8CB0D29E-797B-44A0-A5A2-BAB294B450C9",
     "twuid": "NY9550-03",
     "type": "UCR",
-    "distance_m": 1589
+    "distance_m": 1127
   },
-  "osm-31364171": {
-    "guid": "EAB74DC8-4A6B-4BE9-A4B3-A27B3BFCFD81",
-    "twuid": "NZ1923-01",
+  "osm-28660666": {
+    "guid": "3D8D1BCE-7DEB-46E9-88B6-0B49D9A26A97",
+    "twuid": "NY4707-02",
+    "type": "BOAT",
+    "distance_m": 810
+  },
+  "osm-28663514": {
+    "guid": "B4584FB3-E0C0-4C09-A549-278A0BC845A7",
+    "twuid": "NZ1155-01",
+    "type": "BOAT",
+    "distance_m": 1859
+  },
+  "osm-28664294": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 533
+  },
+  "osm-28664352": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 1094
+  },
+  "osm-28701701": {
+    "guid": "A61C6283-9D5C-469D-B2A8-80E6D26AF1EF",
+    "twuid": "SD6874-01",
     "type": "UCR",
-    "distance_m": 680
+    "distance_m": 1573
   },
-  "osm-31364172": {
-    "guid": "EAB74DC8-4A6B-4BE9-A4B3-A27B3BFCFD81",
-    "twuid": "NZ1923-01",
+  "osm-28705971": {
+    "guid": "3D8D1BCE-7DEB-46E9-88B6-0B49D9A26A97",
+    "twuid": "NY4707-02",
+    "type": "BOAT",
+    "distance_m": 1001
+  },
+  "osm-29225189": {
+    "guid": "D72DACB1-C251-405F-BB7D-84BCEB29BE3B",
+    "twuid": "SD5983-04",
+    "type": "UCR",
+    "distance_m": 1071
+  },
+  "osm-29225294": {
+    "guid": "D72DACB1-C251-405F-BB7D-84BCEB29BE3B",
+    "twuid": "SD5983-04",
     "type": "UCR",
     "distance_m": 814
   },
-  "osm-32666409": {
-    "guid": "B5F3F352-221B-43B8-BBE2-340FED23874E",
-    "twuid": "NY5737-01",
+  "osm-29279951": {
+    "guid": "A61C6283-9D5C-469D-B2A8-80E6D26AF1EF",
+    "twuid": "SD6874-01",
     "type": "UCR",
-    "distance_m": 1591
+    "distance_m": 1666
   },
-  "osm-36773158": {
-    "guid": "C5DB04BC-65DE-4FA3-803C-8D9B648516A8",
-    "twuid": "SE1978-01",
+  "osm-29469990": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
     "type": "UCR",
-    "distance_m": 1032
+    "distance_m": 1239
   },
-  "osm-37013137": {
-    "guid": "DC59A228-D011-4E56-866B-9378E0016BB0",
-    "twuid": "NY8135-03",
+  "osm-29995783": {
+    "guid": "6BE078DF-907A-4E29-916E-A11512DD173A",
+    "twuid": "NY9555-04",
+    "type": "BOAT",
+    "distance_m": 1462
+  },
+  "osm-31047848": {
+    "guid": "38135881-4DB6-4AFC-B9C2-AE491941D999",
+    "twuid": "SD5581-01",
     "type": "UCR",
-    "distance_m": 561
+    "distance_m": 1031
+  },
+  "osm-31729011": {
+    "guid": "35F6CBDE-DC13-472A-A46F-D75E2A85160B",
+    "twuid": "SE1513-04",
+    "type": "BOAT",
+    "distance_m": 1288
+  },
+  "osm-31778071": {
+    "guid": "F8B899A0-0A96-4B8F-89E3-CB1FFD2363F0",
+    "twuid": "SD8589-04",
+    "type": "UCR",
+    "distance_m": 641
+  },
+  "osm-31778094": {
+    "guid": "F8B899A0-0A96-4B8F-89E3-CB1FFD2363F0",
+    "twuid": "SD8589-04",
+    "type": "UCR",
+    "distance_m": 450
+  },
+  "osm-31778100": {
+    "guid": "F8B899A0-0A96-4B8F-89E3-CB1FFD2363F0",
+    "twuid": "SD8589-04",
+    "type": "UCR",
+    "distance_m": 286
+  },
+  "osm-32440363": {
+    "guid": "D33B1F98-A0D3-4745-91DA-777B7F9BCB09",
+    "twuid": "SD8265-04",
+    "type": "BOAT",
+    "distance_m": 830
+  },
+  "osm-32440417": {
+    "guid": "D33B1F98-A0D3-4745-91DA-777B7F9BCB09",
+    "twuid": "SD8265-04",
+    "type": "BOAT",
+    "distance_m": 891
+  },
+  "osm-32635164": {
+    "guid": "9A335E99-5159-4DB3-860C-BEFFCAA94589",
+    "twuid": "NY5636-05",
+    "type": "UCR",
+    "distance_m": 1364
+  },
+  "osm-32646281": {
+    "guid": "9A335E99-5159-4DB3-860C-BEFFCAA94589",
+    "twuid": "NY5636-05",
+    "type": "UCR",
+    "distance_m": 564
+  },
+  "osm-33177303": {
+    "guid": "0B2A895D-F5D8-4DE2-A339-874DF2086510",
+    "twuid": "NY5730-04",
+    "type": "UCR",
+    "distance_m": 1272
+  },
+  "osm-33189343": {
+    "guid": "E6C2DA42-2636-4812-8551-11427AFBF0A5",
+    "twuid": "NY9160-05",
+    "type": "BOAT",
+    "distance_m": 1846
+  },
+  "osm-33754187": {
+    "guid": "A61C6283-9D5C-469D-B2A8-80E6D26AF1EF",
+    "twuid": "SD6874-01",
+    "type": "UCR",
+    "distance_m": 1637
+  },
+  "osm-33955478": {
+    "guid": "182F77BF-9EF0-49B0-A01D-DB81D3F59C33",
+    "twuid": "NY7360-02",
+    "type": "BOAT",
+    "distance_m": 1503
+  },
+  "osm-35006920": {
+    "guid": "7DFFBDE0-CE8F-4BBB-A0B0-2CDB155E2BDD",
+    "twuid": "NZ1935-02",
+    "type": "BOAT",
+    "distance_m": 1525
+  },
+  "osm-35006921": {
+    "guid": "7DFFBDE0-CE8F-4BBB-A0B0-2CDB155E2BDD",
+    "twuid": "NZ1935-02",
+    "type": "BOAT",
+    "distance_m": 1477
+  },
+  "osm-35213287": {
+    "guid": "424F6DD1-80DF-4672-8455-2C63C132F1DA",
+    "twuid": "NZ1354-02",
+    "type": "BOAT",
+    "distance_m": 97
+  },
+  "osm-35213288": {
+    "guid": "424F6DD1-80DF-4672-8455-2C63C132F1DA",
+    "twuid": "NZ1354-02",
+    "type": "BOAT",
+    "distance_m": 341
+  },
+  "osm-35213289": {
+    "guid": "424F6DD1-80DF-4672-8455-2C63C132F1DA",
+    "twuid": "NZ1354-02",
+    "type": "BOAT",
+    "distance_m": 353
+  },
+  "osm-36732265": {
+    "guid": "6248FA90-1113-4141-B488-713578DDBD40",
+    "twuid": "SE0662-01",
+    "type": "UCR",
+    "distance_m": 472
+  },
+  "osm-36770971": {
+    "guid": "986A1131-DB42-476C-ACF7-1D6A4CCC347C",
+    "twuid": "SD8483-02",
+    "type": "UCR",
+    "distance_m": 350
+  },
+  "osm-36857710": {
+    "guid": "9EA5842A-4DB6-43B6-A75D-9013E9511B4C",
+    "twuid": "SE1765-02",
+    "type": "UCR",
+    "distance_m": 1708
+  },
+  "osm-37011323": {
+    "guid": "0F574ACF-B821-4259-AD01-6F304E656E2B",
+    "twuid": "NY9451-04",
+    "type": "BOAT",
+    "distance_m": 1384
+  },
+  "osm-37011324": {
+    "guid": "0F574ACF-B821-4259-AD01-6F304E656E2B",
+    "twuid": "NY9451-04",
+    "type": "BOAT",
+    "distance_m": 1672
+  },
+  "osm-37011325": {
+    "guid": "D167DBA2-3480-4FAE-9EA3-ED421142B9E3",
+    "twuid": "NY9355-07",
+    "type": "BOAT",
+    "distance_m": 1207
+  },
+  "osm-37011326": {
+    "guid": "D167DBA2-3480-4FAE-9EA3-ED421142B9E3",
+    "twuid": "NY9355-07",
+    "type": "BOAT",
+    "distance_m": 323
+  },
+  "osm-37011327": {
+    "guid": "6BE078DF-907A-4E29-916E-A11512DD173A",
+    "twuid": "NY9555-04",
+    "type": "BOAT",
+    "distance_m": 1545
+  },
+  "osm-37011328": {
+    "guid": "D167DBA2-3480-4FAE-9EA3-ED421142B9E3",
+    "twuid": "NY9355-07",
+    "type": "BOAT",
+    "distance_m": 1582
+  },
+  "osm-37011329": {
+    "guid": "0F574ACF-B821-4259-AD01-6F304E656E2B",
+    "twuid": "NY9451-04",
+    "type": "BOAT",
+    "distance_m": 1391
+  },
+  "osm-37011330": {
+    "guid": "D167DBA2-3480-4FAE-9EA3-ED421142B9E3",
+    "twuid": "NY9355-07",
+    "type": "BOAT",
+    "distance_m": 852
+  },
+  "osm-37100632": {
+    "guid": "6248FA90-1113-4141-B488-713578DDBD40",
+    "twuid": "SE0662-01",
+    "type": "UCR",
+    "distance_m": 1956
+  },
+  "osm-37569608": {
+    "guid": "BE85CC83-8CDD-4D65-A869-9F241B96EF52",
+    "twuid": "NZ3236-02",
+    "type": "BOAT",
+    "distance_m": 946
   },
   "osm-37572287": {
-    "guid": "6CF53AA7-0041-4B90-BABC-407521C35F5A",
-    "twuid": "NZ3136-01",
+    "guid": "BE85CC83-8CDD-4D65-A869-9F241B96EF52",
+    "twuid": "NZ3236-02",
     "type": "BOAT",
-    "distance_m": 1442
+    "distance_m": 598
   },
   "osm-37572354": {
-    "guid": "6CF53AA7-0041-4B90-BABC-407521C35F5A",
-    "twuid": "NZ3136-01",
+    "guid": "BE85CC83-8CDD-4D65-A869-9F241B96EF52",
+    "twuid": "NZ3236-02",
     "type": "BOAT",
-    "distance_m": 1297
+    "distance_m": 743
   },
   "osm-38083491": {
-    "guid": "5A3A05A1-229E-4F30-B7AE-8D727BEF81DA",
-    "twuid": "SD9592-02",
+    "guid": "27A5726F-713F-4363-A211-C96439D51DC2",
+    "twuid": "SD9392-01",
     "type": "UCR",
-    "distance_m": 854
+    "distance_m": 1995
+  },
+  "osm-38083492": {
+    "guid": "F98205C2-751D-46DF-B9E9-837BF248A811",
+    "twuid": "SD9988-01",
+    "type": "UCR",
+    "distance_m": 741
+  },
+  "osm-38353790": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 1151
+  },
+  "osm-38708235": {
+    "guid": "3615503E-036A-4C01-B789-7EC5D413D282",
+    "twuid": "NY7158-02",
+    "type": "BOAT",
+    "distance_m": 1139
+  },
+  "osm-39122023": {
+    "guid": "54699C2E-37A4-4244-BA70-54CED3AA68EA",
+    "twuid": "NZ0849-01",
+    "type": "BOAT",
+    "distance_m": 1510
+  },
+  "osm-40146375": {
+    "guid": "C9018693-2B0E-4E30-8265-1AF5FEEC9BB4",
+    "twuid": "SE0299-02",
+    "type": "UCR",
+    "distance_m": 1330
   },
   "osm-40167770": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 1707
+  },
+  "osm-40860040": {
+    "guid": "C9018693-2B0E-4E30-8265-1AF5FEEC9BB4",
+    "twuid": "SE0299-02",
     "type": "UCR",
-    "distance_m": 703
+    "distance_m": 1839
+  },
+  "osm-41179883": {
+    "guid": "38135881-4DB6-4AFC-B9C2-AE491941D999",
+    "twuid": "SD5581-01",
+    "type": "UCR",
+    "distance_m": 1009
+  },
+  "osm-41179884": {
+    "guid": "38135881-4DB6-4AFC-B9C2-AE491941D999",
+    "twuid": "SD5581-01",
+    "type": "UCR",
+    "distance_m": 850
+  },
+  "osm-41195594": {
+    "guid": "DE5D4C99-7AB1-4DF8-A4B3-EB2C64D295F6",
+    "twuid": "SE2037-01",
+    "type": "BOAT",
+    "distance_m": 1185
   },
   "osm-41362165": {
-    "guid": "5A3A05A1-229E-4F30-B7AE-8D727BEF81DA",
-    "twuid": "SD9592-02",
+    "guid": "27A5726F-713F-4363-A211-C96439D51DC2",
+    "twuid": "SD9392-01",
     "type": "UCR",
-    "distance_m": 1969
+    "distance_m": 196
+  },
+  "osm-41434724": {
+    "guid": "9DABD71B-0724-497C-A828-CB6DAC95DEE4",
+    "twuid": "SD5398-02",
+    "type": "BOAT",
+    "distance_m": 1145
+  },
+  "osm-41434726": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1951
+  },
+  "osm-41778742": {
+    "guid": "A61C6283-9D5C-469D-B2A8-80E6D26AF1EF",
+    "twuid": "SD6874-01",
+    "type": "UCR",
+    "distance_m": 472
+  },
+  "osm-41967088": {
+    "guid": "94815785-41B8-4AFD-A1BC-8B0A39E925FE",
+    "twuid": "SD9897-04",
+    "type": "UCR",
+    "distance_m": 880
+  },
+  "osm-42712000": {
+    "guid": "E95A03A6-02C0-4866-A41B-4291C55628E1",
+    "twuid": "SD9383-04",
+    "type": "BOAT",
+    "distance_m": 1542
+  },
+  "osm-42719821": {
+    "guid": "96B8E361-22CE-4230-9E91-FD0F123D8D86",
+    "twuid": "SE2442-02",
+    "type": "UCR",
+    "distance_m": 926
+  },
+  "osm-43324054": {
+    "guid": "BDAC8845-3AE9-452E-A713-414762C71310",
+    "twuid": "SD9065-06",
+    "type": "UCR",
+    "distance_m": 1013
+  },
+  "osm-43671545": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 1030
+  },
+  "osm-45344155": {
+    "guid": "D2F26C8B-B674-424A-BF7E-75B47898B86B",
+    "twuid": "SD6173-01",
+    "type": "UCR",
+    "distance_m": 1876
   },
   "osm-45360040": {
     "guid": "A2AC47EC-AB33-4594-9C9E-345ED7C3E414",
     "twuid": "NY6104-01",
     "type": "BOAT",
-    "distance_m": 1866
+    "distance_m": 557
   },
-  "osm-50459442": {
-    "guid": "06EE8C4E-1C9E-4F04-9A4F-A0422D0E2DCD",
-    "twuid": "NZ0702-02",
+  "osm-45671438": {
+    "guid": "CCA97E88-4DFC-4719-BE23-55F63877F5F5",
+    "twuid": "SE0693-05",
     "type": "UCR",
-    "distance_m": 1531
+    "distance_m": 696
+  },
+  "osm-45738400": {
+    "guid": "CCA97E88-4DFC-4719-BE23-55F63877F5F5",
+    "twuid": "SE0693-05",
+    "type": "UCR",
+    "distance_m": 1333
+  },
+  "osm-46588459": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 1324
+  },
+  "osm-46588460": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 970
+  },
+  "osm-46588461": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 699
+  },
+  "osm-46588462": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 340
+  },
+  "osm-47309652": {
+    "guid": "CCA97E88-4DFC-4719-BE23-55F63877F5F5",
+    "twuid": "SE0693-05",
+    "type": "UCR",
+    "distance_m": 1950
+  },
+  "osm-49195796": {
+    "guid": "29A4B04F-3B82-435C-8469-6E7B8EDDADAA",
+    "twuid": "SE0684-02",
+    "type": "UCR",
+    "distance_m": 1430
   },
   "osm-50459447": {
     "guid": "06EE8C4E-1C9E-4F04-9A4F-A0422D0E2DCD",
     "twuid": "NZ0702-02",
     "type": "UCR",
-    "distance_m": 278
+    "distance_m": 1782
   },
-  "osm-59403088": {
-    "guid": "BE710192-31A0-4D5F-A428-EF7D6DC70646",
-    "twuid": "NZ1438-03",
+  "osm-50831054": {
+    "guid": "7789BDAE-10C6-4D19-B71C-B70E41B3709C",
+    "twuid": "NZ2343-01",
+    "type": "UCR",
+    "distance_m": 54
+  },
+  "osm-51005714": {
+    "guid": "80289955-6C47-44C1-9D50-6954649674AE",
+    "twuid": "SE0189-02",
+    "type": "UCR",
+    "distance_m": 739
+  },
+  "osm-53020883": {
+    "guid": "D6C3B80C-6E41-45EF-87FF-29EAC14379FC",
+    "twuid": "SD8259-03",
+    "type": "UCR",
+    "distance_m": 314
+  },
+  "osm-54432058": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
     "type": "BOAT",
-    "distance_m": 1774
+    "distance_m": 1556
+  },
+  "osm-54683557": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 1909
+  },
+  "osm-54871709": {
+    "guid": "9D158424-D0CE-407B-ABCF-198CEF80F3A6",
+    "twuid": "SE0688-05",
+    "type": "UCR",
+    "distance_m": 1787
+  },
+  "osm-54871836": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 544
+  },
+  "osm-55732262": {
+    "guid": "1A7A4FD5-B597-47A4-B0EA-45828CCFB141",
+    "twuid": "SD9932-02",
+    "type": "UCR",
+    "distance_m": 662
+  },
+  "osm-56182752": {
+    "guid": "7789BDAE-10C6-4D19-B71C-B70E41B3709C",
+    "twuid": "NZ2343-01",
+    "type": "UCR",
+    "distance_m": 74
+  },
+  "osm-56401426": {
+    "guid": "55604FA3-3981-49EC-AE00-7E10F65DCEEA",
+    "twuid": "SD8836-02",
+    "type": "BOAT",
+    "distance_m": 506
+  },
+  "osm-56674203": {
+    "guid": "2FEAC2A6-0FF2-4AA9-99B5-469376178F54",
+    "twuid": "SD5997-03",
+    "type": "UCR",
+    "distance_m": 1357
+  },
+  "osm-57362921": {
+    "guid": "9EA5842A-4DB6-43B6-A75D-9013E9511B4C",
+    "twuid": "SE1765-02",
+    "type": "UCR",
+    "distance_m": 1172
+  },
+  "osm-57891721": {
+    "guid": "97E59373-2F6D-42B1-9A50-9D03CBE4B162",
+    "twuid": "SD6791-02",
+    "type": "UCR",
+    "distance_m": 809
+  },
+  "osm-58924520": {
+    "guid": "1FD518F0-684A-47EC-9377-2A3AD74A6B61",
+    "twuid": "SD7198-02",
+    "type": "UCR",
+    "distance_m": 1822
+  },
+  "osm-59399777": {
+    "guid": "DA4375B3-FFF4-436F-878E-FE9AABB0F048",
+    "twuid": "NZ1439-01",
+    "type": "UCR",
+    "distance_m": 609
+  },
+  "osm-59399908": {
+    "guid": "DA4375B3-FFF4-436F-878E-FE9AABB0F048",
+    "twuid": "NZ1439-01",
+    "type": "UCR",
+    "distance_m": 499
+  },
+  "osm-60366836": {
+    "guid": "87331964-1B79-43FC-93AD-E4BF036FA535",
+    "twuid": "SD4389-03",
+    "type": "BOAT",
+    "distance_m": 966
+  },
+  "osm-60366838": {
+    "guid": "87331964-1B79-43FC-93AD-E4BF036FA535",
+    "twuid": "SD4389-03",
+    "type": "BOAT",
+    "distance_m": 1313
+  },
+  "osm-60697338": {
+    "guid": "6BE078DF-907A-4E29-916E-A11512DD173A",
+    "twuid": "NY9555-04",
+    "type": "BOAT",
+    "distance_m": 1715
   },
   "osm-60795375": {
-    "guid": "DC77F554-0655-4DC9-A7E2-B6F2A5187D87",
-    "twuid": "SD4888-01",
+    "guid": "FD869737-3EAC-4E55-8E85-4F4EA6784691",
+    "twuid": "SD4792-02",
     "type": "UCR",
-    "distance_m": 1873
+    "distance_m": 436
   },
   "osm-60981334": {
-    "guid": "6CF53AA7-0041-4B90-BABC-407521C35F5A",
-    "twuid": "NZ3136-01",
+    "guid": "BE85CC83-8CDD-4D65-A869-9F241B96EF52",
+    "twuid": "NZ3236-02",
     "type": "BOAT",
-    "distance_m": 1134
+    "distance_m": 910
+  },
+  "osm-61431316": {
+    "guid": "A3991B90-4D4E-426A-8599-189BC13AC7E7",
+    "twuid": "SE5007-04",
+    "type": "UCR",
+    "distance_m": 956
+  },
+  "osm-69991554": {
+    "guid": "986A1131-DB42-476C-ACF7-1D6A4CCC347C",
+    "twuid": "SD8483-02",
+    "type": "UCR",
+    "distance_m": 1467
+  },
+  "osm-70803067": {
+    "guid": "96B8E361-22CE-4230-9E91-FD0F123D8D86",
+    "twuid": "SE2442-02",
+    "type": "UCR",
+    "distance_m": 1776
+  },
+  "osm-72612972": {
+    "guid": "FAEA4740-06B6-411C-BD09-9A17E91BAD6B",
+    "twuid": "NZ2836-09",
+    "type": "BOAT",
+    "distance_m": 1167
+  },
+  "osm-74924308": {
+    "guid": "D296176D-8EDA-4665-9A6E-09D14E5E330C",
+    "twuid": "SE1116-01",
+    "type": "BOAT",
+    "distance_m": 1340
+  },
+  "osm-76091583": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 799
+  },
+  "osm-76115794": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 925
+  },
+  "osm-77685839": {
+    "guid": "B3FA45D8-4161-4136-BB9D-1B71D4C4B112",
+    "twuid": "NZ3246-01",
+    "type": "BOAT",
+    "distance_m": 838
+  },
+  "osm-78276889": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1986
+  },
+  "osm-78276891": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1720
+  },
+  "osm-78360570": {
+    "guid": "0902110F-B099-4568-A758-2CD66814CF5B",
+    "twuid": "NY4729-06",
+    "type": "UCR",
+    "distance_m": 807
+  },
+  "osm-81010785": {
+    "guid": "1A17064A-BB2C-4A03-83E3-E728AB39408D",
+    "twuid": "SD9651-02",
+    "type": "UCR",
+    "distance_m": 859
+  },
+  "osm-81027783": {
+    "guid": "D296176D-8EDA-4665-9A6E-09D14E5E330C",
+    "twuid": "SE1116-01",
+    "type": "BOAT",
+    "distance_m": 1816
+  },
+  "osm-81047594": {
+    "guid": "35F6CBDE-DC13-472A-A46F-D75E2A85160B",
+    "twuid": "SE1513-04",
+    "type": "BOAT",
+    "distance_m": 1555
+  },
+  "osm-81406905": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 1768
+  },
+  "osm-82600099": {
+    "guid": "35F6CBDE-DC13-472A-A46F-D75E2A85160B",
+    "twuid": "SE1513-04",
+    "type": "BOAT",
+    "distance_m": 1407
+  },
+  "osm-83097902": {
+    "guid": "5B94F1D5-E4F5-413B-9573-2AF6A61B1E50",
+    "twuid": "SE0761-04",
+    "type": "UCR",
+    "distance_m": 1644
+  },
+  "osm-83105355": {
+    "guid": "878384DB-B36D-42D5-9F03-4BDE63C104F0",
+    "twuid": "SD7663-03",
+    "type": "UCR",
+    "distance_m": 1081
+  },
+  "osm-83117339": {
+    "guid": "2D2FD2CC-9AA0-4010-8484-2B0573D050D5",
+    "twuid": "SE1450-02",
+    "type": "UCR",
+    "distance_m": 1146
+  },
+  "osm-83951059": {
+    "guid": "1563662B-2754-401A-9F4E-2FA0EB7704B1",
+    "twuid": "SE1219-02",
+    "type": "BOAT",
+    "distance_m": 1341
+  },
+  "osm-84166512": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 814
+  },
+  "osm-84218532": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 342
+  },
+  "osm-84218565": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 405
+  },
+  "osm-84235564": {
+    "guid": "B4584FB3-E0C0-4C09-A549-278A0BC845A7",
+    "twuid": "NZ1155-01",
+    "type": "BOAT",
+    "distance_m": 494
+  },
+  "osm-84347228": {
+    "guid": "DA4375B3-FFF4-436F-878E-FE9AABB0F048",
+    "twuid": "NZ1439-01",
+    "type": "UCR",
+    "distance_m": 530
+  },
+  "osm-84347683": {
+    "guid": "0CB9A368-E4FE-47B9-ADE1-E9BE7F2E5A71",
+    "twuid": "NZ1137-01",
+    "type": "UCR",
+    "distance_m": 743
+  },
+  "osm-86888794": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 993
   },
   "osm-86888822": {
-    "guid": "5F8B87C2-E874-4884-ABF1-1BF55A1A24DB",
-    "twuid": "SE1908-03",
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
     "type": "UCR",
-    "distance_m": 1446
+    "distance_m": 1042
+  },
+  "osm-87757796": {
+    "guid": "9DABD71B-0724-497C-A828-CB6DAC95DEE4",
+    "twuid": "SD5398-02",
+    "type": "BOAT",
+    "distance_m": 674
   },
   "osm-87970021": {
-    "guid": "FBB762A7-D7F8-4284-9331-E91DB4CA88B9",
-    "twuid": "SE1847-03",
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
     "type": "UCR",
-    "distance_m": 1602
+    "distance_m": 1557
+  },
+  "osm-90493975": {
+    "guid": "6ECA6314-7D71-4441-8ADD-9A7EDF3A3891",
+    "twuid": "SD5084-01",
+    "type": "BOAT",
+    "distance_m": 541
   },
   "osm-92241651": {
-    "guid": "40E22F53-5C6C-4651-9711-D11C40E536A5",
-    "twuid": "SD8267-02",
+    "guid": "D33B1F98-A0D3-4745-91DA-777B7F9BCB09",
+    "twuid": "SD8265-04",
+    "type": "BOAT",
+    "distance_m": 1215
+  },
+  "osm-92888362": {
+    "guid": "864AF1C6-682D-4FE0-A87A-7364F210A507",
+    "twuid": "SE1580-03",
     "type": "UCR",
-    "distance_m": 1877
+    "distance_m": 477
+  },
+  "osm-94519404": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1286
+  },
+  "osm-94519405": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1213
+  },
+  "osm-95125476": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 955
+  },
+  "osm-96263135": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 1677
+  },
+  "osm-96364907": {
+    "guid": "864AF1C6-682D-4FE0-A87A-7364F210A507",
+    "twuid": "SE1580-03",
+    "type": "UCR",
+    "distance_m": 1541
   },
   "osm-102212268": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
-    "type": "UCR",
-    "distance_m": 603
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 1899
   },
   "osm-102218103": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
-    "type": "UCR",
-    "distance_m": 1977
+    "guid": "93C17D37-4EF9-4574-BBF2-4EA4495EAEE5",
+    "twuid": "SD8533-02",
+    "type": "BOAT",
+    "distance_m": 1317
   },
   "osm-102218112": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
-    "type": "UCR",
-    "distance_m": 1850
+    "guid": "93C17D37-4EF9-4574-BBF2-4EA4495EAEE5",
+    "twuid": "SD8533-02",
+    "type": "BOAT",
+    "distance_m": 238
   },
   "osm-102588676": {
-    "guid": "5436774D-115A-4C6B-87F6-B501EC956792",
-    "twuid": "NZ4038-02",
+    "guid": "ABCE7B06-1D6E-44D5-8AA6-9B931EC1A3DC",
+    "twuid": "NZ4036-04",
     "type": "UCR",
-    "distance_m": 1485
+    "distance_m": 560
+  },
+  "osm-105318581": {
+    "guid": "849307DD-CBFC-40DA-8BAD-4C7A59922781",
+    "twuid": "SE1213-03",
+    "type": "UCR",
+    "distance_m": 1019
+  },
+  "osm-106103833": {
+    "guid": "849307DD-CBFC-40DA-8BAD-4C7A59922781",
+    "twuid": "SE1213-03",
+    "type": "UCR",
+    "distance_m": 1097
+  },
+  "osm-106103834": {
+    "guid": "849307DD-CBFC-40DA-8BAD-4C7A59922781",
+    "twuid": "SE1213-03",
+    "type": "UCR",
+    "distance_m": 827
+  },
+  "osm-106226032": {
+    "guid": "D296176D-8EDA-4665-9A6E-09D14E5E330C",
+    "twuid": "SE1116-01",
+    "type": "BOAT",
+    "distance_m": 1285
   },
   "osm-108102329": {
     "guid": "04A309A3-CDD6-4146-97F7-4A460CB3D8E5",
     "twuid": "NY7349-04",
     "type": "UCR",
-    "distance_m": 1325
+    "distance_m": 730
   },
   "osm-108102336": {
     "guid": "04A309A3-CDD6-4146-97F7-4A460CB3D8E5",
     "twuid": "NY7349-04",
     "type": "UCR",
-    "distance_m": 839
+    "distance_m": 1195
   },
   "osm-108102345": {
     "guid": "04A309A3-CDD6-4146-97F7-4A460CB3D8E5",
     "twuid": "NY7349-04",
     "type": "UCR",
-    "distance_m": 1805
+    "distance_m": 421
+  },
+  "osm-111474248": {
+    "guid": "0E68C442-7E22-4F78-98E1-5C23DAD5331B",
+    "twuid": "NY7442-02",
+    "type": "UCR",
+    "distance_m": 1347
+  },
+  "osm-111614219": {
+    "guid": "7BA8E90E-7AFA-4158-9B6D-FA0419FA2B7D",
+    "twuid": "SE0318-02",
+    "type": "UCR",
+    "distance_m": 747
+  },
+  "osm-111614220": {
+    "guid": "7BA8E90E-7AFA-4158-9B6D-FA0419FA2B7D",
+    "twuid": "SE0318-02",
+    "type": "UCR",
+    "distance_m": 1103
+  },
+  "osm-113214266": {
+    "guid": "1A7A4FD5-B597-47A4-B0EA-45828CCFB141",
+    "twuid": "SD9932-02",
+    "type": "UCR",
+    "distance_m": 990
+  },
+  "osm-114393554": {
+    "guid": "8903DF6E-DD84-4C7D-8A9D-688A7D30F2EB",
+    "twuid": "SE2072-03",
+    "type": "UCR",
+    "distance_m": 1128
+  },
+  "osm-114393557": {
+    "guid": "8903DF6E-DD84-4C7D-8A9D-688A7D30F2EB",
+    "twuid": "SE2072-03",
+    "type": "UCR",
+    "distance_m": 859
+  },
+  "osm-116040905": {
+    "guid": "883F6883-3B13-4FDF-8A83-A8030C1D3F73",
+    "twuid": "SE7412-02",
+    "type": "BOAT",
+    "distance_m": 1570
+  },
+  "osm-116527187": {
+    "guid": "C5177048-D8B3-4B38-AB23-E048C0B6880F",
+    "twuid": "NZ2135-05",
+    "type": "BOAT",
+    "distance_m": 458
+  },
+  "osm-116983659": {
+    "guid": "883F6883-3B13-4FDF-8A83-A8030C1D3F73",
+    "twuid": "SE7412-02",
+    "type": "BOAT",
+    "distance_m": 1430
+  },
+  "osm-118613135": {
+    "guid": "1563662B-2754-401A-9F4E-2FA0EB7704B1",
+    "twuid": "SE1219-02",
+    "type": "BOAT",
+    "distance_m": 574
+  },
+  "osm-119024236": {
+    "guid": "35F6CBDE-DC13-472A-A46F-D75E2A85160B",
+    "twuid": "SE1513-04",
+    "type": "BOAT",
+    "distance_m": 1022
+  },
+  "osm-119024241": {
+    "guid": "35F6CBDE-DC13-472A-A46F-D75E2A85160B",
+    "twuid": "SE1513-04",
+    "type": "BOAT",
+    "distance_m": 700
+  },
+  "osm-119828857": {
+    "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
+    "twuid": "SE1519-03",
+    "type": "UCR",
+    "distance_m": 996
+  },
+  "osm-119828871": {
+    "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
+    "twuid": "SE1519-03",
+    "type": "UCR",
+    "distance_m": 865
+  },
+  "osm-121136761": {
+    "guid": "7BA8E90E-7AFA-4158-9B6D-FA0419FA2B7D",
+    "twuid": "SE0318-02",
+    "type": "UCR",
+    "distance_m": 574
+  },
+  "osm-122047897": {
+    "guid": "2D2FD2CC-9AA0-4010-8484-2B0573D050D5",
+    "twuid": "SE1450-02",
+    "type": "UCR",
+    "distance_m": 1239
+  },
+  "osm-122047898": {
+    "guid": "2D2FD2CC-9AA0-4010-8484-2B0573D050D5",
+    "twuid": "SE1450-02",
+    "type": "UCR",
+    "distance_m": 388
+  },
+  "osm-122239782": {
+    "guid": "6BE078DF-907A-4E29-916E-A11512DD173A",
+    "twuid": "NY9555-04",
+    "type": "BOAT",
+    "distance_m": 1220
+  },
+  "osm-122826965": {
+    "guid": "A5C06249-B6E1-4D91-BFF3-19377E277049",
+    "twuid": "NZ4730-03",
+    "type": "BOAT",
+    "distance_m": 1217
+  },
+  "osm-123266950": {
+    "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
+    "twuid": "SE1519-03",
+    "type": "UCR",
+    "distance_m": 964
+  },
+  "osm-123405804": {
+    "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
+    "twuid": "SE1519-03",
+    "type": "UCR",
+    "distance_m": 542
+  },
+  "osm-124721714": {
+    "guid": "F8B899A0-0A96-4B8F-89E3-CB1FFD2363F0",
+    "twuid": "SD8589-04",
+    "type": "UCR",
+    "distance_m": 1999
+  },
+  "osm-126090847": {
+    "guid": "5B94F1D5-E4F5-413B-9573-2AF6A61B1E50",
+    "twuid": "SE0761-04",
+    "type": "UCR",
+    "distance_m": 1758
+  },
+  "osm-129163494": {
+    "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
+    "twuid": "SE1519-03",
+    "type": "UCR",
+    "distance_m": 874
+  },
+  "osm-129163503": {
+    "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
+    "twuid": "SE1519-03",
+    "type": "UCR",
+    "distance_m": 926
   },
   "osm-129304841": {
-    "guid": "B5F3F352-221B-43B8-BBE2-340FED23874E",
-    "twuid": "NY5737-01",
-    "type": "UCR",
-    "distance_m": 1695
+    "guid": "626C6B9B-2AF3-4D1F-8CAB-A0F3F3B4CF23",
+    "twuid": "NY6139-03",
+    "type": "BOAT",
+    "distance_m": 1386
+  },
+  "osm-129304870": {
+    "guid": "626C6B9B-2AF3-4D1F-8CAB-A0F3F3B4CF23",
+    "twuid": "NY6139-03",
+    "type": "BOAT",
+    "distance_m": 489
+  },
+  "osm-129304881": {
+    "guid": "626C6B9B-2AF3-4D1F-8CAB-A0F3F3B4CF23",
+    "twuid": "NY6139-03",
+    "type": "BOAT",
+    "distance_m": 1862
   },
   "osm-129316190": {
     "guid": "04A309A3-CDD6-4146-97F7-4A460CB3D8E5",
     "twuid": "NY7349-04",
     "type": "UCR",
-    "distance_m": 1464
+    "distance_m": 620
+  },
+  "osm-130584512": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 727
+  },
+  "osm-130584513": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 686
+  },
+  "osm-131602562": {
+    "guid": "9DABD71B-0724-497C-A828-CB6DAC95DEE4",
+    "twuid": "SD5398-02",
+    "type": "BOAT",
+    "distance_m": 1921
+  },
+  "osm-132872565": {
+    "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
+    "twuid": "SE1519-03",
+    "type": "UCR",
+    "distance_m": 1043
+  },
+  "osm-133046999": {
+    "guid": "8903DF6E-DD84-4C7D-8A9D-688A7D30F2EB",
+    "twuid": "SE2072-03",
+    "type": "UCR",
+    "distance_m": 680
+  },
+  "osm-133735809": {
+    "guid": "F47BC38F-7CD8-4850-98B1-C3C6BAC3DFC7",
+    "twuid": "NZ1467-01",
+    "type": "BOAT",
+    "distance_m": 1578
+  },
+  "osm-138667620": {
+    "guid": "DE5D4C99-7AB1-4DF8-A4B3-EB2C64D295F6",
+    "twuid": "SE2037-01",
+    "type": "BOAT",
+    "distance_m": 1526
   },
   "osm-138947752": {
-    "guid": "5A3A05A1-229E-4F30-B7AE-8D727BEF81DA",
-    "twuid": "SD9592-02",
+    "guid": "27A5726F-713F-4363-A211-C96439D51DC2",
+    "twuid": "SD9392-01",
     "type": "UCR",
-    "distance_m": 1301
-  },
-  "osm-142012365": {
-    "guid": "054161EC-9F05-489F-BD7C-E90B9F6C22A4",
-    "twuid": "SE4337-01",
-    "type": "UCR",
-    "distance_m": 1317
+    "distance_m": 818
   },
   "osm-142323406": {
     "guid": "DC59A228-D011-4E56-866B-9378E0016BB0",
     "twuid": "NY8135-03",
     "type": "UCR",
-    "distance_m": 1545
+    "distance_m": 497
+  },
+  "osm-143372244": {
+    "guid": "E6C2DA42-2636-4812-8551-11427AFBF0A5",
+    "twuid": "NY9160-05",
+    "type": "BOAT",
+    "distance_m": 521
+  },
+  "osm-143452237": {
+    "guid": "C76FE48F-5393-4C33-ABF3-A50CEFCF0CA3",
+    "twuid": "NY8455-02",
+    "type": "BOAT",
+    "distance_m": 625
+  },
+  "osm-143477981": {
+    "guid": "79816A24-2F93-4028-9AA1-EE99CAA577C7",
+    "twuid": "NY9256-02",
+    "type": "BOAT",
+    "distance_m": 1435
+  },
+  "osm-143899024": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 1990
+  },
+  "osm-143899085": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 1886
+  },
+  "osm-147578011": {
+    "guid": "0F574ACF-B821-4259-AD01-6F304E656E2B",
+    "twuid": "NY9451-04",
+    "type": "BOAT",
+    "distance_m": 740
   },
   "osm-148076217": {
-    "guid": "9FFEC116-E7CF-4FC9-B984-D9E6F7ABDBAF",
-    "twuid": "NY9958-02",
+    "guid": "F052F681-9CD8-419B-8D68-80A53596142C",
+    "twuid": "NY9458-03",
+    "type": "BOAT",
+    "distance_m": 989
+  },
+  "osm-148814839": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 1355
+  },
+  "osm-151332511": {
+    "guid": "87331964-1B79-43FC-93AD-E4BF036FA535",
+    "twuid": "SD4389-03",
+    "type": "BOAT",
+    "distance_m": 836
+  },
+  "osm-152565402": {
+    "guid": "29A4B04F-3B82-435C-8469-6E7B8EDDADAA",
+    "twuid": "SE0684-02",
     "type": "UCR",
-    "distance_m": 1623
+    "distance_m": 572
+  },
+  "osm-152566288": {
+    "guid": "80289955-6C47-44C1-9D50-6954649674AE",
+    "twuid": "SE0189-02",
+    "type": "UCR",
+    "distance_m": 1202
+  },
+  "osm-155297365": {
+    "guid": "FD869737-3EAC-4E55-8E85-4F4EA6784691",
+    "twuid": "SD4792-02",
+    "type": "UCR",
+    "distance_m": 1011
   },
   "osm-156253053": {
-    "guid": "9FFEC116-E7CF-4FC9-B984-D9E6F7ABDBAF",
-    "twuid": "NY9958-02",
+    "guid": "F052F681-9CD8-419B-8D68-80A53596142C",
+    "twuid": "NY9458-03",
+    "type": "BOAT",
+    "distance_m": 452
+  },
+  "osm-156944684": {
+    "guid": "DD341262-7BA2-47A7-A0A3-81D9E1082400",
+    "twuid": "NY4530-01",
     "type": "UCR",
-    "distance_m": 1853
+    "distance_m": 1728
+  },
+  "osm-158463084": {
+    "guid": "87331964-1B79-43FC-93AD-E4BF036FA535",
+    "twuid": "SD4389-03",
+    "type": "BOAT",
+    "distance_m": 1199
+  },
+  "osm-158465213": {
+    "guid": "87331964-1B79-43FC-93AD-E4BF036FA535",
+    "twuid": "SD4389-03",
+    "type": "BOAT",
+    "distance_m": 1116
   },
   "osm-158959436": {
-    "guid": "5F8B87C2-E874-4884-ABF1-1BF55A1A24DB",
-    "twuid": "SE1908-03",
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
     "type": "UCR",
-    "distance_m": 498
+    "distance_m": 1991
   },
-  "osm-162917263": {
-    "guid": "06D86801-853F-459D-93EA-C6687100659B",
-    "twuid": "SD9223-01",
+  "osm-159046000": {
+    "guid": "3B2C954B-6BA7-4FBC-955D-DEC7FB980F8B",
+    "twuid": "SD6062-02",
     "type": "UCR",
-    "distance_m": 1865
+    "distance_m": 1656
   },
-  "osm-164519765": {
-    "guid": "AC75B240-E5B5-4BB5-B110-0A6294BD3A78",
-    "twuid": "SE1868-03",
-    "type": "UCR",
-    "distance_m": 824
+  "osm-159156588": {
+    "guid": "DE5D4C99-7AB1-4DF8-A4B3-EB2C64D295F6",
+    "twuid": "SE2037-01",
+    "type": "BOAT",
+    "distance_m": 1435
+  },
+  "osm-159179458": {
+    "guid": "B39F52B5-0C1B-41D8-916B-E6CDA31ED1D4",
+    "twuid": "SD7896-03",
+    "type": "BOAT",
+    "distance_m": 1826
+  },
+  "osm-162910160": {
+    "guid": "2743EB8E-E71F-4147-9E77-A34D32A4489B",
+    "twuid": "SD8728-01",
+    "type": "BOAT",
+    "distance_m": 1042
   },
   "osm-165755125": {
     "guid": "4E9159E1-5D3B-49E2-9A8A-AE24BA279056",
     "twuid": "SD6178-04",
     "type": "UCR",
-    "distance_m": 1095
+    "distance_m": 1622
   },
-  "osm-166515927": {
-    "guid": "5F8B87C2-E874-4884-ABF1-1BF55A1A24DB",
-    "twuid": "SE1908-03",
-    "type": "UCR",
-    "distance_m": 1345
+  "osm-168517087": {
+    "guid": "93C17D37-4EF9-4574-BBF2-4EA4495EAEE5",
+    "twuid": "SD8533-02",
+    "type": "BOAT",
+    "distance_m": 1311
   },
   "osm-168615333": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
-    "type": "UCR",
-    "distance_m": 1008
-  },
-  "osm-184763114": {
-    "guid": "8D61AE4A-1ADA-41FD-A361-A8559E09A241",
-    "twuid": "NZ4249-01",
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
     "type": "BOAT",
-    "distance_m": 1419
+    "distance_m": 1308
+  },
+  "osm-168747778": {
+    "guid": "FED5DA81-25F7-4E6E-B1F1-5389B033464B",
+    "twuid": "SE5010-03",
+    "type": "UCR",
+    "distance_m": 1883
+  },
+  "osm-169278918": {
+    "guid": "DE5D4C99-7AB1-4DF8-A4B3-EB2C64D295F6",
+    "twuid": "SE2037-01",
+    "type": "BOAT",
+    "distance_m": 1461
+  },
+  "osm-169280133": {
+    "guid": "DE5D4C99-7AB1-4DF8-A4B3-EB2C64D295F6",
+    "twuid": "SE2037-01",
+    "type": "BOAT",
+    "distance_m": 1399
+  },
+  "osm-170048051": {
+    "guid": "E32CE351-C941-4920-8036-C71E7762F1D8",
+    "twuid": "NY7645-01",
+    "type": "UCR",
+    "distance_m": 1494
+  },
+  "osm-170048052": {
+    "guid": "E32CE351-C941-4920-8036-C71E7762F1D8",
+    "twuid": "NY7645-01",
+    "type": "UCR",
+    "distance_m": 1571
+  },
+  "osm-173142891": {
+    "guid": "0B2A895D-F5D8-4DE2-A339-874DF2086510",
+    "twuid": "NY5730-04",
+    "type": "UCR",
+    "distance_m": 1145
+  },
+  "osm-181790467": {
+    "guid": "F8B899A0-0A96-4B8F-89E3-CB1FFD2363F0",
+    "twuid": "SD8589-04",
+    "type": "UCR",
+    "distance_m": 1413
+  },
+  "osm-184979013": {
+    "guid": "55604FA3-3981-49EC-AE00-7E10F65DCEEA",
+    "twuid": "SD8836-02",
+    "type": "BOAT",
+    "distance_m": 1331
+  },
+  "osm-184979135": {
+    "guid": "55604FA3-3981-49EC-AE00-7E10F65DCEEA",
+    "twuid": "SD8836-02",
+    "type": "BOAT",
+    "distance_m": 1431
+  },
+  "osm-185005981": {
+    "guid": "6BE078DF-907A-4E29-916E-A11512DD173A",
+    "twuid": "NY9555-04",
+    "type": "BOAT",
+    "distance_m": 1021
+  },
+  "osm-186031578": {
+    "guid": "B39F52B5-0C1B-41D8-916B-E6CDA31ED1D4",
+    "twuid": "SD7896-03",
+    "type": "BOAT",
+    "distance_m": 1352
+  },
+  "osm-186031584": {
+    "guid": "B39F52B5-0C1B-41D8-916B-E6CDA31ED1D4",
+    "twuid": "SD7896-03",
+    "type": "BOAT",
+    "distance_m": 1811
+  },
+  "osm-188216034": {
+    "guid": "B39F52B5-0C1B-41D8-916B-E6CDA31ED1D4",
+    "twuid": "SD7896-03",
+    "type": "BOAT",
+    "distance_m": 1217
+  },
+  "osm-188375322": {
+    "guid": "9DABD71B-0724-497C-A828-CB6DAC95DEE4",
+    "twuid": "SD5398-02",
+    "type": "BOAT",
+    "distance_m": 328
+  },
+  "osm-189563801": {
+    "guid": "F8B899A0-0A96-4B8F-89E3-CB1FFD2363F0",
+    "twuid": "SD8589-04",
+    "type": "UCR",
+    "distance_m": 1087
+  },
+  "osm-190709355": {
+    "guid": "D9C9C910-98F6-428F-A2DB-CDE625F2B8FA",
+    "twuid": "SE5307-02",
+    "type": "UCR",
+    "distance_m": 1326
+  },
+  "osm-191881566": {
+    "guid": "DB72238A-1507-4B5E-BA4E-D4227F514FFC",
+    "twuid": "SE0522-02",
+    "type": "UCR",
+    "distance_m": 1510
+  },
+  "osm-194564031": {
+    "guid": "DB72238A-1507-4B5E-BA4E-D4227F514FFC",
+    "twuid": "SE0522-02",
+    "type": "UCR",
+    "distance_m": 837
+  },
+  "osm-196900548": {
+    "guid": "A407CB1B-27E6-4488-B9C4-F7D37C479321",
+    "twuid": "NY6715-04",
+    "type": "BOAT",
+    "distance_m": 618
+  },
+  "osm-197635086": {
+    "guid": "C1B90CE7-B93D-49C4-8967-BBC671B41E28",
+    "twuid": "SE0225-01",
+    "type": "UCR",
+    "distance_m": 793
   },
   "osm-198322764": {
-    "guid": "BE710192-31A0-4D5F-A428-EF7D6DC70646",
-    "twuid": "NZ1438-03",
+    "guid": "7DFFBDE0-CE8F-4BBB-A0B0-2CDB155E2BDD",
+    "twuid": "NZ1935-02",
     "type": "BOAT",
-    "distance_m": 1912
+    "distance_m": 778
+  },
+  "osm-199202317": {
+    "guid": "DB72238A-1507-4B5E-BA4E-D4227F514FFC",
+    "twuid": "SE0522-02",
+    "type": "UCR",
+    "distance_m": 1374
+  },
+  "osm-199964566": {
+    "guid": "7A570D6F-5976-4116-9B42-850732410CE0",
+    "twuid": "SE0513-04",
+    "type": "UCR",
+    "distance_m": 1463
   },
   "osm-200406452": {
-    "guid": "DC77F554-0655-4DC9-A7E2-B6F2A5187D87",
-    "twuid": "SD4888-01",
+    "guid": "FD869737-3EAC-4E55-8E85-4F4EA6784691",
+    "twuid": "SD4792-02",
     "type": "UCR",
-    "distance_m": 1598
+    "distance_m": 1563
   },
-  "osm-204765913": {
-    "guid": "986A1131-DB42-476C-ACF7-1D6A4CCC347C",
-    "twuid": "SD8483-02",
+  "osm-200522745": {
+    "guid": "5B94F1D5-E4F5-413B-9573-2AF6A61B1E50",
+    "twuid": "SE0761-04",
     "type": "UCR",
-    "distance_m": 1715
+    "distance_m": 1352
   },
-  "osm-220947025": {
-    "guid": "9AB8CB70-1250-42DF-BC5C-3197E87191FD",
-    "twuid": "NY7202-01",
+  "osm-200522766": {
+    "guid": "BDAC8845-3AE9-452E-A713-414762C71310",
+    "twuid": "SD9065-06",
     "type": "UCR",
-    "distance_m": 933
+    "distance_m": 1968
   },
-  "osm-283806471": {
-    "guid": "AC75B240-E5B5-4BB5-B110-0A6294BD3A78",
-    "twuid": "SE1868-03",
-    "type": "UCR",
-    "distance_m": 1859
+  "osm-201762421": {
+    "guid": "D296176D-8EDA-4665-9A6E-09D14E5E330C",
+    "twuid": "SE1116-01",
+    "type": "BOAT",
+    "distance_m": 957
   },
-  "osm-283806472": {
-    "guid": "AC75B240-E5B5-4BB5-B110-0A6294BD3A78",
-    "twuid": "SE1868-03",
-    "type": "UCR",
-    "distance_m": 1841
+  "osm-202470142": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 1097
   },
-  "osm-335902008": {
-    "guid": "9D8B3450-5901-428A-BF2C-02E9A3135351",
-    "twuid": "SD7644-01",
+  "osm-202883409": {
+    "guid": "A5C06249-B6E1-4D91-BFF3-19377E277049",
+    "twuid": "NZ4730-03",
+    "type": "BOAT",
+    "distance_m": 1601
+  },
+  "osm-208753998": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 969
+  },
+  "osm-208753999": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 185
+  },
+  "osm-208958063": {
+    "guid": "4557ECAF-2D82-4535-B744-A30E624ACE24",
+    "twuid": "NZ2050-01",
+    "type": "BOAT",
+    "distance_m": 1303
+  },
+  "osm-217949568": {
+    "guid": "1A7A4FD5-B597-47A4-B0EA-45828CCFB141",
+    "twuid": "SD9932-02",
     "type": "UCR",
-    "distance_m": 1913
+    "distance_m": 1991
+  },
+  "osm-217949569": {
+    "guid": "1A7A4FD5-B597-47A4-B0EA-45828CCFB141",
+    "twuid": "SD9932-02",
+    "type": "UCR",
+    "distance_m": 359
+  },
+  "osm-217949571": {
+    "guid": "1A7A4FD5-B597-47A4-B0EA-45828CCFB141",
+    "twuid": "SD9932-02",
+    "type": "UCR",
+    "distance_m": 1422
+  },
+  "osm-221108136": {
+    "guid": "2AC3B138-D49C-4DE7-AC30-1DBBA26EB21F",
+    "twuid": "SE0827-02",
+    "type": "UCR",
+    "distance_m": 708
+  },
+  "osm-221668602": {
+    "guid": "849307DD-CBFC-40DA-8BAD-4C7A59922781",
+    "twuid": "SE1213-03",
+    "type": "UCR",
+    "distance_m": 914
+  },
+  "osm-225174233": {
+    "guid": "849307DD-CBFC-40DA-8BAD-4C7A59922781",
+    "twuid": "SE1213-03",
+    "type": "UCR",
+    "distance_m": 884
+  },
+  "osm-226889591": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 940
+  },
+  "osm-227403032": {
+    "guid": "8D5DDC36-F709-4890-B095-EFA76C8D751A",
+    "twuid": "SE3871-01",
+    "type": "UCR",
+    "distance_m": 1263
+  },
+  "osm-228885797": {
+    "guid": "94B1FF35-C1D7-4A47-A2CA-A382016EBFB6",
+    "twuid": "SE0125-02",
+    "type": "UCR",
+    "distance_m": 1957
+  },
+  "osm-229599530": {
+    "guid": "3D8D1BCE-7DEB-46E9-88B6-0B49D9A26A97",
+    "twuid": "NY4707-02",
+    "type": "BOAT",
+    "distance_m": 999
+  },
+  "osm-229599531": {
+    "guid": "3D8D1BCE-7DEB-46E9-88B6-0B49D9A26A97",
+    "twuid": "NY4707-02",
+    "type": "BOAT",
+    "distance_m": 1003
+  },
+  "osm-230882597": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1305
+  },
+  "osm-230882598": {
+    "guid": "DF8C1D2A-D6BF-49C5-914B-32E190B0B3BC",
+    "twuid": "NY5404-01",
+    "type": "UCR",
+    "distance_m": 1879
+  },
+  "osm-232587516": {
+    "guid": "0B2A895D-F5D8-4DE2-A339-874DF2086510",
+    "twuid": "NY5730-04",
+    "type": "UCR",
+    "distance_m": 1745
+  },
+  "osm-232588071": {
+    "guid": "0B2A895D-F5D8-4DE2-A339-874DF2086510",
+    "twuid": "NY5730-04",
+    "type": "UCR",
+    "distance_m": 1052
+  },
+  "osm-236060630": {
+    "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
+    "twuid": "NY7736-01",
+    "type": "UCR",
+    "distance_m": 1419
+  },
+  "osm-244618458": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1215
+  },
+  "osm-244618459": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1232
+  },
+  "osm-244618535": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1217
+  },
+  "osm-244619321": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1257
+  },
+  "osm-244620153": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1149
+  },
+  "osm-244621339": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1158
+  },
+  "osm-247296819": {
+    "guid": "F3588D09-7F78-4CA0-9712-AA904C96D0D9",
+    "twuid": "NY4805-01",
+    "type": "UCR",
+    "distance_m": 927
+  },
+  "osm-247296822": {
+    "guid": "F3588D09-7F78-4CA0-9712-AA904C96D0D9",
+    "twuid": "NY4805-01",
+    "type": "UCR",
+    "distance_m": 1410
+  },
+  "osm-247296823": {
+    "guid": "F3588D09-7F78-4CA0-9712-AA904C96D0D9",
+    "twuid": "NY4805-01",
+    "type": "UCR",
+    "distance_m": 981
+  },
+  "osm-247296827": {
+    "guid": "F3588D09-7F78-4CA0-9712-AA904C96D0D9",
+    "twuid": "NY4805-01",
+    "type": "UCR",
+    "distance_m": 1423
+  },
+  "osm-248010440": {
+    "guid": "2743EB8E-E71F-4147-9E77-A34D32A4489B",
+    "twuid": "SD8728-01",
+    "type": "BOAT",
+    "distance_m": 1547
+  },
+  "osm-252858417": {
+    "guid": "29A4B04F-3B82-435C-8469-6E7B8EDDADAA",
+    "twuid": "SE0684-02",
+    "type": "UCR",
+    "distance_m": 1936
+  },
+  "osm-258838796": {
+    "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
+    "twuid": "NY7736-01",
+    "type": "UCR",
+    "distance_m": 1229
+  },
+  "osm-267292884": {
+    "guid": "B2C8777D-3E84-4043-BFDC-9A6BA24A413D",
+    "twuid": "NY8561-02",
+    "type": "BOAT",
+    "distance_m": 1179
+  },
+  "osm-267314743": {
+    "guid": "28C20F53-8540-415C-92ED-6AC577AFCB6C",
+    "twuid": "NY4844-01",
+    "type": "UCR",
+    "distance_m": 1246
+  },
+  "osm-270792390": {
+    "guid": "D296176D-8EDA-4665-9A6E-09D14E5E330C",
+    "twuid": "SE1116-01",
+    "type": "BOAT",
+    "distance_m": 1314
+  },
+  "osm-273756807": {
+    "guid": "35F6CBDE-DC13-472A-A46F-D75E2A85160B",
+    "twuid": "SE1513-04",
+    "type": "BOAT",
+    "distance_m": 545
+  },
+  "osm-273757616": {
+    "guid": "04A309A3-CDD6-4146-97F7-4A460CB3D8E5",
+    "twuid": "NY7349-04",
+    "type": "UCR",
+    "distance_m": 1097
+  },
+  "osm-273757617": {
+    "guid": "394E430E-CAF9-410B-B3E6-24B4DCFB9341",
+    "twuid": "NY7650-02",
+    "type": "BOAT",
+    "distance_m": 863
+  },
+  "osm-284013305": {
+    "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
+    "twuid": "NY7736-01",
+    "type": "UCR",
+    "distance_m": 1524
+  },
+  "osm-284013330": {
+    "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
+    "twuid": "NY7736-01",
+    "type": "UCR",
+    "distance_m": 1823
+  },
+  "osm-284026722": {
+    "guid": "52F0F812-E18F-43BF-8E5D-95F3F25826EC",
+    "twuid": "NY7447-02",
+    "type": "UCR",
+    "distance_m": 1407
+  },
+  "osm-284030264": {
+    "guid": "52F0F812-E18F-43BF-8E5D-95F3F25826EC",
+    "twuid": "NY7447-02",
+    "type": "UCR",
+    "distance_m": 1079
+  },
+  "osm-284030265": {
+    "guid": "52F0F812-E18F-43BF-8E5D-95F3F25826EC",
+    "twuid": "NY7447-02",
+    "type": "UCR",
+    "distance_m": 1222
+  },
+  "osm-289290687": {
+    "guid": "1A17064A-BB2C-4A03-83E3-E728AB39408D",
+    "twuid": "SD9651-02",
+    "type": "UCR",
+    "distance_m": 816
+  },
+  "osm-289290688": {
+    "guid": "1A17064A-BB2C-4A03-83E3-E728AB39408D",
+    "twuid": "SD9651-02",
+    "type": "UCR",
+    "distance_m": 809
+  },
+  "osm-289290689": {
+    "guid": "1A17064A-BB2C-4A03-83E3-E728AB39408D",
+    "twuid": "SD9651-02",
+    "type": "UCR",
+    "distance_m": 795
+  },
+  "osm-293014487": {
+    "guid": "A407CB1B-27E6-4488-B9C4-F7D37C479321",
+    "twuid": "NY6715-04",
+    "type": "BOAT",
+    "distance_m": 498
+  },
+  "osm-293567364": {
+    "guid": "DE5D4C99-7AB1-4DF8-A4B3-EB2C64D295F6",
+    "twuid": "SE2037-01",
+    "type": "BOAT",
+    "distance_m": 1465
+  },
+  "osm-297457374": {
+    "guid": "7BA8E90E-7AFA-4158-9B6D-FA0419FA2B7D",
+    "twuid": "SE0318-02",
+    "type": "UCR",
+    "distance_m": 1714
+  },
+  "osm-303466005": {
+    "guid": "E32CE351-C941-4920-8036-C71E7762F1D8",
+    "twuid": "NY7645-01",
+    "type": "UCR",
+    "distance_m": 1550
+  },
+  "osm-314210697": {
+    "guid": "52F0F812-E18F-43BF-8E5D-95F3F25826EC",
+    "twuid": "NY7447-02",
+    "type": "UCR",
+    "distance_m": 1022
+  },
+  "osm-315172593": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 387
+  },
+  "osm-317111087": {
+    "guid": "B84711AA-C0CF-41D7-949C-068D19EEE2BB",
+    "twuid": "NY5638-07",
+    "type": "UCR",
+    "distance_m": 318
+  },
+  "osm-327967028": {
+    "guid": "DD341262-7BA2-47A7-A0A3-81D9E1082400",
+    "twuid": "NY4530-01",
+    "type": "UCR",
+    "distance_m": 602
+  },
+  "osm-331129125": {
+    "guid": "E32CE351-C941-4920-8036-C71E7762F1D8",
+    "twuid": "NY7645-01",
+    "type": "UCR",
+    "distance_m": 560
+  },
+  "osm-335651806": {
+    "guid": "245900C2-ECE8-426B-A59A-D60D2A6CC4D5",
+    "twuid": "NY8233-04",
+    "type": "UCR",
+    "distance_m": 1138
+  },
+  "osm-335717563": {
+    "guid": "DD341262-7BA2-47A7-A0A3-81D9E1082400",
+    "twuid": "NY4530-01",
+    "type": "UCR",
+    "distance_m": 1186
+  },
+  "osm-338295197": {
+    "guid": "79982A90-17A5-417D-97F3-A6AC9E6ACA1B",
+    "twuid": "NY5943-04",
+    "type": "UCR",
+    "distance_m": 1233
   },
   "osm-343683227": {
     "guid": "04A309A3-CDD6-4146-97F7-4A460CB3D8E5",
     "twuid": "NY7349-04",
     "type": "UCR",
-    "distance_m": 1182
+    "distance_m": 982
   },
   "osm-353049408": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
-    "type": "UCR",
-    "distance_m": 1961
-  },
-  "osm-356378430": {
-    "guid": "CF24F6B8-A071-49C7-95E1-92045F6DE53C",
-    "twuid": "NY6015-02",
-    "type": "UCR",
-    "distance_m": 1249
-  },
-  "osm-378603853": {
-    "guid": "182F77BF-9EF0-49B0-A01D-DB81D3F59C33",
-    "twuid": "NY7360-02",
+    "guid": "93C17D37-4EF9-4574-BBF2-4EA4495EAEE5",
+    "twuid": "SD8533-02",
     "type": "BOAT",
-    "distance_m": 1756
+    "distance_m": 372
   },
-  "osm-390661255": {
-    "guid": "5F8B87C2-E874-4884-ABF1-1BF55A1A24DB",
-    "twuid": "SE1908-03",
+  "osm-353712822": {
+    "guid": "A61C6283-9D5C-469D-B2A8-80E6D26AF1EF",
+    "twuid": "SD6874-01",
     "type": "UCR",
-    "distance_m": 1108
+    "distance_m": 1695
+  },
+  "osm-353712824": {
+    "guid": "A61C6283-9D5C-469D-B2A8-80E6D26AF1EF",
+    "twuid": "SD6874-01",
+    "type": "UCR",
+    "distance_m": 1831
+  },
+  "osm-354362705": {
+    "guid": "1563662B-2754-401A-9F4E-2FA0EB7704B1",
+    "twuid": "SE1219-02",
+    "type": "BOAT",
+    "distance_m": 908
+  },
+  "osm-354366247": {
+    "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
+    "twuid": "SE1519-03",
+    "type": "UCR",
+    "distance_m": 953
+  },
+  "osm-354366250": {
+    "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
+    "twuid": "SE1519-03",
+    "type": "UCR",
+    "distance_m": 923
+  },
+  "osm-354634812": {
+    "guid": "31928F44-2170-4CF5-BABD-49561951380A",
+    "twuid": "NY6607-02",
+    "type": "BOAT",
+    "distance_m": 557
+  },
+  "osm-354634816": {
+    "guid": "31928F44-2170-4CF5-BABD-49561951380A",
+    "twuid": "NY6607-02",
+    "type": "BOAT",
+    "distance_m": 531
+  },
+  "osm-359438847": {
+    "guid": "31928F44-2170-4CF5-BABD-49561951380A",
+    "twuid": "NY6607-02",
+    "type": "BOAT",
+    "distance_m": 806
+  },
+  "osm-359438855": {
+    "guid": "31928F44-2170-4CF5-BABD-49561951380A",
+    "twuid": "NY6607-02",
+    "type": "BOAT",
+    "distance_m": 1304
+  },
+  "osm-360795997": {
+    "guid": "94815785-41B8-4AFD-A1BC-8B0A39E925FE",
+    "twuid": "SD9897-04",
+    "type": "UCR",
+    "distance_m": 1706
+  },
+  "osm-361034915": {
+    "guid": "48A091DB-6072-4126-81AE-854292212639",
+    "twuid": "SD4780-01",
+    "type": "UCR",
+    "distance_m": 1991
+  },
+  "osm-362826849": {
+    "guid": "BDAC8845-3AE9-452E-A713-414762C71310",
+    "twuid": "SD9065-06",
+    "type": "UCR",
+    "distance_m": 658
+  },
+  "osm-362826850": {
+    "guid": "BDAC8845-3AE9-452E-A713-414762C71310",
+    "twuid": "SD9065-06",
+    "type": "UCR",
+    "distance_m": 656
+  },
+  "osm-362827010": {
+    "guid": "BDAC8845-3AE9-452E-A713-414762C71310",
+    "twuid": "SD9065-06",
+    "type": "UCR",
+    "distance_m": 743
+  },
+  "osm-375507540": {
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 494
+  },
+  "osm-391615049": {
+    "guid": "7A570D6F-5976-4116-9B42-850732410CE0",
+    "twuid": "SE0513-04",
+    "type": "UCR",
+    "distance_m": 1191
+  },
+  "osm-391617887": {
+    "guid": "7A570D6F-5976-4116-9B42-850732410CE0",
+    "twuid": "SE0513-04",
+    "type": "UCR",
+    "distance_m": 1059
   },
   "osm-393487009": {
     "guid": "06EE8C4E-1C9E-4F04-9A4F-A0422D0E2DCD",
     "twuid": "NZ0702-02",
     "type": "UCR",
-    "distance_m": 1287
+    "distance_m": 776
+  },
+  "osm-393487033": {
+    "guid": "06EE8C4E-1C9E-4F04-9A4F-A0422D0E2DCD",
+    "twuid": "NZ0702-02",
+    "type": "UCR",
+    "distance_m": 278
+  },
+  "osm-397174515": {
+    "guid": "D58F948C-A036-4BE6-9755-4231C26EB44F",
+    "twuid": "NY4741-02",
+    "type": "UCR",
+    "distance_m": 1006
   },
   "osm-397579103": {
-    "guid": "5A3A05A1-229E-4F30-B7AE-8D727BEF81DA",
-    "twuid": "SD9592-02",
+    "guid": "27A5726F-713F-4363-A211-C96439D51DC2",
+    "twuid": "SD9392-01",
     "type": "UCR",
-    "distance_m": 1435
+    "distance_m": 655
+  },
+  "osm-397646792": {
+    "guid": "FADE61EF-EA6C-4916-986D-22D7448675C8",
+    "twuid": "SD9789-05",
+    "type": "UCR",
+    "distance_m": 1210
+  },
+  "osm-398367848": {
+    "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
+    "twuid": "NY7736-01",
+    "type": "UCR",
+    "distance_m": 1437
+  },
+  "osm-398367859": {
+    "guid": "E32CE351-C941-4920-8036-C71E7762F1D8",
+    "twuid": "NY7645-01",
+    "type": "UCR",
+    "distance_m": 1858
+  },
+  "osm-398367871": {
+    "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
+    "twuid": "NY7736-01",
+    "type": "UCR",
+    "distance_m": 1527
+  },
+  "osm-405086522": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 466
+  },
+  "osm-405086523": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 681
+  },
+  "osm-428150398": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 163
+  },
+  "osm-430229995": {
+    "guid": "878384DB-B36D-42D5-9F03-4BDE63C104F0",
+    "twuid": "SD7663-03",
+    "type": "UCR",
+    "distance_m": 242
+  },
+  "osm-430229996": {
+    "guid": "878384DB-B36D-42D5-9F03-4BDE63C104F0",
+    "twuid": "SD7663-03",
+    "type": "UCR",
+    "distance_m": 894
+  },
+  "osm-447678935": {
+    "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
+    "twuid": "NY7736-01",
+    "type": "UCR",
+    "distance_m": 1278
   },
   "osm-447914765": {
     "guid": "7F90DED8-7A49-4865-B9DF-5048E62DE471",
     "twuid": "NZ0738-05",
     "type": "UCR",
-    "distance_m": 1222
+    "distance_m": 1153
   },
-  "osm-474823842": {
-    "guid": "C5DB04BC-65DE-4FA3-803C-8D9B648516A8",
-    "twuid": "SE1978-01",
+  "osm-448362469": {
+    "guid": "79816A24-2F93-4028-9AA1-EE99CAA577C7",
+    "twuid": "NY9256-02",
+    "type": "BOAT",
+    "distance_m": 1407
+  },
+  "osm-448362751": {
+    "guid": "D167DBA2-3480-4FAE-9EA3-ED421142B9E3",
+    "twuid": "NY9355-07",
+    "type": "BOAT",
+    "distance_m": 1024
+  },
+  "osm-449377950": {
+    "guid": "4451448C-E96F-4832-B8D3-00440E7433BF",
+    "twuid": "NZ1253-02",
+    "type": "BOAT",
+    "distance_m": 445
+  },
+  "osm-452097376": {
+    "guid": "B4584FB3-E0C0-4C09-A549-278A0BC845A7",
+    "twuid": "NZ1155-01",
+    "type": "BOAT",
+    "distance_m": 333
+  },
+  "osm-452229927": {
+    "guid": "B4584FB3-E0C0-4C09-A549-278A0BC845A7",
+    "twuid": "NZ1155-01",
+    "type": "BOAT",
+    "distance_m": 80
+  },
+  "osm-456605907": {
+    "guid": "0E68C442-7E22-4F78-98E1-5C23DAD5331B",
+    "twuid": "NY7442-02",
     "type": "UCR",
-    "distance_m": 807
+    "distance_m": 685
+  },
+  "osm-456605908": {
+    "guid": "0E68C442-7E22-4F78-98E1-5C23DAD5331B",
+    "twuid": "NY7442-02",
+    "type": "UCR",
+    "distance_m": 693
+  },
+  "osm-459059240": {
+    "guid": "C76FE48F-5393-4C33-ABF3-A50CEFCF0CA3",
+    "twuid": "NY8455-02",
+    "type": "BOAT",
+    "distance_m": 964
+  },
+  "osm-469076275": {
+    "guid": "394E430E-CAF9-410B-B3E6-24B4DCFB9341",
+    "twuid": "NY7650-02",
+    "type": "BOAT",
+    "distance_m": 1056
+  },
+  "osm-470738798": {
+    "guid": "0E68C442-7E22-4F78-98E1-5C23DAD5331B",
+    "twuid": "NY7442-02",
+    "type": "UCR",
+    "distance_m": 902
+  },
+  "osm-474879324": {
+    "guid": "864AF1C6-682D-4FE0-A87A-7364F210A507",
+    "twuid": "SE1580-03",
+    "type": "UCR",
+    "distance_m": 371
+  },
+  "osm-474879326": {
+    "guid": "864AF1C6-682D-4FE0-A87A-7364F210A507",
+    "twuid": "SE1580-03",
+    "type": "UCR",
+    "distance_m": 331
+  },
+  "osm-478499975": {
+    "guid": "B39F52B5-0C1B-41D8-916B-E6CDA31ED1D4",
+    "twuid": "SD7896-03",
+    "type": "BOAT",
+    "distance_m": 1829
+  },
+  "osm-479867045": {
+    "guid": "B39F52B5-0C1B-41D8-916B-E6CDA31ED1D4",
+    "twuid": "SD7896-03",
+    "type": "BOAT",
+    "distance_m": 1175
+  },
+  "osm-479867047": {
+    "guid": "B39F52B5-0C1B-41D8-916B-E6CDA31ED1D4",
+    "twuid": "SD7896-03",
+    "type": "BOAT",
+    "distance_m": 1185
+  },
+  "osm-479867048": {
+    "guid": "B39F52B5-0C1B-41D8-916B-E6CDA31ED1D4",
+    "twuid": "SD7896-03",
+    "type": "BOAT",
+    "distance_m": 1181
+  },
+  "osm-483466571": {
+    "guid": "B2C8777D-3E84-4043-BFDC-9A6BA24A413D",
+    "twuid": "NY8561-02",
+    "type": "BOAT",
+    "distance_m": 1518
+  },
+  "osm-483906954": {
+    "guid": "B84711AA-C0CF-41D7-949C-068D19EEE2BB",
+    "twuid": "NY5638-07",
+    "type": "UCR",
+    "distance_m": 1149
+  },
+  "osm-483906955": {
+    "guid": "B84711AA-C0CF-41D7-949C-068D19EEE2BB",
+    "twuid": "NY5638-07",
+    "type": "UCR",
+    "distance_m": 327
+  },
+  "osm-493837229": {
+    "guid": "C9018693-2B0E-4E30-8265-1AF5FEEC9BB4",
+    "twuid": "SE0299-02",
+    "type": "UCR",
+    "distance_m": 1294
+  },
+  "osm-495031809": {
+    "guid": "7DFB84F2-4D63-465F-84DB-C462FA135DDF",
+    "twuid": "SE0920-01",
+    "type": "UCR",
+    "distance_m": 1910
+  },
+  "osm-495031811": {
+    "guid": "D296176D-8EDA-4665-9A6E-09D14E5E330C",
+    "twuid": "SE1116-01",
+    "type": "BOAT",
+    "distance_m": 1998
+  },
+  "osm-499553466": {
+    "guid": "7A570D6F-5976-4116-9B42-850732410CE0",
+    "twuid": "SE0513-04",
+    "type": "UCR",
+    "distance_m": 1166
+  },
+  "osm-499553467": {
+    "guid": "7A570D6F-5976-4116-9B42-850732410CE0",
+    "twuid": "SE0513-04",
+    "type": "UCR",
+    "distance_m": 1254
+  },
+  "osm-499699889": {
+    "guid": "38135881-4DB6-4AFC-B9C2-AE491941D999",
+    "twuid": "SD5581-01",
+    "type": "UCR",
+    "distance_m": 1713
+  },
+  "osm-505618549": {
+    "guid": "D6B8D2E7-1C4E-46C0-B592-D6C852368C5D",
+    "twuid": "NY4525-02",
+    "type": "UCR",
+    "distance_m": 1787
   },
   "osm-511755224": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 1766
+  },
+  "osm-527496484": {
+    "guid": "DD341262-7BA2-47A7-A0A3-81D9E1082400",
+    "twuid": "NY4530-01",
     "type": "UCR",
-    "distance_m": 689
+    "distance_m": 1041
+  },
+  "osm-527540354": {
+    "guid": "0902110F-B099-4568-A758-2CD66814CF5B",
+    "twuid": "NY4729-06",
+    "type": "UCR",
+    "distance_m": 1463
+  },
+  "osm-528690405": {
+    "guid": "DD341262-7BA2-47A7-A0A3-81D9E1082400",
+    "twuid": "NY4530-01",
+    "type": "UCR",
+    "distance_m": 1318
+  },
+  "osm-528690411": {
+    "guid": "DD341262-7BA2-47A7-A0A3-81D9E1082400",
+    "twuid": "NY4530-01",
+    "type": "UCR",
+    "distance_m": 310
+  },
+  "osm-529641668": {
+    "guid": "0902110F-B099-4568-A758-2CD66814CF5B",
+    "twuid": "NY4729-06",
+    "type": "UCR",
+    "distance_m": 1131
+  },
+  "osm-529641669": {
+    "guid": "0902110F-B099-4568-A758-2CD66814CF5B",
+    "twuid": "NY4729-06",
+    "type": "UCR",
+    "distance_m": 1389
+  },
+  "osm-529641673": {
+    "guid": "DD341262-7BA2-47A7-A0A3-81D9E1082400",
+    "twuid": "NY4530-01",
+    "type": "UCR",
+    "distance_m": 1716
+  },
+  "osm-533121585": {
+    "guid": "29A4B04F-3B82-435C-8469-6E7B8EDDADAA",
+    "twuid": "SE0684-02",
+    "type": "UCR",
+    "distance_m": 1257
   },
   "osm-543257463": {
-    "guid": "E02B5D2E-95AB-4E1E-9F9A-A32ADEDB15F9",
-    "twuid": "NY7415-01",
+    "guid": "6ED77F3F-644E-425C-A0AB-DF4FEAE3D646",
+    "twuid": "NY7114-02",
     "type": "UCR",
-    "distance_m": 1764
+    "distance_m": 418
   },
-  "osm-591314370": {
-    "guid": "C5DB04BC-65DE-4FA3-803C-8D9B648516A8",
-    "twuid": "SE1978-01",
+  "osm-543259229": {
+    "guid": "6ED77F3F-644E-425C-A0AB-DF4FEAE3D646",
+    "twuid": "NY7114-02",
     "type": "UCR",
-    "distance_m": 579
+    "distance_m": 1263
   },
-  "osm-637611318": {
-    "guid": "C715C9FE-2117-4173-A035-A64E0E45CF2D",
-    "twuid": "NY4926-02",
+  "osm-543259232": {
+    "guid": "6ED77F3F-644E-425C-A0AB-DF4FEAE3D646",
+    "twuid": "NY7114-02",
     "type": "UCR",
-    "distance_m": 755
+    "distance_m": 912
   },
-  "osm-690208593": {
-    "guid": "46855ED9-3006-488D-9F35-FAF60A5DED63",
-    "twuid": "SD4871-03",
+  "osm-543790835": {
+    "guid": "2D2FD2CC-9AA0-4010-8484-2B0573D050D5",
+    "twuid": "SE1450-02",
     "type": "UCR",
-    "distance_m": 897
+    "distance_m": 1071
   },
-  "osm-690208595": {
-    "guid": "46855ED9-3006-488D-9F35-FAF60A5DED63",
-    "twuid": "SD4871-03",
-    "type": "UCR",
-    "distance_m": 1350
+  "osm-547744214": {
+    "guid": "B4584FB3-E0C0-4C09-A549-278A0BC845A7",
+    "twuid": "NZ1155-01",
+    "type": "BOAT",
+    "distance_m": 289
   },
-  "osm-701779106": {
-    "guid": "C5DB04BC-65DE-4FA3-803C-8D9B648516A8",
-    "twuid": "SE1978-01",
+  "osm-547937509": {
+    "guid": "6ED77F3F-644E-425C-A0AB-DF4FEAE3D646",
+    "twuid": "NY7114-02",
     "type": "UCR",
-    "distance_m": 312
+    "distance_m": 877
+  },
+  "osm-555545534": {
+    "guid": "CCA97E88-4DFC-4719-BE23-55F63877F5F5",
+    "twuid": "SE0693-05",
+    "type": "UCR",
+    "distance_m": 1606
+  },
+  "osm-558038635": {
+    "guid": "38135881-4DB6-4AFC-B9C2-AE491941D999",
+    "twuid": "SD5581-01",
+    "type": "UCR",
+    "distance_m": 778
+  },
+  "osm-560773513": {
+    "guid": "93C17D37-4EF9-4574-BBF2-4EA4495EAEE5",
+    "twuid": "SD8533-02",
+    "type": "BOAT",
+    "distance_m": 1266
+  },
+  "osm-574825670": {
+    "guid": "31928F44-2170-4CF5-BABD-49561951380A",
+    "twuid": "NY6607-02",
+    "type": "BOAT",
+    "distance_m": 1111
+  },
+  "osm-574825671": {
+    "guid": "31928F44-2170-4CF5-BABD-49561951380A",
+    "twuid": "NY6607-02",
+    "type": "BOAT",
+    "distance_m": 1493
+  },
+  "osm-608555624": {
+    "guid": "6BE078DF-907A-4E29-916E-A11512DD173A",
+    "twuid": "NY9555-04",
+    "type": "BOAT",
+    "distance_m": 1484
+  },
+  "osm-614376558": {
+    "guid": "97E59373-2F6D-42B1-9A50-9D03CBE4B162",
+    "twuid": "SD6791-02",
+    "type": "UCR",
+    "distance_m": 1035
+  },
+  "osm-618085084": {
+    "guid": "2D2FD2CC-9AA0-4010-8484-2B0573D050D5",
+    "twuid": "SE1450-02",
+    "type": "UCR",
+    "distance_m": 384
+  },
+  "osm-624333535": {
+    "guid": "FADE61EF-EA6C-4916-986D-22D7448675C8",
+    "twuid": "SD9789-05",
+    "type": "UCR",
+    "distance_m": 1373
+  },
+  "osm-632648641": {
+    "guid": "4557ECAF-2D82-4535-B744-A30E624ACE24",
+    "twuid": "NZ2050-01",
+    "type": "BOAT",
+    "distance_m": 809
+  },
+  "osm-635918712": {
+    "guid": "2D2FD2CC-9AA0-4010-8484-2B0573D050D5",
+    "twuid": "SE1450-02",
+    "type": "UCR",
+    "distance_m": 955
+  },
+  "osm-644864533": {
+    "guid": "5B94F1D5-E4F5-413B-9573-2AF6A61B1E50",
+    "twuid": "SE0761-04",
+    "type": "UCR",
+    "distance_m": 1698
+  },
+  "osm-669318806": {
+    "guid": "1FD518F0-684A-47EC-9377-2A3AD74A6B61",
+    "twuid": "SD7198-02",
+    "type": "UCR",
+    "distance_m": 1779
+  },
+  "osm-673398687": {
+    "guid": "3B2C954B-6BA7-4FBC-955D-DEC7FB980F8B",
+    "twuid": "SD6062-02",
+    "type": "UCR",
+    "distance_m": 1993
+  },
+  "osm-675249518": {
+    "guid": "FB35B2AD-D1B3-4584-AC3F-57D90EB35971",
+    "twuid": "SD4898-03",
+    "type": "UCR",
+    "distance_m": 1871
+  },
+  "osm-679592469": {
+    "guid": "9EA5842A-4DB6-43B6-A75D-9013E9511B4C",
+    "twuid": "SE1765-02",
+    "type": "UCR",
+    "distance_m": 1113
+  },
+  "osm-679592475": {
+    "guid": "9EA5842A-4DB6-43B6-A75D-9013E9511B4C",
+    "twuid": "SE1765-02",
+    "type": "UCR",
+    "distance_m": 1119
+  },
+  "osm-682226181": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 1214
+  },
+  "osm-688212039": {
+    "guid": "B19F9EF8-A4B0-4372-85E1-53FCE5DF53F9",
+    "twuid": "SE3737-05",
+    "type": "BOAT",
+    "distance_m": 982
+  },
+  "osm-688976016": {
+    "guid": "B39F52B5-0C1B-41D8-916B-E6CDA31ED1D4",
+    "twuid": "SD7896-03",
+    "type": "BOAT",
+    "distance_m": 1679
+  },
+  "osm-697342420": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 798
+  },
+  "osm-700252687": {
+    "guid": "35F6CBDE-DC13-472A-A46F-D75E2A85160B",
+    "twuid": "SE1513-04",
+    "type": "BOAT",
+    "distance_m": 991
+  },
+  "osm-700511505": {
+    "guid": "D167DBA2-3480-4FAE-9EA3-ED421142B9E3",
+    "twuid": "NY9355-07",
+    "type": "BOAT",
+    "distance_m": 532
+  },
+  "osm-704459238": {
+    "guid": "3615503E-036A-4C01-B789-7EC5D413D282",
+    "twuid": "NY7158-02",
+    "type": "BOAT",
+    "distance_m": 737
+  },
+  "osm-705730528": {
+    "guid": "F28D4007-B18D-4B4C-BDB7-01B28F5CA38F",
+    "twuid": "NY8552-04",
+    "type": "BOAT",
+    "distance_m": 697
+  },
+  "osm-713628827": {
+    "guid": "E32CE351-C941-4920-8036-C71E7762F1D8",
+    "twuid": "NY7645-01",
+    "type": "UCR",
+    "distance_m": 1979
+  },
+  "osm-714424503": {
+    "guid": "06816A9C-5EFD-4D35-B8D1-D46C8618ADA1",
+    "twuid": "SE1175-02",
+    "type": "UCR",
+    "distance_m": 1621
+  },
+  "osm-725312839": {
+    "guid": "34C3F24B-A959-4FD1-8DC7-AA6D7E451D07",
+    "twuid": "NY7949-03",
+    "type": "BOAT",
+    "distance_m": 1510
+  },
+  "osm-725312841": {
+    "guid": "34C3F24B-A959-4FD1-8DC7-AA6D7E451D07",
+    "twuid": "NY7949-03",
+    "type": "BOAT",
+    "distance_m": 1198
+  },
+  "osm-725312842": {
+    "guid": "34C3F24B-A959-4FD1-8DC7-AA6D7E451D07",
+    "twuid": "NY7949-03",
+    "type": "BOAT",
+    "distance_m": 873
+  },
+  "osm-729447965": {
+    "guid": "245900C2-ECE8-426B-A59A-D60D2A6CC4D5",
+    "twuid": "NY8233-04",
+    "type": "UCR",
+    "distance_m": 561
   },
   "osm-732911049": {
-    "guid": "8D41B8F1-9871-4B10-9C57-0F20CCD6EA4E",
-    "twuid": "NZ0745-01",
+    "guid": "54699C2E-37A4-4244-BA70-54CED3AA68EA",
+    "twuid": "NZ0849-01",
+    "type": "BOAT",
+    "distance_m": 1032
+  },
+  "osm-735063927": {
+    "guid": "79982A90-17A5-417D-97F3-A6AC9E6ACA1B",
+    "twuid": "NY5943-04",
     "type": "UCR",
-    "distance_m": 1027
+    "distance_m": 1494
   },
   "osm-738407719": {
-    "guid": "8D41B8F1-9871-4B10-9C57-0F20CCD6EA4E",
-    "twuid": "NZ0745-01",
-    "type": "UCR",
-    "distance_m": 1552
+    "guid": "54699C2E-37A4-4244-BA70-54CED3AA68EA",
+    "twuid": "NZ0849-01",
+    "type": "BOAT",
+    "distance_m": 1279
+  },
+  "osm-747457722": {
+    "guid": "1563662B-2754-401A-9F4E-2FA0EB7704B1",
+    "twuid": "SE1219-02",
+    "type": "BOAT",
+    "distance_m": 69
   },
   "osm-757719052": {
-    "guid": "8D41B8F1-9871-4B10-9C57-0F20CCD6EA4E",
-    "twuid": "NZ0745-01",
-    "type": "UCR",
-    "distance_m": 1383
-  },
-  "osm-757885280": {
-    "guid": "8D61AE4A-1ADA-41FD-A361-A8559E09A241",
-    "twuid": "NZ4249-01",
+    "guid": "54699C2E-37A4-4244-BA70-54CED3AA68EA",
+    "twuid": "NZ0849-01",
     "type": "BOAT",
-    "distance_m": 505
+    "distance_m": 1196
+  },
+  "osm-757719060": {
+    "guid": "2B864C6D-9DD4-48B5-B725-05F5021675DD",
+    "twuid": "NZ0742-03",
+    "type": "UCR",
+    "distance_m": 1539
+  },
+  "osm-757719061": {
+    "guid": "2B864C6D-9DD4-48B5-B725-05F5021675DD",
+    "twuid": "NZ0742-03",
+    "type": "UCR",
+    "distance_m": 1070
+  },
+  "osm-757719062": {
+    "guid": "2B864C6D-9DD4-48B5-B725-05F5021675DD",
+    "twuid": "NZ0742-03",
+    "type": "UCR",
+    "distance_m": 1115
+  },
+  "osm-757885284": {
+    "guid": "086ECBDE-8F70-4665-89DD-D1E71551E9B3",
+    "twuid": "NZ3724-01",
+    "type": "BOAT",
+    "distance_m": 1873
+  },
+  "osm-757885285": {
+    "guid": "FAEA4740-06B6-411C-BD09-9A17E91BAD6B",
+    "twuid": "NZ2836-09",
+    "type": "BOAT",
+    "distance_m": 1074
+  },
+  "osm-757950411": {
+    "guid": "4451448C-E96F-4832-B8D3-00440E7433BF",
+    "twuid": "NZ1253-02",
+    "type": "BOAT",
+    "distance_m": 601
+  },
+  "osm-757950412": {
+    "guid": "4451448C-E96F-4832-B8D3-00440E7433BF",
+    "twuid": "NZ1253-02",
+    "type": "BOAT",
+    "distance_m": 518
+  },
+  "osm-757950415": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 436
+  },
+  "osm-757950416": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 572
+  },
+  "osm-757950418": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 432
+  },
+  "osm-757950419": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 346
+  },
+  "osm-757950421": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 306
+  },
+  "osm-757950422": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 1135
+  },
+  "osm-757950423": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 1161
+  },
+  "osm-757950427": {
+    "guid": "8946E810-58D0-42A8-ACD5-7044F566D9EB",
+    "twuid": "NZ2653-01",
+    "type": "UCR",
+    "distance_m": 1994
+  },
+  "osm-757974065": {
+    "guid": "424F6DD1-80DF-4672-8455-2C63C132F1DA",
+    "twuid": "NZ1354-02",
+    "type": "BOAT",
+    "distance_m": 1430
+  },
+  "osm-757974066": {
+    "guid": "424F6DD1-80DF-4672-8455-2C63C132F1DA",
+    "twuid": "NZ1354-02",
+    "type": "BOAT",
+    "distance_m": 619
+  },
+  "osm-757974067": {
+    "guid": "B4584FB3-E0C0-4C09-A549-278A0BC845A7",
+    "twuid": "NZ1155-01",
+    "type": "BOAT",
+    "distance_m": 1362
+  },
+  "osm-757974068": {
+    "guid": "B4584FB3-E0C0-4C09-A549-278A0BC845A7",
+    "twuid": "NZ1155-01",
+    "type": "BOAT",
+    "distance_m": 383
+  },
+  "osm-757974070": {
+    "guid": "B4584FB3-E0C0-4C09-A549-278A0BC845A7",
+    "twuid": "NZ1155-01",
+    "type": "BOAT",
+    "distance_m": 306
+  },
+  "osm-760030375": {
+    "guid": "2B864C6D-9DD4-48B5-B725-05F5021675DD",
+    "twuid": "NZ0742-03",
+    "type": "UCR",
+    "distance_m": 1846
+  },
+  "osm-760030376": {
+    "guid": "2B864C6D-9DD4-48B5-B725-05F5021675DD",
+    "twuid": "NZ0742-03",
+    "type": "UCR",
+    "distance_m": 1959
+  },
+  "osm-767975106": {
+    "guid": "2B864C6D-9DD4-48B5-B725-05F5021675DD",
+    "twuid": "NZ0742-03",
+    "type": "UCR",
+    "distance_m": 596
+  },
+  "osm-767983576": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 1246
+  },
+  "osm-769929215": {
+    "guid": "1FD518F0-684A-47EC-9377-2A3AD74A6B61",
+    "twuid": "SD7198-02",
+    "type": "UCR",
+    "distance_m": 1710
+  },
+  "osm-772993434": {
+    "guid": "DA4375B3-FFF4-436F-878E-FE9AABB0F048",
+    "twuid": "NZ1439-01",
+    "type": "UCR",
+    "distance_m": 760
+  },
+  "osm-773884889": {
+    "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
+    "twuid": "NY7736-01",
+    "type": "UCR",
+    "distance_m": 1275
+  },
+  "osm-774772179": {
+    "guid": "8CB0D29E-797B-44A0-A5A2-BAB294B450C9",
+    "twuid": "NY9550-03",
+    "type": "UCR",
+    "distance_m": 1496
+  },
+  "osm-776263260": {
+    "guid": "2B864C6D-9DD4-48B5-B725-05F5021675DD",
+    "twuid": "NZ0742-03",
+    "type": "UCR",
+    "distance_m": 1108
   },
   "osm-778379586": {
     "guid": "7F90DED8-7A49-4865-B9DF-5048E62DE471",
     "twuid": "NZ0738-05",
     "type": "UCR",
-    "distance_m": 1813
+    "distance_m": 1104
+  },
+  "osm-785012911": {
+    "guid": "182F77BF-9EF0-49B0-A01D-DB81D3F59C33",
+    "twuid": "NY7360-02",
+    "type": "BOAT",
+    "distance_m": 769
+  },
+  "osm-785012912": {
+    "guid": "182F77BF-9EF0-49B0-A01D-DB81D3F59C33",
+    "twuid": "NY7360-02",
+    "type": "BOAT",
+    "distance_m": 205
+  },
+  "osm-785012916": {
+    "guid": "182F77BF-9EF0-49B0-A01D-DB81D3F59C33",
+    "twuid": "NY7360-02",
+    "type": "BOAT",
+    "distance_m": 873
+  },
+  "osm-785012917": {
+    "guid": "182F77BF-9EF0-49B0-A01D-DB81D3F59C33",
+    "twuid": "NY7360-02",
+    "type": "BOAT",
+    "distance_m": 1691
+  },
+  "osm-786444787": {
+    "guid": "1563662B-2754-401A-9F4E-2FA0EB7704B1",
+    "twuid": "SE1219-02",
+    "type": "BOAT",
+    "distance_m": 842
+  },
+  "osm-786452424": {
+    "guid": "B2C8777D-3E84-4043-BFDC-9A6BA24A413D",
+    "twuid": "NY8561-02",
+    "type": "BOAT",
+    "distance_m": 156
+  },
+  "osm-787876546": {
+    "guid": "ACD11285-F067-40F8-A4C6-A74FF7C846AA",
+    "twuid": "NZ0658-03",
+    "type": "BOAT",
+    "distance_m": 1659
+  },
+  "osm-795525353": {
+    "guid": "3615503E-036A-4C01-B789-7EC5D413D282",
+    "twuid": "NY7158-02",
+    "type": "BOAT",
+    "distance_m": 792
+  },
+  "osm-795525354": {
+    "guid": "3615503E-036A-4C01-B789-7EC5D413D282",
+    "twuid": "NY7158-02",
+    "type": "BOAT",
+    "distance_m": 1528
+  },
+  "osm-795525355": {
+    "guid": "3615503E-036A-4C01-B789-7EC5D413D282",
+    "twuid": "NY7158-02",
+    "type": "BOAT",
+    "distance_m": 1199
   },
   "osm-796788613": {
-    "guid": "9FFEC116-E7CF-4FC9-B984-D9E6F7ABDBAF",
-    "twuid": "NY9958-02",
-    "type": "UCR",
-    "distance_m": 1795
+    "guid": "F052F681-9CD8-419B-8D68-80A53596142C",
+    "twuid": "NY9458-03",
+    "type": "BOAT",
+    "distance_m": 1345
   },
-  "osm-817601822": {
-    "guid": "46855ED9-3006-488D-9F35-FAF60A5DED63",
-    "twuid": "SD4871-03",
-    "type": "UCR",
-    "distance_m": 1109
+  "osm-800271724": {
+    "guid": "79816A24-2F93-4028-9AA1-EE99CAA577C7",
+    "twuid": "NY9256-02",
+    "type": "BOAT",
+    "distance_m": 1052
   },
-  "osm-825491785": {
-    "guid": "C5DB04BC-65DE-4FA3-803C-8D9B648516A8",
-    "twuid": "SE1978-01",
+  "osm-800500679": {
+    "guid": "DB72238A-1507-4B5E-BA4E-D4227F514FFC",
+    "twuid": "SE0522-02",
     "type": "UCR",
-    "distance_m": 1932
+    "distance_m": 1592
   },
-  "osm-870973868": {
-    "guid": "986A1131-DB42-476C-ACF7-1D6A4CCC347C",
-    "twuid": "SD8483-02",
+  "osm-800500680": {
+    "guid": "DB72238A-1507-4B5E-BA4E-D4227F514FFC",
+    "twuid": "SE0522-02",
     "type": "UCR",
-    "distance_m": 1205
+    "distance_m": 1535
   },
-  "osm-870973869": {
-    "guid": "986A1131-DB42-476C-ACF7-1D6A4CCC347C",
-    "twuid": "SD8483-02",
+  "osm-807674217": {
+    "guid": "FADE61EF-EA6C-4916-986D-22D7448675C8",
+    "twuid": "SD9789-05",
     "type": "UCR",
-    "distance_m": 1427
+    "distance_m": 538
   },
-  "osm-903822974": {
-    "guid": "9D8B3450-5901-428A-BF2C-02E9A3135351",
-    "twuid": "SD7644-01",
+  "osm-818708330": {
+    "guid": "F98205C2-751D-46DF-B9E9-837BF248A811",
+    "twuid": "SD9988-01",
     "type": "UCR",
-    "distance_m": 1901
+    "distance_m": 833
   },
-  "osm-904739781": {
-    "guid": "5F8B87C2-E874-4884-ABF1-1BF55A1A24DB",
-    "twuid": "SE1908-03",
+  "osm-819940788": {
+    "guid": "96B8E361-22CE-4230-9E91-FD0F123D8D86",
+    "twuid": "SE2442-02",
     "type": "UCR",
-    "distance_m": 360
+    "distance_m": 1290
   },
-  "osm-905097241": {
-    "guid": "C5DB04BC-65DE-4FA3-803C-8D9B648516A8",
-    "twuid": "SE1978-01",
-    "type": "UCR",
-    "distance_m": 1226
-  },
-  "osm-906209173": {
-    "guid": "9AB8CB70-1250-42DF-BC5C-3197E87191FD",
-    "twuid": "NY7202-01",
-    "type": "UCR",
-    "distance_m": 1393
-  },
-  "osm-944285279": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
-    "type": "UCR",
-    "distance_m": 465
-  },
-  "osm-944285280": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
-    "type": "UCR",
-    "distance_m": 531
-  },
-  "osm-944581922": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
-    "type": "UCR",
-    "distance_m": 679
-  },
-  "osm-944683988": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
-    "type": "UCR",
-    "distance_m": 1102
-  },
-  "osm-953847049": {
-    "guid": "986A1131-DB42-476C-ACF7-1D6A4CCC347C",
-    "twuid": "SD8483-02",
-    "type": "UCR",
-    "distance_m": 964
-  },
-  "osm-990180680": {
-    "guid": "5F8B87C2-E874-4884-ABF1-1BF55A1A24DB",
-    "twuid": "SE1908-03",
-    "type": "UCR",
-    "distance_m": 1282
-  },
-  "osm-990180682": {
-    "guid": "5F8B87C2-E874-4884-ABF1-1BF55A1A24DB",
-    "twuid": "SE1908-03",
-    "type": "UCR",
-    "distance_m": 883
-  },
-  "osm-1039459023": {
-    "guid": "FDB714BA-C733-49D7-A5F9-98A68D052BF7",
-    "twuid": "SD7930-01",
-    "type": "UCR",
-    "distance_m": 1827
-  },
-  "osm-1101952782": {
-    "guid": "5F8B87C2-E874-4884-ABF1-1BF55A1A24DB",
-    "twuid": "SE1908-03",
-    "type": "UCR",
-    "distance_m": 1127
-  },
-  "osm-1101952790": {
-    "guid": "5F8B87C2-E874-4884-ABF1-1BF55A1A24DB",
-    "twuid": "SE1908-03",
-    "type": "UCR",
-    "distance_m": 1398
-  },
-  "osm-1171540854": {
-    "guid": "CF24F6B8-A071-49C7-95E1-92045F6DE53C",
-    "twuid": "NY6015-02",
-    "type": "UCR",
-    "distance_m": 1267
-  },
-  "osm-1193998844": {
-    "guid": "CF24F6B8-A071-49C7-95E1-92045F6DE53C",
-    "twuid": "NY6015-02",
-    "type": "UCR",
-    "distance_m": 1474
-  },
-  "osm-1268230816": {
-    "guid": "CF24F6B8-A071-49C7-95E1-92045F6DE53C",
-    "twuid": "NY6015-02",
-    "type": "UCR",
-    "distance_m": 1248
-  },
-  "osm-1273864556": {
-    "guid": "6347A766-E9D9-4B46-992E-B3A9A7B992FB",
-    "twuid": "SE5653-02",
-    "type": "UCR",
-    "distance_m": 864
-  },
-  "osm-1296354686": {
-    "guid": "5F8B87C2-E874-4884-ABF1-1BF55A1A24DB",
-    "twuid": "SE1908-03",
-    "type": "UCR",
-    "distance_m": 1805
-  },
-  "osm-1328340561": {
-    "guid": "FBB762A7-D7F8-4284-9331-E91DB4CA88B9",
-    "twuid": "SE1847-03",
-    "type": "UCR",
-    "distance_m": 1656
-  },
-  "osm-1328340577": {
-    "guid": "FBB762A7-D7F8-4284-9331-E91DB4CA88B9",
-    "twuid": "SE1847-03",
-    "type": "UCR",
-    "distance_m": 1883
-  },
-  "osm-1328340578": {
-    "guid": "FBB762A7-D7F8-4284-9331-E91DB4CA88B9",
-    "twuid": "SE1847-03",
-    "type": "UCR",
-    "distance_m": 1840
-  },
-  "osm-1328340579": {
-    "guid": "FBB762A7-D7F8-4284-9331-E91DB4CA88B9",
-    "twuid": "SE1847-03",
-    "type": "UCR",
-    "distance_m": 1776
-  },
-  "osm-1328340592": {
-    "guid": "FBB762A7-D7F8-4284-9331-E91DB4CA88B9",
-    "twuid": "SE1847-03",
-    "type": "UCR",
-    "distance_m": 1743
-  },
-  "osm-1328340593": {
-    "guid": "FBB762A7-D7F8-4284-9331-E91DB4CA88B9",
-    "twuid": "SE1847-03",
-    "type": "UCR",
-    "distance_m": 1719
-  },
-  "osm-1328340668": {
-    "guid": "FBB762A7-D7F8-4284-9331-E91DB4CA88B9",
-    "twuid": "SE1847-03",
-    "type": "UCR",
-    "distance_m": 1676
-  },
-  "osm-1328340682": {
-    "guid": "FBB762A7-D7F8-4284-9331-E91DB4CA88B9",
-    "twuid": "SE1847-03",
-    "type": "UCR",
-    "distance_m": 1619
-  },
-  "osm-1328340684": {
-    "guid": "FBB762A7-D7F8-4284-9331-E91DB4CA88B9",
-    "twuid": "SE1847-03",
-    "type": "UCR",
-    "distance_m": 1614
-  },
-  "osm-1364510847": {
-    "guid": "48A091DB-6072-4126-81AE-854292212639",
-    "twuid": "SD4780-01",
+  "osm-819940789": {
+    "guid": "96B8E361-22CE-4230-9E91-FD0F123D8D86",
+    "twuid": "SE2442-02",
     "type": "UCR",
     "distance_m": 1610
   },
-  "osm-1417385699": {
-    "guid": "C5DB04BC-65DE-4FA3-803C-8D9B648516A8",
-    "twuid": "SE1978-01",
+  "osm-821838169": {
+    "guid": "2B864C6D-9DD4-48B5-B725-05F5021675DD",
+    "twuid": "NZ0742-03",
     "type": "UCR",
-    "distance_m": 1832
+    "distance_m": 1050
   },
-  "osm-1417679107": {
-    "guid": "C5DB04BC-65DE-4FA3-803C-8D9B648516A8",
-    "twuid": "SE1978-01",
+  "osm-822556661": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
     "type": "UCR",
-    "distance_m": 1371
+    "distance_m": 654
   },
-  "osm-1417679108": {
-    "guid": "C5DB04BC-65DE-4FA3-803C-8D9B648516A8",
-    "twuid": "SE1978-01",
+  "osm-822677666": {
+    "guid": "4BE55909-D6AE-438F-B73F-AB4981364F23",
+    "twuid": "SE1474-02",
+    "type": "UCR",
+    "distance_m": 959
+  },
+  "osm-822677667": {
+    "guid": "4BE55909-D6AE-438F-B73F-AB4981364F23",
+    "twuid": "SE1474-02",
+    "type": "UCR",
+    "distance_m": 505
+  },
+  "osm-827063307": {
+    "guid": "93C17D37-4EF9-4574-BBF2-4EA4495EAEE5",
+    "twuid": "SD8533-02",
+    "type": "BOAT",
+    "distance_m": 1197
+  },
+  "osm-827865725": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 649
+  },
+  "osm-833679850": {
+    "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
+    "twuid": "NY7736-01",
+    "type": "UCR",
+    "distance_m": 1275
+  },
+  "osm-833679851": {
+    "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
+    "twuid": "NY7736-01",
+    "type": "UCR",
+    "distance_m": 1289
+  },
+  "osm-836967442": {
+    "guid": "79982A90-17A5-417D-97F3-A6AC9E6ACA1B",
+    "twuid": "NY5943-04",
+    "type": "UCR",
+    "distance_m": 1452
+  },
+  "osm-837349326": {
+    "guid": "8CB0D29E-797B-44A0-A5A2-BAB294B450C9",
+    "twuid": "NY9550-03",
+    "type": "UCR",
+    "distance_m": 1484
+  },
+  "osm-847426465": {
+    "guid": "D296176D-8EDA-4665-9A6E-09D14E5E330C",
+    "twuid": "SE1116-01",
+    "type": "BOAT",
+    "distance_m": 1379
+  },
+  "osm-853513732": {
+    "guid": "B3FA45D8-4161-4136-BB9D-1B71D4C4B112",
+    "twuid": "NZ3246-01",
+    "type": "BOAT",
+    "distance_m": 920
+  },
+  "osm-858076463": {
+    "guid": "9FDBE9C2-E8B6-4F37-94DD-66EDB45837C7",
+    "twuid": "SD4666-02",
+    "type": "BOAT",
+    "distance_m": 1214
+  },
+  "osm-858076464": {
+    "guid": "9FDBE9C2-E8B6-4F37-94DD-66EDB45837C7",
+    "twuid": "SD4666-02",
+    "type": "BOAT",
+    "distance_m": 1364
+  },
+  "osm-858318770": {
+    "guid": "80289955-6C47-44C1-9D50-6954649674AE",
+    "twuid": "SE0189-02",
+    "type": "UCR",
+    "distance_m": 979
+  },
+  "osm-858318771": {
+    "guid": "80289955-6C47-44C1-9D50-6954649674AE",
+    "twuid": "SE0189-02",
+    "type": "UCR",
+    "distance_m": 997
+  },
+  "osm-858318777": {
+    "guid": "80289955-6C47-44C1-9D50-6954649674AE",
+    "twuid": "SE0189-02",
+    "type": "UCR",
+    "distance_m": 1168
+  },
+  "osm-862971594": {
+    "guid": "DA4375B3-FFF4-436F-878E-FE9AABB0F048",
+    "twuid": "NZ1439-01",
+    "type": "UCR",
+    "distance_m": 988
+  },
+  "osm-867684983": {
+    "guid": "849307DD-CBFC-40DA-8BAD-4C7A59922781",
+    "twuid": "SE1213-03",
+    "type": "UCR",
+    "distance_m": 456
+  },
+  "osm-883289434": {
+    "guid": "2B864C6D-9DD4-48B5-B725-05F5021675DD",
+    "twuid": "NZ0742-03",
+    "type": "UCR",
+    "distance_m": 649
+  },
+  "osm-885510773": {
+    "guid": "878384DB-B36D-42D5-9F03-4BDE63C104F0",
+    "twuid": "SD7663-03",
+    "type": "UCR",
+    "distance_m": 185
+  },
+  "osm-887985836": {
+    "guid": "C5177048-D8B3-4B38-AB23-E048C0B6880F",
+    "twuid": "NZ2135-05",
+    "type": "BOAT",
+    "distance_m": 872
+  },
+  "osm-887985838": {
+    "guid": "C5177048-D8B3-4B38-AB23-E048C0B6880F",
+    "twuid": "NZ2135-05",
+    "type": "BOAT",
+    "distance_m": 1273
+  },
+  "osm-887985839": {
+    "guid": "7DFFBDE0-CE8F-4BBB-A0B0-2CDB155E2BDD",
+    "twuid": "NZ1935-02",
+    "type": "BOAT",
+    "distance_m": 1611
+  },
+  "osm-887985851": {
+    "guid": "7DFFBDE0-CE8F-4BBB-A0B0-2CDB155E2BDD",
+    "twuid": "NZ1935-02",
+    "type": "BOAT",
+    "distance_m": 1612
+  },
+  "osm-887985853": {
+    "guid": "7DFFBDE0-CE8F-4BBB-A0B0-2CDB155E2BDD",
+    "twuid": "NZ1935-02",
+    "type": "BOAT",
+    "distance_m": 1385
+  },
+  "osm-892094915": {
+    "guid": "849307DD-CBFC-40DA-8BAD-4C7A59922781",
+    "twuid": "SE1213-03",
+    "type": "UCR",
+    "distance_m": 910
+  },
+  "osm-898079451": {
+    "guid": "BE85CC83-8CDD-4D65-A869-9F241B96EF52",
+    "twuid": "NZ3236-02",
+    "type": "BOAT",
+    "distance_m": 1445
+  },
+  "osm-904739781": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 1817
+  },
+  "osm-904742913": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 1839
+  },
+  "osm-904756272": {
+    "guid": "849307DD-CBFC-40DA-8BAD-4C7A59922781",
+    "twuid": "SE1213-03",
+    "type": "UCR",
+    "distance_m": 994
+  },
+  "osm-904756276": {
+    "guid": "849307DD-CBFC-40DA-8BAD-4C7A59922781",
+    "twuid": "SE1213-03",
+    "type": "UCR",
+    "distance_m": 915
+  },
+  "osm-904756278": {
+    "guid": "849307DD-CBFC-40DA-8BAD-4C7A59922781",
+    "twuid": "SE1213-03",
+    "type": "UCR",
+    "distance_m": 958
+  },
+  "osm-904756285": {
+    "guid": "849307DD-CBFC-40DA-8BAD-4C7A59922781",
+    "twuid": "SE1213-03",
     "type": "UCR",
     "distance_m": 1233
   },
-  "osm-1417679109": {
-    "guid": "C5DB04BC-65DE-4FA3-803C-8D9B648516A8",
-    "twuid": "SE1978-01",
+  "osm-904756286": {
+    "guid": "849307DD-CBFC-40DA-8BAD-4C7A59922781",
+    "twuid": "SE1213-03",
     "type": "UCR",
-    "distance_m": 1252
+    "distance_m": 822
+  },
+  "osm-904760244": {
+    "guid": "DB72238A-1507-4B5E-BA4E-D4227F514FFC",
+    "twuid": "SE0522-02",
+    "type": "UCR",
+    "distance_m": 1180
+  },
+  "osm-904761708": {
+    "guid": "C1B90CE7-B93D-49C4-8967-BBC671B41E28",
+    "twuid": "SE0225-01",
+    "type": "UCR",
+    "distance_m": 691
+  },
+  "osm-904761711": {
+    "guid": "C1B90CE7-B93D-49C4-8967-BBC671B41E28",
+    "twuid": "SE0225-01",
+    "type": "UCR",
+    "distance_m": 616
+  },
+  "osm-904761714": {
+    "guid": "C1B90CE7-B93D-49C4-8967-BBC671B41E28",
+    "twuid": "SE0225-01",
+    "type": "UCR",
+    "distance_m": 597
+  },
+  "osm-904761715": {
+    "guid": "C1B90CE7-B93D-49C4-8967-BBC671B41E28",
+    "twuid": "SE0225-01",
+    "type": "UCR",
+    "distance_m": 561
+  },
+  "osm-905042780": {
+    "guid": "A61C6283-9D5C-469D-B2A8-80E6D26AF1EF",
+    "twuid": "SD6874-01",
+    "type": "UCR",
+    "distance_m": 1455
+  },
+  "osm-905102977": {
+    "guid": "29A4B04F-3B82-435C-8469-6E7B8EDDADAA",
+    "twuid": "SE0684-02",
+    "type": "UCR",
+    "distance_m": 1540
+  },
+  "osm-905103703": {
+    "guid": "B27BAE5B-E192-4115-9B83-5C06EBE8E8D3",
+    "twuid": "SE0086-02",
+    "type": "UCR",
+    "distance_m": 338
+  },
+  "osm-905530548": {
+    "guid": "F98205C2-751D-46DF-B9E9-837BF248A811",
+    "twuid": "SD9988-01",
+    "type": "UCR",
+    "distance_m": 911
+  },
+  "osm-905530550": {
+    "guid": "FADE61EF-EA6C-4916-986D-22D7448675C8",
+    "twuid": "SD9789-05",
+    "type": "UCR",
+    "distance_m": 323
+  },
+  "osm-905539113": {
+    "guid": "CCA97E88-4DFC-4719-BE23-55F63877F5F5",
+    "twuid": "SE0693-05",
+    "type": "UCR",
+    "distance_m": 1593
+  },
+  "osm-905539116": {
+    "guid": "CCA97E88-4DFC-4719-BE23-55F63877F5F5",
+    "twuid": "SE0693-05",
+    "type": "UCR",
+    "distance_m": 1957
+  },
+  "osm-905542706": {
+    "guid": "80289955-6C47-44C1-9D50-6954649674AE",
+    "twuid": "SE0189-02",
+    "type": "UCR",
+    "distance_m": 614
+  },
+  "osm-905552021": {
+    "guid": "986A1131-DB42-476C-ACF7-1D6A4CCC347C",
+    "twuid": "SD8483-02",
+    "type": "UCR",
+    "distance_m": 271
+  },
+  "osm-905552022": {
+    "guid": "986A1131-DB42-476C-ACF7-1D6A4CCC347C",
+    "twuid": "SD8483-02",
+    "type": "UCR",
+    "distance_m": 339
+  },
+  "osm-906218544": {
+    "guid": "00C6AC9F-5E03-4B9F-ABF3-5DC8A61290E8",
+    "twuid": "NY5503-03",
+    "type": "BOAT",
+    "distance_m": 1694
+  },
+  "osm-906240570": {
+    "guid": "9DABD71B-0724-497C-A828-CB6DAC95DEE4",
+    "twuid": "SD5398-02",
+    "type": "BOAT",
+    "distance_m": 1680
+  },
+  "osm-906247777": {
+    "guid": "F3588D09-7F78-4CA0-9712-AA904C96D0D9",
+    "twuid": "NY4805-01",
+    "type": "UCR",
+    "distance_m": 406
+  },
+  "osm-906253896": {
+    "guid": "6214F386-B4CD-4771-9EC9-D89187E262F8",
+    "twuid": "NY4605-02",
+    "type": "BOAT",
+    "distance_m": 711
+  },
+  "osm-906253897": {
+    "guid": "6214F386-B4CD-4771-9EC9-D89187E262F8",
+    "twuid": "NY4605-02",
+    "type": "BOAT",
+    "distance_m": 1924
+  },
+  "osm-906253898": {
+    "guid": "6214F386-B4CD-4771-9EC9-D89187E262F8",
+    "twuid": "NY4605-02",
+    "type": "BOAT",
+    "distance_m": 1114
+  },
+  "osm-906497602": {
+    "guid": "0902110F-B099-4568-A758-2CD66814CF5B",
+    "twuid": "NY4729-06",
+    "type": "UCR",
+    "distance_m": 1271
+  },
+  "osm-906497606": {
+    "guid": "DD341262-7BA2-47A7-A0A3-81D9E1082400",
+    "twuid": "NY4530-01",
+    "type": "UCR",
+    "distance_m": 1914
+  },
+  "osm-906553552": {
+    "guid": "28C20F53-8540-415C-92ED-6AC577AFCB6C",
+    "twuid": "NY4844-01",
+    "type": "UCR",
+    "distance_m": 605
+  },
+  "osm-906553559": {
+    "guid": "28C20F53-8540-415C-92ED-6AC577AFCB6C",
+    "twuid": "NY4844-01",
+    "type": "UCR",
+    "distance_m": 681
+  },
+  "osm-906561967": {
+    "guid": "79982A90-17A5-417D-97F3-A6AC9E6ACA1B",
+    "twuid": "NY5943-04",
+    "type": "UCR",
+    "distance_m": 1287
+  },
+  "osm-906561974": {
+    "guid": "79982A90-17A5-417D-97F3-A6AC9E6ACA1B",
+    "twuid": "NY5943-04",
+    "type": "UCR",
+    "distance_m": 1308
+  },
+  "osm-906561978": {
+    "guid": "79982A90-17A5-417D-97F3-A6AC9E6ACA1B",
+    "twuid": "NY5943-04",
+    "type": "UCR",
+    "distance_m": 1090
+  },
+  "osm-906573089": {
+    "guid": "9A335E99-5159-4DB3-860C-BEFFCAA94589",
+    "twuid": "NY5636-05",
+    "type": "UCR",
+    "distance_m": 382
+  },
+  "osm-906573095": {
+    "guid": "B84711AA-C0CF-41D7-949C-068D19EEE2BB",
+    "twuid": "NY5638-07",
+    "type": "UCR",
+    "distance_m": 959
+  },
+  "osm-906584788": {
+    "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
+    "twuid": "NY7736-01",
+    "type": "UCR",
+    "distance_m": 1128
+  },
+  "osm-906594880": {
+    "guid": "52F0F812-E18F-43BF-8E5D-95F3F25826EC",
+    "twuid": "NY7447-02",
+    "type": "UCR",
+    "distance_m": 52
+  },
+  "osm-906594881": {
+    "guid": "52F0F812-E18F-43BF-8E5D-95F3F25826EC",
+    "twuid": "NY7447-02",
+    "type": "UCR",
+    "distance_m": 712
+  },
+  "osm-906596966": {
+    "guid": "04A309A3-CDD6-4146-97F7-4A460CB3D8E5",
+    "twuid": "NY7349-04",
+    "type": "UCR",
+    "distance_m": 884
+  },
+  "osm-906603219": {
+    "guid": "34C3F24B-A959-4FD1-8DC7-AA6D7E451D07",
+    "twuid": "NY7949-03",
+    "type": "BOAT",
+    "distance_m": 987
+  },
+  "osm-906603222": {
+    "guid": "34C3F24B-A959-4FD1-8DC7-AA6D7E451D07",
+    "twuid": "NY7949-03",
+    "type": "BOAT",
+    "distance_m": 1280
+  },
+  "osm-906608037": {
+    "guid": "F052F681-9CD8-419B-8D68-80A53596142C",
+    "twuid": "NY9458-03",
+    "type": "BOAT",
+    "distance_m": 1721
+  },
+  "osm-906608039": {
+    "guid": "B2C8777D-3E84-4043-BFDC-9A6BA24A413D",
+    "twuid": "NY8561-02",
+    "type": "BOAT",
+    "distance_m": 1521
+  },
+  "osm-906617634": {
+    "guid": "0F574ACF-B821-4259-AD01-6F304E656E2B",
+    "twuid": "NY9451-04",
+    "type": "BOAT",
+    "distance_m": 1224
+  },
+  "osm-906617635": {
+    "guid": "0F574ACF-B821-4259-AD01-6F304E656E2B",
+    "twuid": "NY9451-04",
+    "type": "BOAT",
+    "distance_m": 1217
+  },
+  "osm-906617636": {
+    "guid": "6BE078DF-907A-4E29-916E-A11512DD173A",
+    "twuid": "NY9555-04",
+    "type": "BOAT",
+    "distance_m": 1736
+  },
+  "osm-906617639": {
+    "guid": "D167DBA2-3480-4FAE-9EA3-ED421142B9E3",
+    "twuid": "NY9355-07",
+    "type": "BOAT",
+    "distance_m": 1392
+  },
+  "osm-906621492": {
+    "guid": "ACD11285-F067-40F8-A4C6-A74FF7C846AA",
+    "twuid": "NZ0658-03",
+    "type": "BOAT",
+    "distance_m": 1304
+  },
+  "osm-910017077": {
+    "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
+    "twuid": "SE1519-03",
+    "type": "UCR",
+    "distance_m": 1856
+  },
+  "osm-922973016": {
+    "guid": "B3FA45D8-4161-4136-BB9D-1B71D4C4B112",
+    "twuid": "NZ3246-01",
+    "type": "BOAT",
+    "distance_m": 968
+  },
+  "osm-941602488": {
+    "guid": "DA4375B3-FFF4-436F-878E-FE9AABB0F048",
+    "twuid": "NZ1439-01",
+    "type": "UCR",
+    "distance_m": 888
+  },
+  "osm-941602499": {
+    "guid": "DA4375B3-FFF4-436F-878E-FE9AABB0F048",
+    "twuid": "NZ1439-01",
+    "type": "UCR",
+    "distance_m": 1426
+  },
+  "osm-941602501": {
+    "guid": "DA4375B3-FFF4-436F-878E-FE9AABB0F048",
+    "twuid": "NZ1439-01",
+    "type": "UCR",
+    "distance_m": 886
+  },
+  "osm-944285279": {
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 1915
+  },
+  "osm-944285280": {
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 1928
+  },
+  "osm-944581922": {
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 1835
+  },
+  "osm-944683988": {
+    "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
+    "twuid": "SD8531-04",
+    "type": "BOAT",
+    "distance_m": 1258
+  },
+  "osm-945422868": {
+    "guid": "93C17D37-4EF9-4574-BBF2-4EA4495EAEE5",
+    "twuid": "SD8533-02",
+    "type": "BOAT",
+    "distance_m": 1324
+  },
+  "osm-948827030": {
+    "guid": "4BE55909-D6AE-438F-B73F-AB4981364F23",
+    "twuid": "SE1474-02",
+    "type": "UCR",
+    "distance_m": 264
+  },
+  "osm-948827031": {
+    "guid": "4BE55909-D6AE-438F-B73F-AB4981364F23",
+    "twuid": "SE1474-02",
+    "type": "UCR",
+    "distance_m": 672
+  },
+  "osm-949219995": {
+    "guid": "2D2FD2CC-9AA0-4010-8484-2B0573D050D5",
+    "twuid": "SE1450-02",
+    "type": "UCR",
+    "distance_m": 1051
+  },
+  "osm-949219999": {
+    "guid": "2D2FD2CC-9AA0-4010-8484-2B0573D050D5",
+    "twuid": "SE1450-02",
+    "type": "UCR",
+    "distance_m": 878
+  },
+  "osm-949220003": {
+    "guid": "EDBD4497-3C24-4CF8-97BE-F14A54DF0940",
+    "twuid": "SE1850-01",
+    "type": "UCR",
+    "distance_m": 1843
+  },
+  "osm-961380979": {
+    "guid": "BDAC8845-3AE9-452E-A713-414762C71310",
+    "twuid": "SD9065-06",
+    "type": "UCR",
+    "distance_m": 1596
+  },
+  "osm-961380980": {
+    "guid": "BDAC8845-3AE9-452E-A713-414762C71310",
+    "twuid": "SD9065-06",
+    "type": "UCR",
+    "distance_m": 634
+  },
+  "osm-965360785": {
+    "guid": "80289955-6C47-44C1-9D50-6954649674AE",
+    "twuid": "SE0189-02",
+    "type": "UCR",
+    "distance_m": 511
+  },
+  "osm-965360787": {
+    "guid": "80289955-6C47-44C1-9D50-6954649674AE",
+    "twuid": "SE0189-02",
+    "type": "UCR",
+    "distance_m": 446
+  },
+  "osm-965360791": {
+    "guid": "80289955-6C47-44C1-9D50-6954649674AE",
+    "twuid": "SE0189-02",
+    "type": "UCR",
+    "distance_m": 691
+  },
+  "osm-965360800": {
+    "guid": "80289955-6C47-44C1-9D50-6954649674AE",
+    "twuid": "SE0189-02",
+    "type": "UCR",
+    "distance_m": 832
+  },
+  "osm-965415667": {
+    "guid": "80289955-6C47-44C1-9D50-6954649674AE",
+    "twuid": "SE0189-02",
+    "type": "UCR",
+    "distance_m": 477
+  },
+  "osm-965415668": {
+    "guid": "80289955-6C47-44C1-9D50-6954649674AE",
+    "twuid": "SE0189-02",
+    "type": "UCR",
+    "distance_m": 477
+  },
+  "osm-970644702": {
+    "guid": "8946E810-58D0-42A8-ACD5-7044F566D9EB",
+    "twuid": "NZ2653-01",
+    "type": "UCR",
+    "distance_m": 1968
+  },
+  "osm-971290294": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 1828
+  },
+  "osm-971290295": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 1814
+  },
+  "osm-972431923": {
+    "guid": "F98205C2-751D-46DF-B9E9-837BF248A811",
+    "twuid": "SD9988-01",
+    "type": "UCR",
+    "distance_m": 921
+  },
+  "osm-973223159": {
+    "guid": "1FD518F0-684A-47EC-9377-2A3AD74A6B61",
+    "twuid": "SD7198-02",
+    "type": "UCR",
+    "distance_m": 1688
+  },
+  "osm-984754654": {
+    "guid": "7BA8E90E-7AFA-4158-9B6D-FA0419FA2B7D",
+    "twuid": "SE0318-02",
+    "type": "UCR",
+    "distance_m": 449
+  },
+  "osm-1007616851": {
+    "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
+    "twuid": "SE1519-03",
+    "type": "UCR",
+    "distance_m": 635
+  },
+  "osm-1020254415": {
+    "guid": "55604FA3-3981-49EC-AE00-7E10F65DCEEA",
+    "twuid": "SD8836-02",
+    "type": "BOAT",
+    "distance_m": 1360
+  },
+  "osm-1020254417": {
+    "guid": "55604FA3-3981-49EC-AE00-7E10F65DCEEA",
+    "twuid": "SD8836-02",
+    "type": "BOAT",
+    "distance_m": 1332
+  },
+  "osm-1022008863": {
+    "guid": "13D7050F-76F1-4CBE-A91A-43709E5A8BC1",
+    "twuid": "SE1454-05",
+    "type": "UCR",
+    "distance_m": 1881
+  },
+  "osm-1026326576": {
+    "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
+    "twuid": "NY7736-01",
+    "type": "UCR",
+    "distance_m": 1977
+  },
+  "osm-1026326577": {
+    "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
+    "twuid": "NY7736-01",
+    "type": "UCR",
+    "distance_m": 1447
+  },
+  "osm-1026652080": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 491
+  },
+  "osm-1026652081": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 642
+  },
+  "osm-1026652084": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 979
+  },
+  "osm-1026722810": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 1456
+  },
+  "osm-1032054592": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 1805
+  },
+  "osm-1033852139": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 1963
+  },
+  "osm-1039459023": {
+    "guid": "93C17D37-4EF9-4574-BBF2-4EA4495EAEE5",
+    "twuid": "SD8533-02",
+    "type": "BOAT",
+    "distance_m": 274
+  },
+  "osm-1040194702": {
+    "guid": "2743EB8E-E71F-4147-9E77-A34D32A4489B",
+    "twuid": "SD8728-01",
+    "type": "BOAT",
+    "distance_m": 1039
+  },
+  "osm-1050538171": {
+    "guid": "1FD518F0-684A-47EC-9377-2A3AD74A6B61",
+    "twuid": "SD7198-02",
+    "type": "UCR",
+    "distance_m": 1553
+  },
+  "osm-1056683909": {
+    "guid": "D6C3B80C-6E41-45EF-87FF-29EAC14379FC",
+    "twuid": "SD8259-03",
+    "type": "UCR",
+    "distance_m": 934
+  },
+  "osm-1071373196": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 396
+  },
+  "osm-1071373197": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 989
+  },
+  "osm-1071373198": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 821
+  },
+  "osm-1080547382": {
+    "guid": "C9018693-2B0E-4E30-8265-1AF5FEEC9BB4",
+    "twuid": "SE0299-02",
+    "type": "UCR",
+    "distance_m": 1527
+  },
+  "osm-1092344666": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 1497
+  },
+  "osm-1100826083": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 1956
+  },
+  "osm-1101952790": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 1946
+  },
+  "osm-1139049355": {
+    "guid": "BE85CC83-8CDD-4D65-A869-9F241B96EF52",
+    "twuid": "NZ3236-02",
+    "type": "BOAT",
+    "distance_m": 1179
+  },
+  "osm-1149463840": {
+    "guid": "F1DFD0C4-8EF1-48D9-ACD1-FA49E69117AA",
+    "twuid": "SE5087-01",
+    "type": "BOAT",
+    "distance_m": 1018
+  },
+  "osm-1151347672": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 635
+  },
+  "osm-1161522225": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 708
+  },
+  "osm-1161524776": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 884
+  },
+  "osm-1161524777": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 864
+  },
+  "osm-1161528300": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 485
+  },
+  "osm-1161530527": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 378
+  },
+  "osm-1161536641": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 239
+  },
+  "osm-1161536642": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 286
+  },
+  "osm-1161536643": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 199
+  },
+  "osm-1161536644": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 159
+  },
+  "osm-1161536803": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 104
+  },
+  "osm-1161536804": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 142
+  },
+  "osm-1161536805": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 67
+  },
+  "osm-1161537162": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 24
+  },
+  "osm-1161537163": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 68
+  },
+  "osm-1161537236": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 424
+  },
+  "osm-1173260356": {
+    "guid": "F47BC38F-7CD8-4850-98B1-C3C6BAC3DFC7",
+    "twuid": "NZ1467-01",
+    "type": "BOAT",
+    "distance_m": 1504
+  },
+  "osm-1190481633": {
+    "guid": "3D8D1BCE-7DEB-46E9-88B6-0B49D9A26A97",
+    "twuid": "NY4707-02",
+    "type": "BOAT",
+    "distance_m": 1026
+  },
+  "osm-1190481634": {
+    "guid": "F3588D09-7F78-4CA0-9712-AA904C96D0D9",
+    "twuid": "NY4805-01",
+    "type": "UCR",
+    "distance_m": 1084
+  },
+  "osm-1190481636": {
+    "guid": "39577A12-443A-4D2C-AECB-A97A6F403034",
+    "twuid": "NY5314-02",
+    "type": "UCR",
+    "distance_m": 1403
+  },
+  "osm-1191595790": {
+    "guid": "E2C71064-81BF-4F5A-A7B1-5F7B7005CA60",
+    "twuid": "SD6284-05",
+    "type": "UCR",
+    "distance_m": 750
+  },
+  "osm-1191660603": {
+    "guid": "97E59373-2F6D-42B1-9A50-9D03CBE4B162",
+    "twuid": "SD6791-02",
+    "type": "UCR",
+    "distance_m": 1412
+  },
+  "osm-1191660604": {
+    "guid": "97E59373-2F6D-42B1-9A50-9D03CBE4B162",
+    "twuid": "SD6791-02",
+    "type": "UCR",
+    "distance_m": 1562
+  },
+  "osm-1191839443": {
+    "guid": "2FEAC2A6-0FF2-4AA9-99B5-469376178F54",
+    "twuid": "SD5997-03",
+    "type": "UCR",
+    "distance_m": 962
+  },
+  "osm-1191839444": {
+    "guid": "2FEAC2A6-0FF2-4AA9-99B5-469376178F54",
+    "twuid": "SD5997-03",
+    "type": "UCR",
+    "distance_m": 1806
+  },
+  "osm-1192510336": {
+    "guid": "1FD518F0-684A-47EC-9377-2A3AD74A6B61",
+    "twuid": "SD7198-02",
+    "type": "UCR",
+    "distance_m": 1574
+  },
+  "osm-1192510338": {
+    "guid": "1FD518F0-684A-47EC-9377-2A3AD74A6B61",
+    "twuid": "SD7198-02",
+    "type": "UCR",
+    "distance_m": 1537
+  },
+  "osm-1194315217": {
+    "guid": "6ED77F3F-644E-425C-A0AB-DF4FEAE3D646",
+    "twuid": "NY7114-02",
+    "type": "UCR",
+    "distance_m": 1117
+  },
+  "osm-1194315218": {
+    "guid": "6ED77F3F-644E-425C-A0AB-DF4FEAE3D646",
+    "twuid": "NY7114-02",
+    "type": "UCR",
+    "distance_m": 738
+  },
+  "osm-1194315219": {
+    "guid": "6ED77F3F-644E-425C-A0AB-DF4FEAE3D646",
+    "twuid": "NY7114-02",
+    "type": "UCR",
+    "distance_m": 885
+  },
+  "osm-1201414489": {
+    "guid": "35F6CBDE-DC13-472A-A46F-D75E2A85160B",
+    "twuid": "SE1513-04",
+    "type": "BOAT",
+    "distance_m": 779
+  },
+  "osm-1206164795": {
+    "guid": "E32CE351-C941-4920-8036-C71E7762F1D8",
+    "twuid": "NY7645-01",
+    "type": "UCR",
+    "distance_m": 1761
+  },
+  "osm-1206164796": {
+    "guid": "E32CE351-C941-4920-8036-C71E7762F1D8",
+    "twuid": "NY7645-01",
+    "type": "UCR",
+    "distance_m": 1485
+  },
+  "osm-1206475305": {
+    "guid": "6ED77F3F-644E-425C-A0AB-DF4FEAE3D646",
+    "twuid": "NY7114-02",
+    "type": "UCR",
+    "distance_m": 698
+  },
+  "osm-1229151877": {
+    "guid": "F8B899A0-0A96-4B8F-89E3-CB1FFD2363F0",
+    "twuid": "SD8589-04",
+    "type": "UCR",
+    "distance_m": 1225
+  },
+  "osm-1258623806": {
+    "guid": "F47BC38F-7CD8-4850-98B1-C3C6BAC3DFC7",
+    "twuid": "NZ1467-01",
+    "type": "BOAT",
+    "distance_m": 1435
+  },
+  "osm-1264590414": {
+    "guid": "DD341262-7BA2-47A7-A0A3-81D9E1082400",
+    "twuid": "NY4530-01",
+    "type": "UCR",
+    "distance_m": 522
+  },
+  "osm-1264590415": {
+    "guid": "DD341262-7BA2-47A7-A0A3-81D9E1082400",
+    "twuid": "NY4530-01",
+    "type": "UCR",
+    "distance_m": 684
+  },
+  "osm-1264590417": {
+    "guid": "0902110F-B099-4568-A758-2CD66814CF5B",
+    "twuid": "NY4729-06",
+    "type": "UCR",
+    "distance_m": 1068
+  },
+  "osm-1270637006": {
+    "guid": "0B2A895D-F5D8-4DE2-A339-874DF2086510",
+    "twuid": "NY5730-04",
+    "type": "UCR",
+    "distance_m": 1632
+  },
+  "osm-1287327203": {
+    "guid": "C6F2FE1F-EC6C-4F03-AEBE-B416E7A30763",
+    "twuid": "NZ1149-02",
+    "type": "BOAT",
+    "distance_m": 1096
+  },
+  "osm-1291650110": {
+    "guid": "55604FA3-3981-49EC-AE00-7E10F65DCEEA",
+    "twuid": "SD8836-02",
+    "type": "BOAT",
+    "distance_m": 233
+  },
+  "osm-1291650358": {
+    "guid": "2743EB8E-E71F-4147-9E77-A34D32A4489B",
+    "twuid": "SD8728-01",
+    "type": "BOAT",
+    "distance_m": 1833
+  },
+  "osm-1293933543": {
+    "guid": "C5177048-D8B3-4B38-AB23-E048C0B6880F",
+    "twuid": "NZ2135-05",
+    "type": "BOAT",
+    "distance_m": 537
+  },
+  "osm-1295025768": {
+    "guid": "849307DD-CBFC-40DA-8BAD-4C7A59922781",
+    "twuid": "SE1213-03",
+    "type": "UCR",
+    "distance_m": 495
+  },
+  "osm-1296354686": {
+    "guid": "577B95CB-52AB-4330-BABD-69FFC6EB4283",
+    "twuid": "SE1607-02",
+    "type": "UCR",
+    "distance_m": 864
+  },
+  "osm-1296637816": {
+    "guid": "8903DF6E-DD84-4C7D-8A9D-688A7D30F2EB",
+    "twuid": "SE2072-03",
+    "type": "UCR",
+    "distance_m": 473
+  },
+  "osm-1302725160": {
+    "guid": "A5E4EDBA-0452-4719-B343-5DD52052E367",
+    "twuid": "SD7924-05",
+    "type": "BOAT",
+    "distance_m": 1800
+  },
+  "osm-1328340561": {
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
+    "type": "UCR",
+    "distance_m": 1446
+  },
+  "osm-1328340568": {
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
+    "type": "UCR",
+    "distance_m": 1429
+  },
+  "osm-1328340574": {
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
+    "type": "UCR",
+    "distance_m": 1430
+  },
+  "osm-1328340576": {
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
+    "type": "UCR",
+    "distance_m": 1426
+  },
+  "osm-1328340577": {
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
+    "type": "UCR",
+    "distance_m": 1424
+  },
+  "osm-1328340578": {
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
+    "type": "UCR",
+    "distance_m": 1426
+  },
+  "osm-1328340579": {
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
+    "type": "UCR",
+    "distance_m": 1431
+  },
+  "osm-1328340592": {
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
+    "type": "UCR",
+    "distance_m": 1436
+  },
+  "osm-1328340593": {
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
+    "type": "UCR",
+    "distance_m": 1435
+  },
+  "osm-1328340668": {
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
+    "type": "UCR",
+    "distance_m": 1444
+  },
+  "osm-1328340682": {
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
+    "type": "UCR",
+    "distance_m": 1458
+  },
+  "osm-1328340684": {
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
+    "type": "UCR",
+    "distance_m": 1485
+  },
+  "osm-1328436225": {
+    "guid": "6ECA6314-7D71-4441-8ADD-9A7EDF3A3891",
+    "twuid": "SD5084-01",
+    "type": "BOAT",
+    "distance_m": 1135
+  },
+  "osm-1346676385": {
+    "guid": "13D7050F-76F1-4CBE-A91A-43709E5A8BC1",
+    "twuid": "SE1454-05",
+    "type": "UCR",
+    "distance_m": 1960
+  },
+  "osm-1364365401": {
+    "guid": "424F6DD1-80DF-4672-8455-2C63C132F1DA",
+    "twuid": "NZ1354-02",
+    "type": "BOAT",
+    "distance_m": 898
+  },
+  "osm-1366703094": {
+    "guid": "165473F2-813C-4E03-981B-7AE580002059",
+    "twuid": "SE5380-01",
+    "type": "UCR",
+    "distance_m": 799
+  },
+  "osm-1370321006": {
+    "guid": "D6C3B80C-6E41-45EF-87FF-29EAC14379FC",
+    "twuid": "SD8259-03",
+    "type": "UCR",
+    "distance_m": 365
+  },
+  "osm-1370321567": {
+    "guid": "D6C3B80C-6E41-45EF-87FF-29EAC14379FC",
+    "twuid": "SD8259-03",
+    "type": "UCR",
+    "distance_m": 755
+  },
+  "osm-1370321670": {
+    "guid": "D6C3B80C-6E41-45EF-87FF-29EAC14379FC",
+    "twuid": "SD8259-03",
+    "type": "UCR",
+    "distance_m": 1539
+  },
+  "osm-1370322239": {
+    "guid": "D6C3B80C-6E41-45EF-87FF-29EAC14379FC",
+    "twuid": "SD8259-03",
+    "type": "UCR",
+    "distance_m": 1967
+  },
+  "osm-1370958906": {
+    "guid": "7A570D6F-5976-4116-9B42-850732410CE0",
+    "twuid": "SE0513-04",
+    "type": "UCR",
+    "distance_m": 1346
+  },
+  "osm-1375499208": {
+    "guid": "6BE078DF-907A-4E29-916E-A11512DD173A",
+    "twuid": "NY9555-04",
+    "type": "BOAT",
+    "distance_m": 1574
+  },
+  "osm-1377923573": {
+    "guid": "BDAC8845-3AE9-452E-A713-414762C71310",
+    "twuid": "SD9065-06",
+    "type": "UCR",
+    "distance_m": 789
+  },
+  "osm-1380441579": {
+    "guid": "BDAC8845-3AE9-452E-A713-414762C71310",
+    "twuid": "SD9065-06",
+    "type": "UCR",
+    "distance_m": 957
+  },
+  "osm-1380441580": {
+    "guid": "BDAC8845-3AE9-452E-A713-414762C71310",
+    "twuid": "SD9065-06",
+    "type": "UCR",
+    "distance_m": 654
+  },
+  "osm-1380441581": {
+    "guid": "BDAC8845-3AE9-452E-A713-414762C71310",
+    "twuid": "SD9065-06",
+    "type": "UCR",
+    "distance_m": 647
+  },
+  "osm-1380441582": {
+    "guid": "BDAC8845-3AE9-452E-A713-414762C71310",
+    "twuid": "SD9065-06",
+    "type": "UCR",
+    "distance_m": 659
+  },
+  "osm-1380441583": {
+    "guid": "BDAC8845-3AE9-452E-A713-414762C71310",
+    "twuid": "SD9065-06",
+    "type": "UCR",
+    "distance_m": 696
+  },
+  "osm-1385495221": {
+    "guid": "0F574ACF-B821-4259-AD01-6F304E656E2B",
+    "twuid": "NY9451-04",
+    "type": "BOAT",
+    "distance_m": 424
+  },
+  "osm-1414167600": {
+    "guid": "4BE55909-D6AE-438F-B73F-AB4981364F23",
+    "twuid": "SE1474-02",
+    "type": "UCR",
+    "distance_m": 1426
+  },
+  "osm-1425282330": {
+    "guid": "A61C6283-9D5C-469D-B2A8-80E6D26AF1EF",
+    "twuid": "SD6874-01",
+    "type": "UCR",
+    "distance_m": 1684
+  },
+  "osm-1425282331": {
+    "guid": "A61C6283-9D5C-469D-B2A8-80E6D26AF1EF",
+    "twuid": "SD6874-01",
+    "type": "UCR",
+    "distance_m": 1711
+  },
+  "osm-1429238119": {
+    "guid": "4BE55909-D6AE-438F-B73F-AB4981364F23",
+    "twuid": "SE1474-02",
+    "type": "UCR",
+    "distance_m": 516
+  },
+  "osm-1429238122": {
+    "guid": "4BE55909-D6AE-438F-B73F-AB4981364F23",
+    "twuid": "SE1474-02",
+    "type": "UCR",
+    "distance_m": 780
+  },
+  "osm-1429238702": {
+    "guid": "4BE55909-D6AE-438F-B73F-AB4981364F23",
+    "twuid": "SE1474-02",
+    "type": "UCR",
+    "distance_m": 1066
+  },
+  "osm-1429238703": {
+    "guid": "4BE55909-D6AE-438F-B73F-AB4981364F23",
+    "twuid": "SE1474-02",
+    "type": "UCR",
+    "distance_m": 1516
+  },
+  "osm-1429239375": {
+    "guid": "4BE55909-D6AE-438F-B73F-AB4981364F23",
+    "twuid": "SE1474-02",
+    "type": "UCR",
+    "distance_m": 1202
+  },
+  "osm-1429239377": {
+    "guid": "4BE55909-D6AE-438F-B73F-AB4981364F23",
+    "twuid": "SE1474-02",
+    "type": "UCR",
+    "distance_m": 1380
+  },
+  "osm-1435145765": {
+    "guid": "E32CE351-C941-4920-8036-C71E7762F1D8",
+    "twuid": "NY7645-01",
+    "type": "UCR",
+    "distance_m": 562
+  },
+  "osm-1435145766": {
+    "guid": "E32CE351-C941-4920-8036-C71E7762F1D8",
+    "twuid": "NY7645-01",
+    "type": "UCR",
+    "distance_m": 555
+  },
+  "osm-1443066721": {
+    "guid": "883F6883-3B13-4FDF-8A83-A8030C1D3F73",
+    "twuid": "SE7412-02",
+    "type": "BOAT",
+    "distance_m": 1143
+  },
+  "osm-1446402318": {
+    "guid": "1A17064A-BB2C-4A03-83E3-E728AB39408D",
+    "twuid": "SD9651-02",
+    "type": "UCR",
+    "distance_m": 800
+  },
+  "osm-1465417649": {
+    "guid": "C5177048-D8B3-4B38-AB23-E048C0B6880F",
+    "twuid": "NZ2135-05",
+    "type": "BOAT",
+    "distance_m": 1814
+  },
+  "osm-1480340340": {
+    "guid": "D6C3B80C-6E41-45EF-87FF-29EAC14379FC",
+    "twuid": "SD8259-03",
+    "type": "UCR",
+    "distance_m": 587
+  },
+  "osm-1496440726": {
+    "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
+    "twuid": "SE1519-03",
+    "type": "UCR",
+    "distance_m": 900
+  },
+  "osm-1496440727": {
+    "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
+    "twuid": "SE1519-03",
+    "type": "UCR",
+    "distance_m": 1256
+  },
+  "osm-1535029245": {
+    "guid": "424F6DD1-80DF-4672-8455-2C63C132F1DA",
+    "twuid": "NZ1354-02",
+    "type": "BOAT",
+    "distance_m": 234
+  },
+  "osm-1536591025": {
+    "guid": "424F6DD1-80DF-4672-8455-2C63C132F1DA",
+    "twuid": "NZ1354-02",
+    "type": "BOAT",
+    "distance_m": 423
+  },
+  "osm-1536591028": {
+    "guid": "424F6DD1-80DF-4672-8455-2C63C132F1DA",
+    "twuid": "NZ1354-02",
+    "type": "BOAT",
+    "distance_m": 316
+  },
+  "osm-1540271371": {
+    "guid": "31928F44-2170-4CF5-BABD-49561951380A",
+    "twuid": "NY6607-02",
+    "type": "BOAT",
+    "distance_m": 968
+  },
+  "osm-1543060086": {
+    "guid": "878384DB-B36D-42D5-9F03-4BDE63C104F0",
+    "twuid": "SD7663-03",
+    "type": "UCR",
+    "distance_m": 452
   },
   "osm-4445209": {
-    "guid": "FBB762A7-D7F8-4284-9331-E91DB4CA88B9",
-    "twuid": "SE1847-03",
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
     "type": "UCR",
-    "distance_m": 1163
+    "distance_m": 917
   },
-  "osm-5008468": {
-    "guid": "4385771D-D904-4778-85B9-6B5265DD40F1",
-    "twuid": "SD8211-06",
+  "osm-4496206": {
+    "guid": "1EB95E40-2564-4427-B03F-C9F291268696",
+    "twuid": "SE2046-02",
+    "type": "UCR",
+    "distance_m": 1759
+  },
+  "osm-4788708": {
+    "guid": "94B1FF35-C1D7-4A47-A2CA-A382016EBFB6",
+    "twuid": "SE0125-02",
+    "type": "UCR",
+    "distance_m": 1465
+  },
+  "osm-4926832": {
+    "guid": "94B1FF35-C1D7-4A47-A2CA-A382016EBFB6",
+    "twuid": "SE0125-02",
+    "type": "UCR",
+    "distance_m": 1655
+  },
+  "osm-4929203": {
+    "guid": "C1B90CE7-B93D-49C4-8967-BBC671B41E28",
+    "twuid": "SE0225-01",
+    "type": "UCR",
+    "distance_m": 1044
+  },
+  "osm-4933399": {
+    "guid": "C1B90CE7-B93D-49C4-8967-BBC671B41E28",
+    "twuid": "SE0225-01",
+    "type": "UCR",
+    "distance_m": 1565
+  },
+  "osm-4938291": {
+    "guid": "94B1FF35-C1D7-4A47-A2CA-A382016EBFB6",
+    "twuid": "SE0125-02",
+    "type": "UCR",
+    "distance_m": 1167
+  },
+  "osm-11272323": {
+    "guid": "94B1FF35-C1D7-4A47-A2CA-A382016EBFB6",
+    "twuid": "SE0125-02",
+    "type": "UCR",
+    "distance_m": 1433
+  },
+  "osm-11641067": {
+    "guid": "6C04F785-7090-4790-8538-1D83434BBF53",
+    "twuid": "SE0427-01",
+    "type": "UCR",
+    "distance_m": 1823
+  },
+  "osm-22756753": {
+    "guid": "C1B90CE7-B93D-49C4-8967-BBC671B41E28",
+    "twuid": "SE0225-01",
+    "type": "UCR",
+    "distance_m": 1975
+  },
+  "osm-22792761": {
+    "guid": "DB72238A-1507-4B5E-BA4E-D4227F514FFC",
+    "twuid": "SE0522-02",
+    "type": "UCR",
+    "distance_m": 1753
+  },
+  "osm-22793698": {
+    "guid": "7BA8E90E-7AFA-4158-9B6D-FA0419FA2B7D",
+    "twuid": "SE0318-02",
+    "type": "UCR",
+    "distance_m": 1150
+  },
+  "osm-22880111": {
+    "guid": "DB72238A-1507-4B5E-BA4E-D4227F514FFC",
+    "twuid": "SE0522-02",
+    "type": "UCR",
+    "distance_m": 1410
+  },
+  "osm-22884929": {
+    "guid": "DE5D4C99-7AB1-4DF8-A4B3-EB2C64D295F6",
+    "twuid": "SE2037-01",
     "type": "BOAT",
-    "distance_m": 1645
+    "distance_m": 1467
   },
-  "osm-53559443": {
-    "guid": "90032622-26F3-4F24-8536-ED2C925D2807",
-    "twuid": "SE1832-02",
+  "osm-27428217": {
+    "guid": "07C42FD2-1B84-42C2-883A-E04BA7510A4A",
+    "twuid": "SE1733-06",
     "type": "UCR",
-    "distance_m": 1146
+    "distance_m": 1676
   },
-  "osm-53559738": {
-    "guid": "90032622-26F3-4F24-8536-ED2C925D2807",
-    "twuid": "SE1832-02",
+  "osm-29282664": {
+    "guid": "4AD09CA5-121C-43DE-A401-2598F8B9C367",
+    "twuid": "SE1507-02",
+    "type": "BOAT",
+    "distance_m": 1576
+  },
+  "osm-29377550": {
+    "guid": "A00DAE1A-824D-45F1-96DB-A24E4594D138",
+    "twuid": "SE0739-02",
     "type": "UCR",
-    "distance_m": 842
+    "distance_m": 1833
+  },
+  "osm-31310379": {
+    "guid": "B56DA2ED-15D6-4172-B5A8-E28065FDCF0A",
+    "twuid": "SD7315-02",
+    "type": "BOAT",
+    "distance_m": 1640
+  },
+  "osm-31359468": {
+    "guid": "A00DAE1A-824D-45F1-96DB-A24E4594D138",
+    "twuid": "SE0739-02",
+    "type": "UCR",
+    "distance_m": 1854
+  },
+  "osm-32928037": {
+    "guid": "DE5D4C99-7AB1-4DF8-A4B3-EB2C64D295F6",
+    "twuid": "SE2037-01",
+    "type": "BOAT",
+    "distance_m": 1559
+  },
+  "osm-33786440": {
+    "guid": "E57A447A-39B6-4E9A-9D6B-2765E43521B5",
+    "twuid": "SE0933-12",
+    "type": "UCR",
+    "distance_m": 1067
+  },
+  "osm-35093037": {
+    "guid": "C2DF85B6-369E-458E-8D66-3FB8DB4DEEB4",
+    "twuid": "SE0852-01",
+    "type": "UCR",
+    "distance_m": 1630
+  },
+  "osm-36991990": {
+    "guid": "A00DAE1A-824D-45F1-96DB-A24E4594D138",
+    "twuid": "SE0739-02",
+    "type": "UCR",
+    "distance_m": 1546
+  },
+  "osm-38334121": {
+    "guid": "DE5D4C99-7AB1-4DF8-A4B3-EB2C64D295F6",
+    "twuid": "SE2037-01",
+    "type": "BOAT",
+    "distance_m": 509
+  },
+  "osm-40354081": {
+    "guid": "D58C732A-0033-4FF7-8052-6017E1A26A37",
+    "twuid": "SD4603-03",
+    "type": "UCR",
+    "distance_m": 1472
+  },
+  "osm-55558829": {
+    "guid": "5F7E60AD-AED5-4AC2-8275-20FB32CC367B",
+    "twuid": "SD4946-03",
+    "type": "UCR",
+    "distance_m": 226
+  },
+  "osm-56222813": {
+    "guid": "C205040E-D9DF-49F8-8900-DA697F366033",
+    "twuid": "SE1838-03",
+    "type": "UCR",
+    "distance_m": 900
+  },
+  "osm-56284157": {
+    "guid": "94B1FF35-C1D7-4A47-A2CA-A382016EBFB6",
+    "twuid": "SE0125-02",
+    "type": "UCR",
+    "distance_m": 1030
+  },
+  "osm-60097577": {
+    "guid": "1FD518F0-684A-47EC-9377-2A3AD74A6B61",
+    "twuid": "SD7198-02",
+    "type": "UCR",
+    "distance_m": 612
+  },
+  "osm-60347709": {
+    "guid": "54693427-BA95-4F30-9FB8-8097FB0D4319",
+    "twuid": "NZ4801-02",
+    "type": "UCR",
+    "distance_m": 1892
+  },
+  "osm-60347710": {
+    "guid": "54693427-BA95-4F30-9FB8-8097FB0D4319",
+    "twuid": "NZ4801-02",
+    "type": "UCR",
+    "distance_m": 1877
+  },
+  "osm-65353292": {
+    "guid": "1A7A4FD5-B597-47A4-B0EA-45828CCFB141",
+    "twuid": "SD9932-02",
+    "type": "UCR",
+    "distance_m": 1613
+  },
+  "osm-69991587": {
+    "guid": "EFD97FA1-843C-41CD-9F62-36C43CA694A0",
+    "twuid": "SD9151-01",
+    "type": "UCR",
+    "distance_m": 155
+  },
+  "osm-75056143": {
+    "guid": "885BDBC6-8A64-4D2A-95B5-CE327138D8C9",
+    "twuid": "SD4663-01",
+    "type": "UCR",
+    "distance_m": 1912
+  },
+  "osm-82245517": {
+    "guid": "6533CE9B-5929-4993-B676-1E96F9DFC4F2",
+    "twuid": "SD6413-04",
+    "type": "UCR",
+    "distance_m": 1037
+  },
+  "osm-82245518": {
+    "guid": "6533CE9B-5929-4993-B676-1E96F9DFC4F2",
+    "twuid": "SD6413-04",
+    "type": "UCR",
+    "distance_m": 1036
+  },
+  "osm-83641001": {
+    "guid": "11AFCF04-3FEB-4A40-80FE-07CE3D3DAF9D",
+    "twuid": "SD9703-02",
+    "type": "UCR",
+    "distance_m": 1856
+  },
+  "osm-101440105": {
+    "guid": "96B8E361-22CE-4230-9E91-FD0F123D8D86",
+    "twuid": "SE2442-02",
+    "type": "UCR",
+    "distance_m": 1803
+  },
+  "osm-109595632": {
+    "guid": "D58C732A-0033-4FF7-8052-6017E1A26A37",
+    "twuid": "SD4603-03",
+    "type": "UCR",
+    "distance_m": 1438
+  },
+  "osm-113444619": {
+    "guid": "7BA8E90E-7AFA-4158-9B6D-FA0419FA2B7D",
+    "twuid": "SE0318-02",
+    "type": "UCR",
+    "distance_m": 1231
+  },
+  "osm-120562048": {
+    "guid": "A8B0B4FD-C621-44B5-BE40-8AB42028E25C",
+    "twuid": "SE1151-03",
+    "type": "UCR",
+    "distance_m": 1844
   },
   "osm-135049651": {
     "guid": "385F225C-16BA-4EC2-B532-58E29AAA9D9D",
     "twuid": "SE6890-04",
     "type": "UCR",
-    "distance_m": 365
+    "distance_m": 1695
   },
-  "osm-144570282": {
-    "guid": "BD45B0F3-7DAA-4EB3-93ED-01CBAF4A9D5A",
-    "twuid": "SD8023-04",
+  "osm-143477974": {
+    "guid": "79816A24-2F93-4028-9AA1-EE99CAA577C7",
+    "twuid": "NY9256-02",
     "type": "BOAT",
-    "distance_m": 1593
+    "distance_m": 1309
+  },
+  "osm-150818672": {
+    "guid": "6533CE9B-5929-4993-B676-1E96F9DFC4F2",
+    "twuid": "SD6413-04",
+    "type": "UCR",
+    "distance_m": 824
   },
   "osm-151163111": {
     "guid": "7DFB84F2-4D63-465F-84DB-C462FA135DDF",
     "twuid": "SE0920-01",
     "type": "UCR",
-    "distance_m": 1913
+    "distance_m": 1436
   },
-  "osm-481641301": {
-    "guid": "A00DAE1A-824D-45F1-96DB-A24E4594D138",
-    "twuid": "SE0739-02",
+  "osm-177593715": {
+    "guid": "1A17064A-BB2C-4A03-83E3-E728AB39408D",
+    "twuid": "SD9651-02",
     "type": "UCR",
-    "distance_m": 1326
+    "distance_m": 584
   },
-  "osm-583528137": {
-    "guid": "FB7850C9-AB95-4E1C-8CDD-1156F5A9A97C",
-    "twuid": "SD4856-01",
+  "osm-202653832": {
+    "guid": "7DE4A57D-D59A-4B4B-921A-FC692A4C845E",
+    "twuid": "SE0109-02",
     "type": "UCR",
-    "distance_m": 776
+    "distance_m": 841
   },
-  "osm-777963868": {
-    "guid": "4385771D-D904-4778-85B9-6B5265DD40F1",
-    "twuid": "SD8211-06",
+  "osm-205738762": {
+    "guid": "43B8CBFE-3F70-42E2-BD67-12FDA2F672B1",
+    "twuid": "NY8466-02",
     "type": "BOAT",
-    "distance_m": 1642
+    "distance_m": 672
   },
-  "osm-797308529": {
-    "guid": "7DFB84F2-4D63-465F-84DB-C462FA135DDF",
-    "twuid": "SE0920-01",
+  "osm-215496675": {
+    "guid": "1A7A4FD5-B597-47A4-B0EA-45828CCFB141",
+    "twuid": "SD9932-02",
     "type": "UCR",
-    "distance_m": 1992
+    "distance_m": 1605
   },
-  "osm-838812508": {
+  "osm-215496676": {
+    "guid": "1A7A4FD5-B597-47A4-B0EA-45828CCFB141",
+    "twuid": "SD9932-02",
+    "type": "UCR",
+    "distance_m": 1605
+  },
+  "osm-221169764": {
     "guid": "385F225C-16BA-4EC2-B532-58E29AAA9D9D",
     "twuid": "SE6890-04",
     "type": "UCR",
-    "distance_m": 315
+    "distance_m": 1754
+  },
+  "osm-221326034": {
+    "guid": "2B7A2EE7-0484-4A5D-9F86-13CCFDE5BBC9",
+    "twuid": "SE1125-04",
+    "type": "UCR",
+    "distance_m": 1141
+  },
+  "osm-230965521": {
+    "guid": "EFD97FA1-843C-41CD-9F62-36C43CA694A0",
+    "twuid": "SD9151-01",
+    "type": "UCR",
+    "distance_m": 262
+  },
+  "osm-230965525": {
+    "guid": "EFD97FA1-843C-41CD-9F62-36C43CA694A0",
+    "twuid": "SD9151-01",
+    "type": "UCR",
+    "distance_m": 227
+  },
+  "osm-231081098": {
+    "guid": "45D33FF3-99EC-44D4-BF85-F73C108BECA1",
+    "twuid": "SE4224-01",
+    "type": "UCR",
+    "distance_m": 1415
+  },
+  "osm-297544949": {
+    "guid": "D296176D-8EDA-4665-9A6E-09D14E5E330C",
+    "twuid": "SE1116-01",
+    "type": "BOAT",
+    "distance_m": 831
+  },
+  "osm-365486968": {
+    "guid": "7A1D817C-5141-423E-B11F-9AF072E233FA",
+    "twuid": "SE2352-02",
+    "type": "UCR",
+    "distance_m": 580
+  },
+  "osm-394642328": {
+    "guid": "6A104575-9756-4A38-8639-148AB64CFF3B",
+    "twuid": "SE1012-02",
+    "type": "UCR",
+    "distance_m": 1033
+  },
+  "osm-394642565": {
+    "guid": "6A104575-9756-4A38-8639-148AB64CFF3B",
+    "twuid": "SE1012-02",
+    "type": "UCR",
+    "distance_m": 289
+  },
+  "osm-406216147": {
+    "guid": "7DE4A57D-D59A-4B4B-921A-FC692A4C845E",
+    "twuid": "SE0109-02",
+    "type": "UCR",
+    "distance_m": 1245
+  },
+  "osm-429060101": {
+    "guid": "7A1D817C-5141-423E-B11F-9AF072E233FA",
+    "twuid": "SE2352-02",
+    "type": "UCR",
+    "distance_m": 468
+  },
+  "osm-490737020": {
+    "guid": "DE5D4C99-7AB1-4DF8-A4B3-EB2C64D295F6",
+    "twuid": "SE2037-01",
+    "type": "BOAT",
+    "distance_m": 1521
+  },
+  "osm-697563015": {
+    "guid": "ABCE7B06-1D6E-44D5-8AA6-9B931EC1A3DC",
+    "twuid": "NZ4036-04",
+    "type": "UCR",
+    "distance_m": 1796
+  },
+  "osm-718834364": {
+    "guid": "AD53E2EE-9C4D-4FE1-A9E0-983932D6979A",
+    "twuid": "SD5697-03",
+    "type": "UCR",
+    "distance_m": 937
+  },
+  "osm-720989865": {
+    "guid": "7DE4A57D-D59A-4B4B-921A-FC692A4C845E",
+    "twuid": "SE0109-02",
+    "type": "UCR",
+    "distance_m": 904
+  },
+  "osm-728837653": {
+    "guid": "9F39ED05-4EF7-4CF1-BBDE-F0009D95FBB1",
+    "twuid": "SE1636-01",
+    "type": "UCR",
+    "distance_m": 1093
+  },
+  "osm-797308529": {
+    "guid": "DB72238A-1507-4B5E-BA4E-D4227F514FFC",
+    "twuid": "SE0522-02",
+    "type": "UCR",
+    "distance_m": 1230
+  },
+  "osm-809572372": {
+    "guid": "5F7E60AD-AED5-4AC2-8275-20FB32CC367B",
+    "twuid": "SD4946-03",
+    "type": "UCR",
+    "distance_m": 106
+  },
+  "osm-837390937": {
+    "guid": "39CD67F9-F15B-485C-B3C4-3C32B393E93D",
+    "twuid": "SE1421-01",
+    "type": "UCR",
+    "distance_m": 1428
+  },
+  "osm-838812508": {
+    "guid": "12502C40-A36B-491B-A827-785068E8A2C8",
+    "twuid": "SE6390-03",
+    "type": "UCR",
+    "distance_m": 1958
+  },
+  "osm-869020089": {
+    "guid": "8F42F32A-E3CA-4ECB-9697-21252E4453A2",
+    "twuid": "SE4721-06",
+    "type": "UCR",
+    "distance_m": 1222
+  },
+  "osm-899981268": {
+    "guid": "A8B0B4FD-C621-44B5-BE40-8AB42028E25C",
+    "twuid": "SE1151-03",
+    "type": "UCR",
+    "distance_m": 1301
+  },
+  "osm-904784751": {
+    "guid": "ABCE7B06-1D6E-44D5-8AA6-9B931EC1A3DC",
+    "twuid": "NZ4036-04",
+    "type": "UCR",
+    "distance_m": 1595
   },
   "osm-913932731": {
     "guid": "7DFB84F2-4D63-465F-84DB-C462FA135DDF",
     "twuid": "SE0920-01",
     "type": "UCR",
-    "distance_m": 1896
+    "distance_m": 1270
   },
-  "osm-993361079": {
-    "guid": "ADDF301B-F2E4-4426-8899-BB4D5C52F56E",
-    "twuid": "SE5368-02",
+  "osm-979866448": {
+    "guid": "A8CD1B9F-90C8-4748-A3AA-B179ACD0A1D4",
+    "twuid": "SE5907-02",
     "type": "UCR",
-    "distance_m": 1108
+    "distance_m": 1439
+  },
+  "osm-1042038736": {
+    "guid": "7DE4A57D-D59A-4B4B-921A-FC692A4C845E",
+    "twuid": "SE0109-02",
+    "type": "UCR",
+    "distance_m": 828
+  },
+  "osm-1042038737": {
+    "guid": "7DE4A57D-D59A-4B4B-921A-FC692A4C845E",
+    "twuid": "SE0109-02",
+    "type": "UCR",
+    "distance_m": 836
+  },
+  "osm-1042038739": {
+    "guid": "7DE4A57D-D59A-4B4B-921A-FC692A4C845E",
+    "twuid": "SE0109-02",
+    "type": "UCR",
+    "distance_m": 928
+  },
+  "osm-1044563935": {
+    "guid": "EFD97FA1-843C-41CD-9F62-36C43CA694A0",
+    "twuid": "SD9151-01",
+    "type": "UCR",
+    "distance_m": 230
+  },
+  "osm-1052466835": {
+    "guid": "2542082B-E140-4859-8599-E5281B200FA9",
+    "twuid": "SE4363-02",
+    "type": "UCR",
+    "distance_m": 1839
+  },
+  "osm-1062132138": {
+    "guid": "7DFB84F2-4D63-465F-84DB-C462FA135DDF",
+    "twuid": "SE0920-01",
+    "type": "UCR",
+    "distance_m": 1826
+  },
+  "osm-1062133223": {
+    "guid": "7DFB84F2-4D63-465F-84DB-C462FA135DDF",
+    "twuid": "SE0920-01",
+    "type": "UCR",
+    "distance_m": 1945
+  },
+  "osm-1082549418": {
+    "guid": "BE85CC83-8CDD-4D65-A869-9F241B96EF52",
+    "twuid": "NZ3236-02",
+    "type": "BOAT",
+    "distance_m": 1979
+  },
+  "osm-1185236819": {
+    "guid": "5DDC8C91-AF16-4B95-AE04-E82628993B9C",
+    "twuid": "SD9607-02",
+    "type": "UCR",
+    "distance_m": 1978
+  },
+  "osm-1234563585": {
+    "guid": "6533CE9B-5929-4993-B676-1E96F9DFC4F2",
+    "twuid": "SD6413-04",
+    "type": "UCR",
+    "distance_m": 487
+  },
+  "osm-1234972231": {
+    "guid": "C1B90CE7-B93D-49C4-8967-BBC671B41E28",
+    "twuid": "SE0225-01",
+    "type": "UCR",
+    "distance_m": 1070
+  },
+  "osm-1234972232": {
+    "guid": "C1B90CE7-B93D-49C4-8967-BBC671B41E28",
+    "twuid": "SE0225-01",
+    "type": "UCR",
+    "distance_m": 1064
+  },
+  "osm-1248932570": {
+    "guid": "45D33FF3-99EC-44D4-BF85-F73C108BECA1",
+    "twuid": "SE4224-01",
+    "type": "UCR",
+    "distance_m": 1349
+  },
+  "osm-1265008754": {
+    "guid": "52F0F812-E18F-43BF-8E5D-95F3F25826EC",
+    "twuid": "NY7447-02",
+    "type": "UCR",
+    "distance_m": 202
+  },
+  "osm-1265008755": {
+    "guid": "52F0F812-E18F-43BF-8E5D-95F3F25826EC",
+    "twuid": "NY7447-02",
+    "type": "UCR",
+    "distance_m": 356
   },
   "osm-1265008756": {
-    "guid": "04A309A3-CDD6-4146-97F7-4A460CB3D8E5",
-    "twuid": "NY7349-04",
+    "guid": "52F0F812-E18F-43BF-8E5D-95F3F25826EC",
+    "twuid": "NY7447-02",
     "type": "UCR",
-    "distance_m": 1934
+    "distance_m": 329
+  },
+  "osm-1265008757": {
+    "guid": "52F0F812-E18F-43BF-8E5D-95F3F25826EC",
+    "twuid": "NY7447-02",
+    "type": "UCR",
+    "distance_m": 277
+  },
+  "osm-1293871707": {
+    "guid": "DE5D4C99-7AB1-4DF8-A4B3-EB2C64D295F6",
+    "twuid": "SE2037-01",
+    "type": "BOAT",
+    "distance_m": 1214
+  },
+  "osm-1376424251": {
+    "guid": "5F7E60AD-AED5-4AC2-8275-20FB32CC367B",
+    "twuid": "SD4946-03",
+    "type": "UCR",
+    "distance_m": 149
   },
   "osm-1378444634": {
-    "guid": "04A309A3-CDD6-4146-97F7-4A460CB3D8E5",
-    "twuid": "NY7349-04",
+    "guid": "52F0F812-E18F-43BF-8E5D-95F3F25826EC",
+    "twuid": "NY7447-02",
     "type": "UCR",
-    "distance_m": 1915
+    "distance_m": 359
   },
-  "tw2-14eeed8e": {
-    "guid": "14EEED8E-AF57-4245-B99C-703CCD17CF6B",
-    "twuid": "SD4707-01",
+  "osm-1382974315": {
+    "guid": "A8B0B4FD-C621-44B5-BE40-8AB42028E25C",
+    "twuid": "SE1151-03",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1290
   },
-  "tw2-dd7257e6": {
-    "guid": "DD7257E6-622D-441C-9CFA-F85A274A1241",
-    "twuid": "SD4810-02",
+  "osm-1384943180": {
+    "guid": "8F7CE07E-A067-4879-B732-CA4A6E1966BE",
+    "twuid": "SE2299-03",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1218
+  },
+  "osm-1385098802": {
+    "guid": "575FBDA5-08F9-4B5C-950F-0748BCCD71B4",
+    "twuid": "SE7765-06",
+    "type": "UCR",
+    "distance_m": 1046
+  },
+  "osm-1410042105": {
+    "guid": "2B7A2EE7-0484-4A5D-9F86-13CCFDE5BBC9",
+    "twuid": "SE1125-04",
+    "type": "UCR",
+    "distance_m": 339
+  },
+  "osm-1414287139": {
+    "guid": "7A570D6F-5976-4116-9B42-850732410CE0",
+    "twuid": "SE0513-04",
+    "type": "UCR",
+    "distance_m": 304
+  },
+  "osm-1522756626": {
+    "guid": "054161EC-9F05-489F-BD7C-E90B9F6C22A4",
+    "twuid": "SE4337-01",
+    "type": "UCR",
+    "distance_m": 457
+  },
+  "osm-1538515598": {
+    "guid": "52F0F812-E18F-43BF-8E5D-95F3F25826EC",
+    "twuid": "NY7447-02",
+    "type": "UCR",
+    "distance_m": 337
   },
   "tw2-205e8ead": {
-    "guid": "205E8EAD-17DE-488B-9445-85E4E21DB969",
-    "twuid": "SD4820-02",
+    "guid": "4729080F-AF3A-4058-8FB7-8EC79B7E9222",
+    "twuid": "SD4722-04",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-38af0a61": {
-    "guid": "38AF0A61-C9BC-4583-A5ED-DFAFD45D0C7E",
-    "twuid": "SD4937-02",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-2c3091fb": {
-    "guid": "2C3091FB-2EE3-470C-8A76-C2355D3286AC",
-    "twuid": "SD4867-02",
-    "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 1967
   },
   "tw2-9fdbe9c2": {
     "guid": "9FDBE9C2-E8B6-4F37-94DD-66EDB45837C7",
     "twuid": "SD4666-02",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 1759
   },
   "tw2-f3588d09": {
     "guid": "F3588D09-7F78-4CA0-9712-AA904C96D0D9",
     "twuid": "NY4805-01",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1068
   },
   "tw2-6214f386": {
     "guid": "6214F386-B4CD-4771-9EC9-D89187E262F8",
     "twuid": "NY4605-02",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 851
   },
   "tw2-d58f948c": {
     "guid": "D58F948C-A036-4BE6-9755-4231C26EB44F",
     "twuid": "NY4741-02",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 823
   },
   "tw2-28c20f53": {
     "guid": "28C20F53-8540-415C-92ED-6AC577AFCB6C",
     "twuid": "NY4844-01",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-4263bb78": {
-    "guid": "4263BB78-B34D-46FA-B345-FC2B84C585A9",
-    "twuid": "SD6221-01",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 595
   },
   "tw2-83defc3e": {
     "guid": "83DEFC3E-C7EE-41B1-A4D8-158EED86408B",
     "twuid": "SD6130-01",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 673
   },
   "tw2-c871a4d0": {
     "guid": "C871A4D0-9D5B-4E3F-AD22-C1886816EEA7",
     "twuid": "SD6189-02",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-62873cb8": {
-    "guid": "62873CB8-5D69-4904-9E62-CAF144256252",
-    "twuid": "NY5960-02",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 255
   },
   "tw2-daa33279": {
-    "guid": "DAA33279-D582-4F4F-ABEB-14E231357B8F",
-    "twuid": "NY5763-05",
+    "guid": "D7B15B2B-4901-486E-BD58-0F6D55A362DB",
+    "twuid": "NY5864-01",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-a0553e8d": {
-    "guid": "A0553E8D-C98B-4453-81E6-DDA592BE366C",
-    "twuid": "SD6920-01",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-f418c59b": {
-    "guid": "F418C59B-C431-4402-AB8F-CD93A8949F41",
-    "twuid": "SD7479-02",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-9004281c": {
-    "guid": "9004281C-AE5C-4146-B18B-EFD283E968C9",
-    "twuid": "NY7511-03",
-    "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 1153
   },
   "tw2-a4b70ccd": {
     "guid": "A4B70CCD-F849-476D-A1BD-32BD0BF492BA",
     "twuid": "NY7736-01",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-260cb62f": {
-    "guid": "260CB62F-19D3-4CCE-9FF6-BC095FF673D2",
-    "twuid": "NY7271-02",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-491b9eea": {
-    "guid": "491B9EEA-9ACE-442B-AB92-22B98307C8C6",
-    "twuid": "NY6393-02",
-    "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 935
   },
   "tw2-404e21f9": {
     "guid": "404E21F9-7C8A-4B59-8CE4-79AE2C1A8750",
-    "twuid": "DD1305-18",
+    "twuid": "SD8531-04",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 685
   },
   "tw2-67a089de": {
     "guid": "67A089DE-3536-4AF3-B78D-0A9BA98D0ECD",
     "twuid": "SD8269-02",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 590
   },
   "tw2-d33b1f98": {
     "guid": "D33B1F98-A0D3-4745-91DA-777B7F9BCB09",
     "twuid": "SD8265-04",
     "type": "BOAT",
-    "distance_m": 0
-  },
-  "tw2-4843169f": {
-    "guid": "4843169F-5248-466F-96CF-F47D62FFAEA1",
-    "twuid": "SD8278-02",
-    "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 272
   },
   "tw2-3408e7ad": {
     "guid": "3408E7AD-19A3-470E-8F50-855316A86290",
     "twuid": "SD7986-04",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1586
   },
   "tw2-b39f52b5": {
     "guid": "B39F52B5-0C1B-41D8-916B-E6CDA31ED1D4",
     "twuid": "SD7896-03",
     "type": "BOAT",
-    "distance_m": 0
-  },
-  "tw2-edc4e89f": {
-    "guid": "EDC4E89F-8CF7-4EEB-A3C2-E772762099B8",
-    "twuid": "NY8548-02",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 497
   },
   "tw2-e01c2bd3": {
-    "guid": "E01C2BD3-FAF1-443D-98B3-56D06C35A9B7",
-    "twuid": "NY8448-02",
+    "guid": "194C53B5-D802-43FE-9DEF-CCE18C4DC621",
+    "twuid": "NY8449-03",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 1419
   },
   "tw2-5f88fa73": {
     "guid": "5F88FA73-AE13-484F-A808-32899894D66D",
     "twuid": "NY8175-02",
     "type": "BOAT",
-    "distance_m": 0
-  },
-  "tw2-2f5b4b3d": {
-    "guid": "2F5B4B3D-C76F-4A9C-9607-E8264FE170E7",
-    "twuid": "SD9408-03",
-    "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 1875
   },
   "tw2-9056e52d": {
     "guid": "9056E52D-4AF4-4E31-B1AE-59444B9E5E7A",
     "twuid": "SD9642-01",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 1208
   },
   "tw2-1a17064a": {
     "guid": "1A17064A-BB2C-4A03-83E3-E728AB39408D",
     "twuid": "SD9651-02",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-216781d0": {
-    "guid": "216781D0-9FD7-42EA-B2F6-6CCB3C0F5D9C",
-    "twuid": "SD9466-02",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 417
   },
   "tw2-10e311cd": {
     "guid": "10E311CD-7F88-477D-ACEA-0C420743BA21",
     "twuid": "NY9307-01",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 535
   },
   "tw2-6c4c3d0d": {
     "guid": "6C4C3D0D-7461-4DE0-B8A6-1EC2AE3734A5",
     "twuid": "NY9723-02",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 603
   },
   "tw2-cecfedce": {
-    "guid": "CECFEDCE-8502-4A27-ACE3-E2FF321579AC",
-    "twuid": "NY9550-02",
-    "type": "BOAT",
-    "distance_m": 0
+    "guid": "8CB0D29E-797B-44A0-A5A2-BAB294B450C9",
+    "twuid": "NY9550-03",
+    "type": "UCR",
+    "distance_m": 1203
   },
   "tw2-0f574acf": {
     "guid": "0F574ACF-B821-4259-AD01-6F304E656E2B",
     "twuid": "NY9451-04",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 725
   },
   "tw2-e6c2da42": {
     "guid": "E6C2DA42-2636-4812-8551-11427AFBF0A5",
     "twuid": "NY9160-05",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 294
   },
   "tw2-debfeec0": {
-    "guid": "DEBFEEC0-AC4A-4138-8F6B-00CFEAC41357",
-    "twuid": "NY9168-03",
+    "guid": "424AAA19-C547-4D91-A24D-E925B7C4FFE9",
+    "twuid": "NY9168-02",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1874
   },
   "tw2-c5f1ed63": {
     "guid": "C5F1ED63-FCCD-4B6B-9ECC-18C6060F4951",
     "twuid": "NY9191-02",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 541
   },
   "tw2-a26ae956": {
     "guid": "A26AE956-FF5C-4161-A21A-FD68D252DC50",
     "twuid": "NU0004-02",
     "type": "BOAT",
-    "distance_m": 0
-  },
-  "tw2-973fcee3": {
-    "guid": "973FCEE3-8572-4D70-B5A9-95E3E53AD145",
-    "twuid": "SE0410-01",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-1ee7bb34": {
-    "guid": "1EE7BB34-A16E-4472-9DC8-2431A2567988",
-    "twuid": "SE0717-01",
-    "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 369
   },
   "tw2-c2df85b6": {
     "guid": "C2DF85B6-369E-458E-8D66-3FB8DB4DEEB4",
     "twuid": "SE0852-01",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-00c8f3e6": {
-    "guid": "00C8F3E6-610A-40E7-8A7B-910CF1877F79",
-    "twuid": "SE0677-02",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-74a95503": {
-    "guid": "74A95503-8E50-454A-B219-AF536D0C83B0",
-    "twuid": "SE0791-01",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1191
   },
   "tw2-9d158424": {
     "guid": "9D158424-D0CE-407B-ABCF-198CEF80F3A6",
     "twuid": "SE0688-05",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 200
   },
   "tw2-007d9816": {
-    "guid": "007D9816-3956-4478-B886-307F984EE903",
-    "twuid": "NZ0738-04",
-    "type": "BOAT",
-    "distance_m": 0
+    "guid": "2B864C6D-9DD4-48B5-B725-05F5021675DD",
+    "twuid": "NZ0742-03",
+    "type": "UCR",
+    "distance_m": 1575
   },
   "tw2-18a797db": {
-    "guid": "18A797DB-BFC8-4A43-B2E9-FA4BFFBF937A",
-    "twuid": "NZ0749-01",
+    "guid": "54699C2E-37A4-4244-BA70-54CED3AA68EA",
+    "twuid": "NZ0849-01",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 1010
   },
   "tw2-54699c2e": {
     "guid": "54699C2E-37A4-4244-BA70-54CED3AA68EA",
     "twuid": "NZ0849-01",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 969
   },
   "tw2-96b5bb68": {
-    "guid": "96B5BB68-AB93-4830-B77A-67C4E5432A00",
-    "twuid": "NZ0560-07",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-5eaa46c1": {
-    "guid": "5EAA46C1-FD82-4696-B809-836B0212406E",
-    "twuid": "NZ0960-02",
+    "guid": "ACD11285-F067-40F8-A4C6-A74FF7C846AA",
+    "twuid": "NZ0658-03",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 1568
   },
   "tw2-789ee6ec": {
-    "guid": "789EE6EC-88E1-402F-B210-3FFEA60AFCA3",
-    "twuid": "NZ0769-04",
+    "guid": "29885C97-2D11-438B-A375-7EEAD2EDF270",
+    "twuid": "NZ0869-01",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1430
   },
   "tw2-d7542e41": {
-    "guid": "D7542E41-B4FD-4CB2-A876-C39966B53B59",
-    "twuid": "NZ0580-02",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-ea00d7c5": {
-    "guid": "EA00D7C5-56C2-4192-BD2B-0AAD0365702E",
-    "twuid": "NZ0883-01",
+    "guid": "8860C1D7-C039-4F29-A04C-FD5028844932",
+    "twuid": "NZ0578-03",
     "type": "BOAT",
-    "distance_m": 0
-  },
-  "tw2-ad05264e": {
-    "guid": "AD05264E-BB62-488C-B90D-3DD6CE6A609E",
-    "twuid": "SE1708-03",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1952
   },
   "tw2-d3d6741e": {
     "guid": "D3D6741E-A622-4A01-BEF1-38A6774A7EFE",
     "twuid": "SE1519-03",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1379
   },
   "tw2-de5d4c99": {
     "guid": "DE5D4C99-7AB1-4DF8-A4B3-EB2C64D295F6",
     "twuid": "SE2037-01",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 484
   },
   "tw2-e51afe31": {
-    "guid": "E51AFE31-B681-4D35-AA70-AC7A20F4F5BE",
-    "twuid": "SE1554-06",
+    "guid": "13D7050F-76F1-4CBE-A91A-43709E5A8BC1",
+    "twuid": "SE1454-05",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1714
   },
   "tw2-0dc142fd": {
     "guid": "0DC142FD-BCBB-4960-B75D-3B14E6EDFFB1",
     "twuid": "SE1684-01",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 703
   },
   "tw2-82466980": {
     "guid": "82466980-98D2-4434-AF03-CBD10089505D",
     "twuid": "SE1694-02",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 830
   },
   "tw2-12c1f250": {
-    "guid": "12C1F250-CB56-4512-9CE4-C11505644D69",
-    "twuid": "SE2199-02",
+    "guid": "8F7CE07E-A067-4879-B732-CA4A6E1966BE",
+    "twuid": "SE2299-03",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-b18e6d76": {
-    "guid": "B18E6D76-9CC1-4086-857B-D4DA24A1A48A",
-    "twuid": "NZ1826-01",
-    "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 1719
   },
   "tw2-4557ecaf": {
     "guid": "4557ECAF-2D82-4535-B744-A30E624ACE24",
-    "twuid": "CD2656-72",
+    "twuid": "NZ2050-01",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 403
   },
   "tw2-4efb3dae": {
     "guid": "4EFB3DAE-1FD5-405C-A270-4728F4313430",
     "twuid": "NZ1975-02",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 998
   },
   "tw2-784f8963": {
     "guid": "784F8963-BCFE-48BF-9CC1-EE7EFF5BFD11",
     "twuid": "NZ1773-01",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 829
   },
   "tw2-0cd5fa99": {
-    "guid": "0CD5FA99-54CD-4AD5-832E-79A4049F2BAB",
-    "twuid": "NZ1881-02",
+    "guid": "49A59F2D-7A35-46FE-A738-2442F8B826AD",
+    "twuid": "NZ1581-02",
     "type": "BOAT",
-    "distance_m": 0
-  },
-  "tw2-0f46081f": {
-    "guid": "0F46081F-F2F9-4C62-93C7-543B2AD61AB2",
-    "twuid": "NU1905-02",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1800
   },
   "tw2-17f15a3a": {
     "guid": "17F15A3A-EC83-4DAE-B269-E188B32898B1",
     "twuid": "SE3304-01",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1142
   },
   "tw2-41dac5f6": {
     "guid": "41DAC5F6-E87B-441C-BED2-14798B30A244",
     "twuid": "SE3521-03",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 836
   },
   "tw2-0ce4dcb6": {
-    "guid": "0CE4DCB6-816A-4553-BA22-3A501549E6E2",
-    "twuid": "SE2743-02",
-    "type": "BOAT",
-    "distance_m": 0
+    "guid": "96B8E361-22CE-4230-9E91-FD0F123D8D86",
+    "twuid": "SE2442-02",
+    "type": "UCR",
+    "distance_m": 1446
   },
   "tw2-f8267319": {
     "guid": "F8267319-B1E0-4F43-9930-D2371DC6E541",
     "twuid": "SE3260-01",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 968
   },
   "tw2-d1f25139": {
     "guid": "D1F25139-4E19-4AC8-B6DB-BF26E8021E8B",
     "twuid": "SE2966-02",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-a8c7bb6c": {
-    "guid": "A8C7BB6C-DC26-41D2-8CE0-1D8F53ED97C9",
-    "twuid": "SE3091-01",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 166
   },
   "tw2-fcc05d19": {
     "guid": "FCC05D19-96D7-4D15-9284-99D7D407144D",
     "twuid": "SE2990-01",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 925
   },
   "tw2-b6acdef7": {
     "guid": "B6ACDEF7-3C54-4C5B-97ED-EAE743C9D12D",
     "twuid": "NZ2904-01",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1038
   },
   "tw2-192758a1": {
-    "guid": "192758A1-1F17-426C-AB36-1B660CC61505",
-    "twuid": "NZ2836-12",
+    "guid": "FAEA4740-06B6-411C-BD09-9A17E91BAD6B",
+    "twuid": "NZ2836-09",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 1404
   },
   "tw2-b3fa45d8": {
     "guid": "B3FA45D8-4161-4136-BB9D-1B71D4C4B112",
     "twuid": "NZ3246-01",
     "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 412
   },
   "tw2-5809f67f": {
     "guid": "5809F67F-174D-4D9D-A3F3-401F72198E70",
     "twuid": "NZ3272-01",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-70982148": {
-    "guid": "70982148-A7BC-45C2-84D7-B06A6EF78587",
-    "twuid": "NZ2687-02",
-    "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 607
   },
   "tw2-9fd6d2a5": {
-    "guid": "9FD6D2A5-2BFA-47D5-B8A6-7FA28DC47C90",
-    "twuid": "SE4168-02",
+    "guid": "872EE029-0864-4B26-A67B-0D1D2485D9D7",
+    "twuid": "SE4166-02",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1148
   },
   "tw2-a8e05fb3": {
-    "guid": "A8E05FB3-CA32-4494-AB6E-F8516F027D1D",
-    "twuid": "SE4062-02",
+    "guid": "FEA4A1F8-B9BC-411D-A95D-D8A31CE56E1C",
+    "twuid": "SE4163-02",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-3d1d2fc3": {
-    "guid": "3D1D2FC3-4507-4183-BFCE-7E5B3731210D",
-    "twuid": "NZ4216-01",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-13bab727": {
-    "guid": "13BAB727-F8F3-49DB-B2B8-5EC0EAB89EDA",
-    "twuid": "NZ3929-01",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-710fded4": {
-    "guid": "710FDED4-BC04-4779-B42E-B613F857BECF",
-    "twuid": "NZ3637-02",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 570
   },
   "tw2-c7cba480": {
-    "guid": "C7CBA480-5785-4921-9F17-2087D2FEC96D",
-    "twuid": "NZ4036-03",
-    "type": "BOAT",
-    "distance_m": 0
+    "guid": "ABCE7B06-1D6E-44D5-8AA6-9B931EC1A3DC",
+    "twuid": "NZ4036-04",
+    "type": "UCR",
+    "distance_m": 649
   },
   "tw2-d9c9c910": {
     "guid": "D9C9C910-98F6-428F-A2DB-CDE625F2B8FA",
     "twuid": "SE5307-02",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 658
   },
   "tw2-1ece8924": {
-    "guid": "1ECE8924-2DDD-4605-BF02-C9D947535A2A",
-    "twuid": "SE5208-02",
-    "type": "BOAT",
-    "distance_m": 0
+    "guid": "D9C9C910-98F6-428F-A2DB-CDE625F2B8FA",
+    "twuid": "SE5307-02",
+    "type": "UCR",
+    "distance_m": 1625
   },
   "tw2-4e3c56e3": {
-    "guid": "4E3C56E3-EBC9-4A06-9527-45A2DD951B9C",
-    "twuid": "SE5431-01",
+    "guid": "958FAA50-6C10-4A68-815F-F7B97B71B4D5",
+    "twuid": "SE5631-01",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-0eaca658": {
-    "guid": "0EACA658-0E2C-4C5C-B358-9CBDB0BA60E0",
-    "twuid": "SE5344-01",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1745
   },
   "tw2-f980f15a": {
     "guid": "F980F15A-A740-4A0D-B6DF-36C8207BEAD3",
     "twuid": "SE5491-02",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-02c033cc": {
-    "guid": "02C033CC-05B7-4DCE-A5A8-62A7813137C8",
-    "twuid": "NZ5401-01",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-ec6dc2ea": {
-    "guid": "EC6DC2EA-393E-440D-9B44-BB32943725C7",
-    "twuid": "NZ5518-04",
-    "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 382
   },
   "tw2-4cc91348": {
     "guid": "4CC91348-B18C-4CCF-8079-946AAD73D5EA",
     "twuid": "NZ5227-02",
     "type": "BOAT",
-    "distance_m": 0
-  },
-  "tw2-af73c589": {
-    "guid": "AF73C589-7021-4547-B57C-CBB0C4A0E6D0",
-    "twuid": "SE6809-02",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-c944fb2b": {
-    "guid": "C944FB2B-6626-4DD7-B35D-B8B3ECEF5191",
-    "twuid": "SE6335-01",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-a220f26b": {
-    "guid": "A220F26B-85CF-4C66-81A3-08ACDEBD5B33",
-    "twuid": "SE6744-02",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-d294bbe3": {
-    "guid": "D294BBE3-356D-4F5A-B1E2-A6F983F35217",
-    "twuid": "NZ6501-02",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1309
   },
   "tw2-1dbab59d": {
-    "guid": "1DBAB59D-03C9-4AD1-B9A1-D37DC4772F8F",
-    "twuid": "NZ6614-01",
+    "guid": "204A2F19-A59E-47A1-8CDB-8120F87E70D3",
+    "twuid": "NZ6615-02",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1200
   },
   "tw2-204a2f19": {
     "guid": "204A2F19-A59E-47A1-8CDB-8120F87E70D3",
     "twuid": "NZ6615-02",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-29923f47": {
-    "guid": "29923F47-E9A2-4A26-8C9E-629D305ECA4A",
-    "twuid": "NZ6813-03",
-    "type": "BOAT",
-    "distance_m": 0
-  },
-  "tw2-04ac4a57": {
-    "guid": "04AC4A57-026C-4C41-B87E-E15AEA11E811",
-    "twuid": "NZ6222-02",
-    "type": "BOAT",
-    "distance_m": 0
+    "distance_m": 986
   },
   "tw2-41062ebe": {
     "guid": "41062EBE-4445-4007-AD84-5254B506E5D5",
     "twuid": "SE7707-01",
     "type": "BOAT",
-    "distance_m": 0
-  },
-  "tw2-446d6b75": {
-    "guid": "446D6B75-B4BE-47B2-B02E-A46CE0F7F6F3",
-    "twuid": "SE7843-01",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 615
   },
   "tw2-f37a5534": {
     "guid": "F37A5534-7FA4-4EBA-951B-1F99878BCD43",
     "twuid": "SE7748-01",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 352
   },
   "tw2-f6a854bf": {
-    "guid": "F6A854BF-A3FE-4A4A-A7F5-7AB13A01A2B3",
-    "twuid": "SE7868-02",
+    "guid": "AFFF97C2-0FDB-4393-A805-AF5A43517AB7",
+    "twuid": "SE7967-04",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 983
   },
   "tw2-575fbda5": {
     "guid": "575FBDA5-08F9-4B5C-950F-0748BCCD71B4",
     "twuid": "SE7765-06",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-fdeff2e3": {
-    "guid": "FDEFF2E3-1BC1-4975-B1D3-F4B196555C93",
-    "twuid": "NZ7706-02",
-    "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-87a6e078": {
-    "guid": "87A6E078-43FB-48C6-9B28-645F200B778A",
-    "twuid": "NZ7710-01",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 732
   },
   "tw2-9535ada9": {
     "guid": "9535ADA9-B828-47AB-8C03-0856CAAC8543",
     "twuid": "SE9151-02",
     "type": "UCR",
-    "distance_m": 0
-  },
-  "tw2-a8643845": {
-    "guid": "A8643845-AE94-4A9B-A3F4-F1BDB0588844",
-    "twuid": "SE9080-01",
-    "type": "UCR",
-    "distance_m": 0
+    "distance_m": 243
   },
   "tw2-77cfa5e9": {
-    "guid": "77CFA5E9-5595-4D6F-BC65-6BEF5BF03B77",
-    "twuid": "SE8891-01",
+    "guid": "1EEC34E1-42AD-421A-8874-BEF1665AE69A",
+    "twuid": "SE8890-04",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1662
   },
   "tw2-1eec34e1": {
     "guid": "1EEC34E1-42AD-421A-8874-BEF1665AE69A",
     "twuid": "SE8890-04",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1393
   },
   "tw2-7335bdce": {
-    "guid": "7335BDCE-D120-417D-81D0-29C85EA50280",
-    "twuid": "SE8892-02",
-    "type": "BOAT",
-    "distance_m": 0
-  },
-  "tw2-d5f7ad70": {
-    "guid": "D5F7AD70-AA78-4B57-9E67-8EDF754B7B51",
-    "twuid": "NZ8706-04",
+    "guid": "8FA40F83-C739-4474-945C-A0EA74DD3FDE",
+    "twuid": "SE8591-02",
     "type": "UCR",
-    "distance_m": 0
+    "distance_m": 1142
   }
 }
